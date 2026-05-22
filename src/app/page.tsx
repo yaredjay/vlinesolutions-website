@@ -15,7 +15,7 @@ export default function HomePage() {
       <WhoWeAre />
       <CTA
         eyebrow="Engage"
-        title="Bring us your hardest mission."
+        title="Bring us your hardest project."
         body="Government scale, startup pace. Tell us the constraint, the contract, the deadline."
         primary={{ label: "Start a conversation", href: "/contact" }}
         secondary={{ label: "See government credentials", href: "/government" }}

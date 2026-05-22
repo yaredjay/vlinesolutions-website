@@ -6,7 +6,7 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export function CTA({
   eyebrow = "Engage",
-  title = "Ready to move at mission speed?",
+  title = "Ready to move at project speed?",
   body = "Tell us about the contract, the constraint, and the deadline. We will respond with a path forward.",
   primary = { label: "Start a conversation", href: "/contact" },
   secondary,

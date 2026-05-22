@@ -20,7 +20,7 @@ export default function ContactPage() {
           <>
             <span className="gradient-text">Let's talk</span>{" "}
             <span className="text-fg-secondary">about your</span>{" "}
-            <span className="text-fg-primary">mission.</span>
+            <span className="text-fg-primary">project.</span>
           </>
         }
         description="Procurement, programs, partnerships — send a message and we'll route it directly to operations leadership."

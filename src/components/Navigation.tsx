@@ -92,7 +92,12 @@ export function Navigation() {
               onClick={() => setOpen((v) => !v)}
               aria-label={open ? "Close menu" : "Open menu"}
               aria-expanded={open}
-              className="grid h-10 w-10 place-items-center rounded-full border border-border-subtle bg-bg-surface/60 backdrop-blur md:hidden"
+              className={cn(
+                "relative z-[60] grid h-10 w-10 place-items-center rounded-full border text-fg-primary transition-colors md:hidden",
+                open
+                  ? "border-border-strong bg-bg-surface shadow-[0_8px_24px_-8px_rgba(0,0,0,0.25)]"
+                  : "border-border-subtle bg-bg-surface/80 backdrop-blur"
+              )}
             >
               {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
@@ -111,7 +116,7 @@ export function Navigation() {
             style={{ top: 0 }}
           >
             <div
-              className="absolute inset-0 bg-bg-base/85 backdrop-blur-xl"
+              className="absolute inset-0 bg-bg-base"
               onClick={() => setOpen(false)}
             />
             <motion.nav
@@ -119,7 +124,7 @@ export function Navigation() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-              className="absolute right-0 top-0 flex h-full w-[88%] max-w-sm flex-col border-l border-border-subtle bg-bg-surface/95 p-7 pt-24"
+              className="absolute right-0 top-0 flex h-full w-[88%] max-w-sm flex-col border-l border-border-strong bg-bg-surface p-7 pt-24 shadow-[-24px_0_60px_-20px_rgba(0,0,0,0.35)]"
               aria-label="Mobile"
             >
               <ul className="flex flex-col gap-1">
