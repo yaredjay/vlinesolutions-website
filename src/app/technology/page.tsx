@@ -8,7 +8,14 @@ import { technology } from "@/data/services";
 export const metadata: Metadata = {
   title: "Technology Solutions",
   description:
-    "AI, intelligent automation, secure platforms, data, and cloud — engineered for the public sector and enterprise.",
+    "V-Line Solutions builds AI systems, intelligent automation, secure cloud platforms, and data infrastructure for government agencies and enterprise clients. Seven service lines, one delivery standard.",
+  alternates: { canonical: "/technology" },
+  openGraph: {
+    title: "Technology Solutions — V-Line Solutions",
+    description:
+      "AI, agentic automation, secure platforms, data, and cloud — engineered for the public sector.",
+    url: "https://vlinesolutions.com/technology",
+  },
 };
 
 export default function TechnologyPage() {

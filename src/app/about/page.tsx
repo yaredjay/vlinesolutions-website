@@ -8,7 +8,14 @@ import { site } from "@/data/site";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "V-Line Solutions LLC is a California-based technology and workforce services firm built to deliver government-grade quality at startup speed.",
+    "V-Line Solutions LLC is a California-based technology and workforce services firm headquartered in Campbell, CA. We deliver AI systems, intelligent automation, and mission-critical staffing to government agencies and enterprise clients nationwide.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About — V-Line Solutions",
+    description:
+      "California-based firm delivering government-grade quality at startup speed.",
+    url: "https://vlinesolutions.com/about",
+  },
 };
 
 const principles = [

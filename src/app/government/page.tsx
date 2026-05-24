@@ -10,7 +10,14 @@ import { contractMechanisms, naics, naicsLabels, sectors, site } from "@/data/si
 export const metadata: Metadata = {
   title: "Government Contracts",
   description:
-    "Purpose-built for public sector procurement. SAM.gov registered. Small business. 17 NAICS codes across technology, facilities, and professional services.",
+    "V-Line Solutions LLC is SAM.gov registered, small business classified, and active across 17 NAICS codes spanning technology, facilities, and professional services. Ready for direct awards, IDIQs, cooperative purchasing, and rapid deployment.",
+  alternates: { canonical: "/government" },
+  openGraph: {
+    title: "Government Contracts — V-Line Solutions",
+    description:
+      "SAM.gov registered, small business, 17 NAICS codes — purpose-built for public sector procurement.",
+    url: "https://vlinesolutions.com/government",
+  },
 };
 
 const credentials = [

@@ -8,7 +8,14 @@ import { site } from "@/data/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Talk to V-Line Solutions. Government technology, AI systems, and mission-critical workforce — Campbell, California.",
+    "Reach V-Line Solutions for government technology, AI systems, and mission-critical workforce engagements. Call (408) 516-6667, email info@vlinesolutions.com, or send a message — Campbell, California.",
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Contact — V-Line Solutions",
+    description:
+      "Government technology, AI systems, and mission-critical workforce — let's talk.",
+    url: "https://vlinesolutions.com/contact",
+  },
 };
 
 export default function ContactPage() {

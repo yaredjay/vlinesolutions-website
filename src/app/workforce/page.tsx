@@ -7,7 +7,14 @@ import { workforce } from "@/data/services";
 export const metadata: Metadata = {
   title: "Workforce Solutions",
   description:
-    "Mission-ready personnel across facilities, janitorial, events, sports, administration, IT, and the skilled trades.",
+    "V-Line Solutions fields mission-ready personnel for facilities, janitorial, events, sports operations, administration, IT, and the skilled trades — credentialed, accountable, and ready to deploy nationwide.",
+  alternates: { canonical: "/workforce" },
+  openGraph: {
+    title: "Workforce Solutions — V-Line Solutions",
+    description:
+      "Credentialed personnel across facilities, events, IT, administration, and the skilled trades.",
+    url: "https://vlinesolutions.com/workforce",
+  },
 };
 
 export default function WorkforcePage() {
