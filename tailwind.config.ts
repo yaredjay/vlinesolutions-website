@@ -6,70 +6,44 @@ const config: Config = {
     "./src/app/**/*.{ts,tsx}",
     "./src/components/**/*.{ts,tsx}",
     "./src/lib/**/*.{ts,tsx}",
+    "./src/data/**/*.{ts,tsx}",
   ],
   theme: {
     extend: {
       colors: {
-        bg: {
-          base: "var(--bg-base)",
-          surface: "var(--bg-surface)",
-          elevated: "var(--bg-elevated)",
+        bg: { DEFAULT: "var(--bg)", 2: "var(--bg-2)" },
+        surface: { DEFAULT: "var(--surface)", 2: "var(--surface-2)" },
+        ink: {
+          DEFAULT: "var(--text)",
+          secondary: "var(--text-secondary)",
+          muted: "var(--text-muted)",
         },
-        fg: {
-          primary: "var(--fg-primary)",
-          secondary: "var(--fg-secondary)",
-          muted: "var(--fg-muted)",
-        },
-        border: {
-          subtle: "var(--border-subtle)",
-          strong: "var(--border-strong)",
-        },
-        accent: {
-          DEFAULT: "var(--accent)",
-          glow: "var(--accent-glow)",
-          soft: "var(--accent-soft)",
-        },
+        line: { DEFAULT: "var(--border)", hover: "var(--border-hover)" },
+        cyan: { DEFAULT: "var(--cyan)" },
+        purple: { DEFAULT: "var(--purple)" },
+        money: { DEFAULT: "var(--green)" },
+        gold: { DEFAULT: "var(--gold)" },
+        warn: { DEFAULT: "var(--warning)" },
       },
       fontFamily: {
         sans: ["var(--font-inter)", "ui-sans-serif", "system-ui"],
-        display: ["var(--font-display)", "ui-sans-serif", "system-ui"],
+        display: ["var(--font-display)", "var(--font-inter)", "ui-sans-serif", "system-ui"],
       },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "mesh-cyan":
-          "radial-gradient(at 20% 20%, rgba(0,212,255,0.15) 0px, transparent 50%), radial-gradient(at 80% 0%, rgba(0,102,255,0.12) 0px, transparent 50%), radial-gradient(at 0% 80%, rgba(96,80,255,0.10) 0px, transparent 50%)",
+      fontSize: {
+        // Readability-first scale
+        "body": ["1.125rem", { lineHeight: "1.8" }],
+        "body-sm": ["0.9375rem", { lineHeight: "1.7" }],
       },
       animation: {
-        "gradient-x": "gradient-x 18s ease infinite",
-        "float-slow": "float 12s ease-in-out infinite",
-        "pulse-glow": "pulse-glow 3s ease-in-out infinite",
-        "shimmer": "shimmer 2.5s linear infinite",
-        "marquee": "marquee 40s linear infinite",
-        "marquee-reverse": "marquee 40s linear infinite reverse",
+        float: "float 13s ease-in-out infinite",
+        marquee: "marquee 38s linear infinite",
+        "marquee-slow": "marquee 60s linear infinite",
+        "orb-drift": "orb-drift 20s ease-in-out infinite",
+        "glow-pulse": "glow-pulse 2.8s ease-in-out infinite",
       },
-      keyframes: {
-        "gradient-x": {
-          "0%, 100%": { "background-position": "0% 50%" },
-          "50%": { "background-position": "100% 50%" },
-        },
-        float: {
-          "0%, 100%": { transform: "translate3d(0,0,0)" },
-          "50%": { transform: "translate3d(0,-20px,0)" },
-        },
-        "pulse-glow": {
-          "0%, 100%": { opacity: "0.5", filter: "blur(28px)" },
-          "50%": { opacity: "1", filter: "blur(36px)" },
-        },
-        shimmer: {
-          "0%": { "background-position": "-200% 0" },
-          "100%": { "background-position": "200% 0" },
-        },
-        marquee: {
-          "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-50%)" },
-        },
+      backgroundImage: {
+        "mesh-dark":
+          "radial-gradient(at 15% 15%, rgba(10,102,255,0.10) 0px, transparent 45%), radial-gradient(at 85% 20%, rgba(79,107,255,0.10) 0px, transparent 45%), radial-gradient(at 50% 90%, rgba(10,102,255,0.06) 0px, transparent 50%)",
       },
     },
   },

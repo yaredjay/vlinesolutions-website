@@ -24,6 +24,9 @@ export function SmoothScroll() {
     };
     rafId = requestAnimationFrame(raf);
 
+    // expose for tooling / debugging
+    (window as unknown as { lenis?: Lenis }).lenis = lenis;
+
     return () => {
       cancelAnimationFrame(rafId);
       lenis.destroy();
