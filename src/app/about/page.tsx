@@ -1,177 +1,73 @@
 import type { Metadata } from "next";
-import { MapPin, Phone, Mail, User2 } from "lucide-react";
-import { PageHero } from "@/components/sections/PageHero";
-import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
-import { CTA } from "@/components/sections/CTA";
+import Link from "next/link";
+import { ArrowUpRight, MapPin } from "lucide-react";
+import { PageHeader } from "@/components/shared/PageHeader";
+import { Reveal } from "@/components/ui/Reveal";
+import { CTASection } from "@/components/shared/CTASection";
 import { site } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "About",
   description:
-    "V-Line Solutions LLC is a California-based technology and workforce services firm headquartered in Campbell, CA. We deliver AI systems, intelligent automation, and mission-critical staffing to government agencies and enterprise clients nationwide.",
+    "V-Line Solutions builds production-grade AI systems that capture leads, automate operations, and grow revenue for businesses that can't afford to miss a customer. Based in Campbell, California.",
   alternates: { canonical: "/about" },
-  openGraph: {
-    title: "About — V-Line Solutions",
-    description:
-      "California-based firm delivering government-grade quality at startup speed.",
-    url: "https://vlinesolutions.com/about",
-  },
 };
 
-const principles = [
-  {
-    n: "01",
-    title: "Operate at mission speed",
-    body: "Public sector outcomes shouldn't wait for vendor cadence. We move on the agency's clock.",
-  },
-  {
-    n: "02",
-    title: "Engineer for accountability",
-    body: "Every system we ship is observable, governed, and ready for audit on day one.",
-  },
-  {
-    n: "03",
-    title: "Field reliable people",
-    body: "Workforce delivery is a craft. We treat it that way — every shift, every site, every event.",
-  },
-  {
-    n: "04",
-    title: "Refuse the vendor cliché",
-    body: "No bloated decks. No padded SOWs. We win on delivery, not on procurement theater.",
-  },
+const paragraphs = [
+  "V-Line Solutions builds AI systems that capture leads, automate operations, and grow revenue for businesses that can't afford to miss a single customer.",
+  "Founded in 2025, we've deployed production AI platforms serving businesses across the United States. Our engineering team ships AI systems from concept to live deployment in under 30 days — a pace most agencies can't match.",
+  "We're not a chatbot company selling templates. We're AI engineers building custom, production-grade systems tailored to your business. Every AI we deploy is trained on your services, your pricing, your brand voice, and your workflows.",
+  "Every system we build makes your business more structured, more automated, and more valuable — whether you're scaling to the next level or building toward an exit.",
+  "Based in Campbell, California. Serving businesses nationwide.",
 ];
 
 export default function AboutPage() {
   return (
     <>
-      <PageHero
+      <PageHeader
         eyebrow="About"
-        title={
-          <>
-            <span className="gradient-text">A California firm</span>{" "}
-            <span className="text-fg-secondary">built for</span>{" "}
-            <span className="text-fg-primary">public-sector velocity.</span>
-          </>
-        }
-        description="V-Line Solutions LLC delivers AI systems, intelligent automation, and mission-critical staffing to government agencies and enterprise clients nationwide — with the rigor of a federal integrator and the speed of a modern technology firm."
+        title={<>About <span className="text-gradient">V-Line Solutions</span></>}
       />
-
-      {/* Mission */}
-      <section className="relative py-20">
+      <section className="relative py-12">
         <div className="container-edge">
-          <div className="grid items-start gap-12 md:grid-cols-12">
-            <Reveal as="div" className="md:col-span-4">
-              <span className="text-xs uppercase tracking-[0.22em] text-fg-muted">Our mission</span>
-              <div className="mt-3 h-px w-16 bg-gradient-to-r from-accent to-transparent" />
-            </Reveal>
-            <Reveal as="div" delay={0.05} className="md:col-span-8">
-              <p className="text-balance font-display text-2xl font-medium leading-snug tracking-tight md:text-[2rem]">
-                {site.bio}
+          <Reveal className="prose-width mx-auto space-y-6">
+            {paragraphs.map((p, i) => (
+              <p key={i} className={i === 0 ? "text-[1.375rem] font-medium leading-relaxed text-ink" : "text-body leading-relaxed text-ink-secondary"}>
+                {p}
               </p>
-              <p className="mt-6 max-w-2xl text-pretty leading-relaxed text-fg-secondary">
-                We exist because public-sector teams deserve a partner who can architect the AI
-                system, secure the cloud, and field the crew that runs the building — without
-                handoffs, without finger-pointing, without inflated timelines.
-              </p>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
-      {/* Principles */}
-      <section className="relative py-20">
-        <div className="container-edge">
-          <Stagger className="grid gap-5 md:grid-cols-2">
-            {principles.map((p) => (
-              <StaggerItem
-                key={p.n}
-                className="relative overflow-hidden rounded-3xl glass glow-ring p-8"
-              >
-                <div className="absolute inset-0 grid-bg-sm opacity-25 [mask-image:linear-gradient(to_bottom,black,transparent_85%)]" />
-                <span className="relative font-display text-xs uppercase tracking-[0.28em] text-fg-muted">
-                  Principle / {p.n}
-                </span>
-                <h3 className="relative mt-3 font-display text-2xl font-medium tracking-tight md:text-3xl">
-                  {p.title}
-                </h3>
-                <p className="relative mt-3 max-w-md text-fg-secondary">{p.body}</p>
-              </StaggerItem>
             ))}
-          </Stagger>
-        </div>
-      </section>
+          </Reveal>
 
-      {/* Leadership + Office */}
-      <section className="relative py-20">
-        <div className="container-edge">
-          <div className="grid gap-6 md:grid-cols-2">
-            <Reveal className="relative overflow-hidden rounded-3xl glass p-10">
-              <div className="absolute inset-0 grid-bg-sm opacity-30" />
-              <div
-                className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full opacity-30 blur-3xl"
-                style={{
-                  background:
-                    "radial-gradient(circle, rgba(var(--accent-glow),0.55) 0%, transparent 70%)",
-                }}
-              />
-              <span className="relative text-xs uppercase tracking-[0.22em] text-fg-muted">
-                Leadership
-              </span>
-              <div className="relative mt-6 flex items-center gap-5">
-                <span className="grid h-16 w-16 place-items-center rounded-2xl border border-border-subtle bg-bg-elevated/70 text-accent">
-                  <User2 className="h-7 w-7" />
-                </span>
-                <div>
-                  <p className="font-display text-2xl font-medium tracking-tight">{site.director}</p>
-                  <p className="text-sm text-fg-secondary">{site.directorTitle}</p>
-                </div>
-              </div>
-              <p className="relative mt-8 max-w-md text-fg-secondary">
-                Leads operations across both divisions — from public-sector capture to multi-site
-                workforce deployment — with a single bar for quality and accountability.
-              </p>
-            </Reveal>
-
-            <Reveal delay={0.06} className="relative overflow-hidden rounded-3xl glass p-10">
-              <div className="absolute inset-0 grid-bg-sm opacity-30" />
-              <span className="relative text-xs uppercase tracking-[0.22em] text-fg-muted">
-                Headquarters
-              </span>
-              <ul className="relative mt-6 space-y-4">
-                <li className="flex items-start gap-3">
-                  <MapPin className="mt-0.5 h-4 w-4 text-accent" />
-                  <div className="text-sm text-fg-secondary">
-                    <p className="text-fg-primary">{site.legalName}</p>
-                    <p>{site.address.line1}</p>
-                    <p>
-                      {site.address.city}, {site.address.state} {site.address.zip}
-                    </p>
+          {/* Platforms */}
+          <Reveal className="mx-auto mt-14 max-w-3xl">
+            <p className="text-3xs font-semibold uppercase tracking-[0.2em] text-ink-muted">Platforms we operate</p>
+            <div className="mt-4 grid gap-4 sm:grid-cols-2">
+              {site.platforms.map((p) => (
+                <a key={p.name} href={p.url} target="_blank" rel="noopener noreferrer" className="glass card-hover group flex items-center justify-between rounded-2xl p-6">
+                  <div>
+                    <p className="text-xl font-bold text-ink">{p.name}</p>
+                    <p className="text-body-sm text-ink-secondary">{p.domain}</p>
                   </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Phone className="mt-0.5 h-4 w-4 text-accent" />
-                  <a className="text-sm text-fg-secondary hover:text-fg-primary" href={site.phoneHref}>
-                    {site.phone}
-                  </a>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Mail className="mt-0.5 h-4 w-4 text-accent" />
-                  <a className="text-sm text-fg-secondary hover:text-fg-primary" href={site.emailHref}>
-                    {site.email}
-                  </a>
-                </li>
-              </ul>
-            </Reveal>
-          </div>
+                  <ArrowUpRight className="h-5 w-5 text-ink-muted transition-colors group-hover:text-cyan" />
+                </a>
+              ))}
+            </div>
+          </Reveal>
+
+          {/* Location */}
+          <Reveal className="mx-auto mt-8 max-w-3xl">
+            <div className="glass flex items-start gap-4 rounded-2xl p-6">
+              <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-line bg-surface text-cyan"><MapPin className="h-5 w-5" /></span>
+              <div className="text-[1.0625rem] text-ink">
+                <p className="font-semibold">{site.legalName}</p>
+                <p className="text-ink-secondary">{site.address.line1}, {site.address.city}, {site.address.state} {site.address.zip}</p>
+                <Link href="/government" className="mt-2 inline-block text-body-sm text-cyan link-underline">Government & procurement →</Link>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
-
-      <CTA
-        eyebrow="Engage"
-        title="Let's get to work."
-        body="Tell us about the program, the agency, or the operation. We'll respond fast — and direct."
-        primary={{ label: "Contact V-Line Solutions", href: "/contact" }}
-      />
+      <CTASection title="Let's Build Something That Pays for Itself" sub="Tell us what's slowing you down. We'll show you the AI that fixes it." ctaLabel="Start a Conversation" ctaHref="/contact" />
     </>
   );
 }

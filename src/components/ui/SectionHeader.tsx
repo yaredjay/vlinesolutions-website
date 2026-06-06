@@ -11,29 +11,23 @@ export function SectionHeader({
   className,
 }: {
   eyebrow?: string;
-  title: string;
+  title: React.ReactNode;
   description?: string;
   align?: "left" | "center";
   className?: string;
 }) {
   const reduced = useReducedMotion();
   return (
-    <div
-      className={cn(
-        "max-w-[820px]",
-        align === "center" ? "mx-auto text-center" : "text-left",
-        className
-      )}
-    >
+    <div className={cn("max-w-[760px]", align === "center" ? "mx-auto text-center" : "text-left", className)}>
       {eyebrow && (
         <motion.span
           initial={reduced ? false : { opacity: 0, y: 10 }}
           whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-15% 0px" }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 rounded-full border border-border-subtle bg-bg-surface/60 px-3 py-1 text-xs uppercase tracking-[0.18em] text-fg-secondary backdrop-blur-md"
+          className="pill mb-5"
         >
-          <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_10px_var(--accent)]" />
+          <span className="h-1.5 w-1.5 rounded-full bg-cyan shadow-[0_0_10px_var(--cyan)]" />
           {eyebrow}
         </motion.span>
       )}
@@ -41,11 +35,8 @@ export function SectionHeader({
         initial={reduced ? false : { opacity: 0, y: 18 }}
         whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-10% 0px" }}
-        transition={{ duration: 0.75, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
-        className={cn(
-          "mt-5 font-display text-balance text-4xl font-medium leading-[1.05] tracking-tightest md:text-5xl lg:text-[3.6rem]",
-          "gradient-text"
-        )}
+        transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        className="text-balance text-[1.75rem] font-bold leading-[1.1] sm:text-4xl md:text-[2.5rem]"
       >
         {title}
       </motion.h2>
@@ -54,9 +45,9 @@ export function SectionHeader({
           initial={reduced ? false : { opacity: 0, y: 14 }}
           whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-10% 0px" }}
-          transition={{ duration: 0.7, delay: 0.1 }}
+          transition={{ duration: 0.65, delay: 0.08 }}
           className={cn(
-            "mt-5 text-pretty text-base leading-relaxed text-fg-secondary md:text-lg",
+            "mt-4 text-[1.0625rem] leading-relaxed text-ink-secondary sm:text-body",
             align === "center" ? "mx-auto max-w-2xl" : "max-w-2xl"
           )}
         >

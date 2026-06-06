@@ -1,25 +1,35 @@
-import { Hero } from "@/components/sections/Hero";
-import { PathwayCards } from "@/components/sections/PathwayCards";
-import { LogosMarquee } from "@/components/sections/LogosMarquee";
-import { Stats } from "@/components/sections/Stats";
-import { WhoWeAre } from "@/components/sections/WhoWeAre";
-import { CTA } from "@/components/sections/CTA";
+import { Hero } from "@/components/home/Hero";
+import {
+  StatsTicker, ThreeWays, Outcomes, HowItWorks, Results,
+  BusinessValue, CustomPreview, ClientLogos,
+} from "@/components/home/StaticSections";
+import { PainGrid } from "@/components/home/PainGrid";
+import { RoiCalculator } from "@/components/home/RoiCalculator";
+import { CostComparison } from "@/components/shared/CostComparison";
+import { Testimonials } from "@/components/shared/Testimonials";
+import { IndustryStrip } from "@/components/shared/IndustryStrip";
+import { Guarantee } from "@/components/shared/Guarantee";
+import { CTASection } from "@/components/shared/CTASection";
 
 export default function HomePage() {
   return (
     <>
       <Hero />
-      <PathwayCards />
-      <LogosMarquee />
-      <Stats />
-      <WhoWeAre />
-      <CTA
-        eyebrow="Engage"
-        title="Bring us your hardest project."
-        body="Government scale, startup pace. Tell us the constraint, the contract, the deadline."
-        primary={{ label: "Start a conversation", href: "/contact" }}
-        secondary={{ label: "See government credentials", href: "/government" }}
-      />
+      <StatsTicker />
+      <PainGrid />
+      <ThreeWays />
+      <RoiCalculator />
+      <Outcomes />
+      <HowItWorks />
+      <Results />
+      <CostComparison />
+      <Testimonials />
+      <IndustryStrip />
+      <CustomPreview />
+      <BusinessValue />
+      <ClientLogos />
+      <Guarantee />
+      <CTASection />
     </>
   );
 }

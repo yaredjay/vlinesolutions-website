@@ -3,24 +3,22 @@ import { cn } from "@/lib/cn";
 export function Logo({ className, mark = false }: { className?: string; mark?: boolean }) {
   return (
     <span className={cn("inline-flex items-center gap-2.5", className)} aria-label="V-Line Solutions">
-      <span className="relative inline-flex h-7 w-7 items-center justify-center">
-        <svg viewBox="0 0 32 32" className="h-7 w-7" fill="none" aria-hidden="true">
+      <span className="relative inline-flex h-8 w-8 items-center justify-center">
+        <svg viewBox="0 0 32 32" className="h-8 w-8" fill="none" aria-hidden="true">
           <defs>
-            <linearGradient id="vls-grad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-              <stop offset="0" stopColor="currentColor" stopOpacity="0.95" />
-              <stop offset="1" stopColor="currentColor" stopOpacity="0.55" />
+            <linearGradient id="vls-mark" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stopColor="#00d4ff" />
+              <stop offset="1" stopColor="#7c3aed" />
             </linearGradient>
           </defs>
-          <path
-            d="M3 5 L11 27 L21 5 L25 5 L15 28 L9 28 L1 6 Z"
-            fill="url(#vls-grad)"
-          />
-          <circle cx="26" cy="22" r="3" fill="currentColor" opacity="0.9" />
+          <rect width="32" height="32" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" />
+          <path d="M6 8 L13 24 L20 8 L23 8 L14.5 25 L11.5 25 L3 9 Z" fill="url(#vls-mark)" />
+          <circle cx="24" cy="20" r="2.4" fill="#00d4ff" />
         </svg>
       </span>
       {!mark && (
-        <span className="text-[15px] font-semibold tracking-tight">
-          V-Line<span className="text-fg-muted font-normal"> Solutions</span>
+        <span className="text-[17px] font-bold tracking-tight text-ink">
+          V-Line<span className="font-medium text-ink-secondary"> Solutions</span>
         </span>
       )}
     </span>
