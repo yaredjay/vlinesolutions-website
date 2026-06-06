@@ -28,7 +28,7 @@ export default function ContactPage({ searchParams }: { searchParams: { plan?: s
           </Reveal>
           <Reveal delay={0.08}>
             <div className="glass relative h-full overflow-hidden rounded-3xl p-8">
-              <div className="pointer-events-none absolute -right-16 -bottom-16 h-60 w-60 rounded-full opacity-40 blur-3xl" style={{ background: "radial-gradient(circle, rgba(0,212,255,0.4), transparent 70%)" }} />
+              <div className="pointer-events-none absolute -right-16 -bottom-16 h-60 w-60 rounded-full opacity-40 blur-3xl" style={{ background: "radial-gradient(circle, rgba(10,102,255,0.4), transparent 70%)" }} />
               <p className="text-3xs font-semibold uppercase tracking-[0.2em] text-ink-muted">Direct lines</p>
               <ul className="mt-7 space-y-6">
                 <Item icon={Phone} label="Phone" value={site.phone} href={site.phoneHref} />

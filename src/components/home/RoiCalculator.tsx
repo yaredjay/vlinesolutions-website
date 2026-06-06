@@ -27,7 +27,7 @@ function Slider({
         onChange={(e) => onChange(Number(e.target.value))}
         aria-label={label}
         className="mt-3 h-2 w-full cursor-pointer appearance-none rounded-full outline-none"
-        style={{ background: `linear-gradient(to right, var(--cyan) ${pct}%, rgba(255,255,255,0.1) ${pct}%)` }}
+        style={{ background: `linear-gradient(to right, var(--cyan) ${pct}%, rgba(13,27,62,0.12) ${pct}%)` }}
       />
     </div>
   );
@@ -63,7 +63,7 @@ export function RoiCalculator() {
           </Reveal>
 
           <Reveal delay={0.08} className="glass-2 relative overflow-hidden rounded-3xl p-8">
-            <div className="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full opacity-50 blur-3xl" style={{ background: "radial-gradient(circle, rgba(16,185,129,0.4), transparent 70%)" }} />
+            <div className="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full opacity-50 blur-3xl" style={{ background: "radial-gradient(circle, rgba(10,102,255,0.4), transparent 70%)" }} />
             <div className="relative space-y-5">
               <Row label="Missed calls per month" value={`${missed}`} />
               <Row label="Revenue at risk" value={`${fmt(lost)}/mo`} accent />

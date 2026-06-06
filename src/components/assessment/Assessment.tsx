@@ -123,7 +123,7 @@ export function Assessment() {
                       return (
                         <button key={h} onClick={() => toggleHeadache(h)}
                           className={cn("flex items-center gap-2 rounded-xl border p-3 text-left text-[0.95rem] font-medium transition-colors", on ? "border-cyan bg-cyan/[0.08] text-cyan" : "border-line bg-surface text-ink hover:border-line-hover")}>
-                          <span className={cn("grid h-5 w-5 shrink-0 place-items-center rounded border", on ? "border-cyan bg-cyan text-[#021318]" : "border-line")}>{on && <Check className="h-3.5 w-3.5" />}</span>
+                          <span className={cn("grid h-5 w-5 shrink-0 place-items-center rounded border", on ? "border-cyan bg-cyan text-white" : "border-line")}>{on && <Check className="h-3.5 w-3.5" />}</span>
                           {h}
                         </button>
                       );
@@ -188,11 +188,11 @@ export function Assessment() {
       <style jsx global>{`
         .as-field {
           width: 100%; border-radius: 0.85rem; border: 1px solid var(--border);
-          background: rgba(255,255,255,0.03); padding: 0.7rem 0.9rem; font-size: 1rem;
+          background:#f7f9fc; padding: 0.7rem 0.9rem; font-size: 1rem;
           color: var(--text); outline: none; transition: border-color 0.2s;
         }
         .as-field::placeholder { color: var(--text-muted); }
-        .as-field:focus { border-color: rgba(0,212,255,0.5); }
+        .as-field:focus { border-color: rgba(10,102,255,0.5); }
       `}</style>
     </div>
   );

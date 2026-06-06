@@ -32,11 +32,11 @@ export function Pricing() {
               key={plan.id}
               className={cn(
                 "glass relative flex flex-col rounded-3xl p-7",
-                plan.popular ? "border-cyan/50 shadow-[0_30px_80px_-30px_rgba(0,212,255,0.4)]" : "card-hover"
+                plan.popular ? "border-cyan/50 shadow-[0_30px_80px_-30px_rgba(10,102,255,0.4)]" : "card-hover"
               )}
             >
               {plan.popular && (
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-cyan px-3 py-1 text-[0.8125rem] font-bold text-[#021318]">
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-cyan px-3 py-1 text-[0.8125rem] font-bold text-white">
                   {plan.badge}
                 </span>
               )}
@@ -105,7 +105,7 @@ function UpsellModal({ plan, onClose, onContinue }: { plan: Plan; onClose: () =>
             const on = picked.includes(u.id);
             return (
               <button key={u.id} onClick={() => toggle(u.id)} className={cn("flex w-full items-center gap-3 rounded-2xl border p-4 text-left transition-colors", on ? "border-cyan/50 bg-cyan/[0.06]" : "border-line bg-surface hover:border-line-hover")}>
-                <span className={cn("grid h-6 w-6 shrink-0 place-items-center rounded-md border", on ? "border-cyan bg-cyan text-[#021318]" : "border-line")}>
+                <span className={cn("grid h-6 w-6 shrink-0 place-items-center rounded-md border", on ? "border-cyan bg-cyan text-white" : "border-line")}>
                   {on && <Check className="h-4 w-4" />}
                 </span>
                 <span className="flex-1">

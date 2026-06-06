@@ -94,14 +94,14 @@ function Field({
           width: 100%;
           border-radius: 0.85rem;
           border: 1px solid var(--border);
-          background: rgba(255, 255, 255, 0.03);
+          background:#f7f9fc;
           padding: 0.7rem 0.9rem;
           font-size: 1rem;
           color: var(--text);
           outline: none;
           transition: border-color 0.2s;
         }
-        .qf-input:focus { border-color: rgba(0, 212, 255, 0.5); }
+        .qf-input:focus { border-color: rgba(10, 102, 255, 0.5); }
       `}</style>
     </label>
   );
@@ -126,13 +126,13 @@ function Select({
           width: 100%;
           border-radius: 0.85rem;
           border: 1px solid var(--border);
-          background: rgba(10, 10, 12, 0.6);
+          background:#ffffff;
           padding: 0.7rem 0.9rem;
           font-size: 1rem;
           color: var(--text);
           outline: none;
         }
-        .qf-select:focus { border-color: rgba(0, 212, 255, 0.5); }
+        .qf-select:focus { border-color: rgba(10, 102, 255, 0.5); }
       `}</style>
     </label>
   );

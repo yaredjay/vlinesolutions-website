@@ -61,7 +61,7 @@ export function GuaranteeBlock() {
     <section className="relative py-12">
       <div className="container-edge">
         <Reveal className="relative overflow-hidden rounded-[2rem] border border-money/30 bg-money/[0.06] p-10 md:p-14">
-          <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full opacity-40 blur-3xl" style={{ background: "radial-gradient(circle, rgba(16,185,129,0.5), transparent 70%)" }} />
+          <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full opacity-40 blur-3xl" style={{ background: "radial-gradient(circle, rgba(10,102,255,0.5), transparent 70%)" }} />
           <div className="relative">
             <span className="grid h-14 w-14 place-items-center rounded-2xl bg-money/15 text-money"><ShieldCheck className="h-7 w-7" /></span>
             <h2 className="mt-6 text-3xl font-bold sm:text-4xl">The V-Line Guarantee</h2>

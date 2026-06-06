@@ -70,8 +70,8 @@ function F({ name, label, type = "text", required, textarea, half }: { name: str
       <span className="mb-1.5 block text-body-sm font-medium text-ink-secondary">{label} {required && <span className="text-cyan">*</span>}</span>
       {textarea ? <textarea name={name} required={required} rows={4} className="cf-input resize-none" /> : <input name={name} type={type} required={required} className="cf-input" />}
       <style jsx>{`
-        .cf-input { width:100%; border-radius:0.85rem; border:1px solid var(--border); background:rgba(255,255,255,0.03); padding:0.7rem 0.9rem; font-size:1rem; color:var(--text); outline:none; transition:border-color .2s; }
-        .cf-input:focus { border-color: rgba(0,212,255,0.5); }
+        .cf-input { width:100%; border-radius:0.85rem; border:1px solid var(--border); background:#f7f9fc; padding:0.7rem 0.9rem; font-size:1rem; color:var(--text); outline:none; transition:border-color .2s; }
+        .cf-input:focus { border-color: rgba(10,102,255,0.5); }
       `}</style>
     </label>
   );
@@ -86,8 +86,8 @@ function S({ name, label, options, half }: { name: string; label: string; option
         {options.map((o) => <option key={o} value={o}>{o}</option>)}
       </select>
       <style jsx>{`
-        .cf-select { width:100%; border-radius:0.85rem; border:1px solid var(--border); background:rgba(10,10,12,0.6); padding:0.7rem 0.9rem; font-size:1rem; color:var(--text); outline:none; }
-        .cf-select:focus { border-color: rgba(0,212,255,0.5); }
+        .cf-select { width:100%; border-radius:0.85rem; border:1px solid var(--border); background:#ffffff; padding:0.7rem 0.9rem; font-size:1rem; color:var(--text); outline:none; }
+        .cf-select:focus { border-color: rgba(10,102,255,0.5); }
       `}</style>
     </label>
   );

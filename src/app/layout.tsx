@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { SmoothScroll } from "@/components/providers/SmoothScroll";
 import { Cursor } from "@/components/ui/Cursor";
@@ -13,7 +13,7 @@ import { StructuredData } from "@/components/StructuredData";
 import { site } from "@/data/site";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
-const display = Space_Grotesk({ subsets: ["latin"], variable: "--font-display", display: "swap" });
+const display = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-display", display: "swap", weight: ["500", "600", "700", "800"] });
 
 const siteUrl = "https://vlinesolutions.com";
 
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#050505",
+  themeColor: "#f4f6fa",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -63,7 +63,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`dark ${inter.variable} ${display.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${inter.variable} ${display.variable}`} suppressHydrationWarning>
       <body className="relative bg-bg text-ink">
         <StructuredData />
         <SmoothScroll />

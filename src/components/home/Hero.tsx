@@ -2,15 +2,15 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, ShieldCheck, MessageCircle } from "lucide-react";
-import { HeroScene } from "@/components/three/HeroScene";
+import { HeroBackdrop } from "@/components/home/HeroBackdrop";
 import { openChat, scrollToId } from "@/lib/chat";
 import { site } from "@/data/site";
 
 export function Hero() {
   return (
     <section className="relative overflow-hidden pt-[140px] pb-20 md:pt-[168px]">
-      <div className="absolute inset-0 grid-bg opacity-50 radial-fade" aria-hidden />
-      <HeroScene />
+      <div className="absolute inset-0 grid-bg opacity-60 radial-fade" aria-hidden />
+      <HeroBackdrop />
 
       <div className="container-edge relative">
         <motion.h1

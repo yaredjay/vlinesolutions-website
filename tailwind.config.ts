@@ -43,7 +43,7 @@ const config: Config = {
       },
       backgroundImage: {
         "mesh-dark":
-          "radial-gradient(at 15% 15%, rgba(0,212,255,0.10) 0px, transparent 45%), radial-gradient(at 85% 20%, rgba(124,58,237,0.10) 0px, transparent 45%), radial-gradient(at 50% 90%, rgba(0,212,255,0.06) 0px, transparent 50%)",
+          "radial-gradient(at 15% 15%, rgba(10,102,255,0.10) 0px, transparent 45%), radial-gradient(at 85% 20%, rgba(79,107,255,0.10) 0px, transparent 45%), radial-gradient(at 50% 90%, rgba(10,102,255,0.06) 0px, transparent 50%)",
       },
     },
   },

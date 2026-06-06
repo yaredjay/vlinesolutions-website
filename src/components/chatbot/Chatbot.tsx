@@ -155,13 +155,13 @@ export function Chatbot() {
         type="button"
         onClick={() => (open ? setOpen(false) : openChatWindow())}
         aria-label={open ? "Close AI consultant" : "Open AI consultant"}
-        className="fixed bottom-24 right-5 z-[45] grid h-14 w-14 place-items-center rounded-full text-[#021318] lg:bottom-6 lg:right-6"
+        className="fixed bottom-24 right-5 z-[45] grid h-14 w-14 place-items-center rounded-full text-white lg:bottom-6 lg:right-6"
         style={{
-          background: "var(--cyan)",
-          boxShadow: "0 0 0 1px rgba(0,212,255,0.5), 0 16px 40px -10px rgba(0,212,255,0.7)",
+          background: "var(--blue)",
+          boxShadow: "0 0 0 1px rgba(10,102,255,0.5), 0 16px 40px -10px rgba(10,102,255,0.6)",
         }}
       >
-        <span className={pulse ? "absolute inset-0 rounded-full" : "hidden"} style={{ boxShadow: "0 0 0 0 rgba(0,212,255,0.5)", animation: "ping 2s cubic-bezier(0,0,0.2,1) infinite" }} />
+        <span className={pulse ? "absolute inset-0 rounded-full" : "hidden"} style={{ boxShadow: "0 0 0 0 rgba(10,102,255,0.5)", animation: "ping 2s cubic-bezier(0,0,0.2,1) infinite" }} />
         {open ? <X className="h-6 w-6" /> : <MessageCircle className="h-6 w-6" />}
       </button>
 
@@ -172,13 +172,13 @@ export function Chatbot() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 24, scale: 0.98 }}
             transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
-            className="glass-2 fixed z-[55] flex flex-col overflow-hidden rounded-3xl border border-line shadow-[0_30px_80px_-20px_rgba(0,0,0,0.7)]
+            className="glass-2 fixed z-[55] flex flex-col overflow-hidden rounded-3xl border border-line shadow-[0_30px_80px_-20px_rgba(13,40,120,0.35)]
                        inset-x-3 bottom-3 top-20 sm:inset-x-auto sm:bottom-24 sm:right-6 sm:top-auto sm:h-[560px] sm:w-[390px] lg:bottom-24"
           >
             {/* Header */}
             <div className="flex items-center gap-3 border-b border-line bg-bg-2/60 px-4 py-3">
-              <span className="grid h-9 w-9 place-items-center rounded-full" style={{ background: "rgba(0,212,255,0.15)" }}>
-                <MessageCircle className="h-4.5 w-4.5 text-cyan" />
+              <span className="grid h-9 w-9 place-items-center rounded-full" style={{ background: "rgba(10,102,255,0.12)" }}>
+                <MessageCircle className="h-5 w-5 text-cyan" />
               </span>
               <div className="leading-tight">
                 <p className="text-[0.95rem] font-bold text-ink">V-Line AI Consultant</p>
@@ -204,7 +204,7 @@ export function Chatbot() {
                   <div
                     className={
                       m.role === "user"
-                        ? "max-w-[82%] rounded-2xl rounded-br-md bg-cyan px-3.5 py-2.5 text-[0.95rem] leading-snug text-[#021318]"
+                        ? "max-w-[82%] rounded-2xl rounded-br-md bg-cyan px-3.5 py-2.5 text-[0.95rem] leading-snug text-white"
                         : "max-w-[85%] rounded-2xl rounded-bl-md border border-line bg-surface px-3.5 py-2.5 text-[0.95rem] leading-snug text-ink"
                     }
                   >
@@ -288,7 +288,7 @@ export function Chatbot() {
                   placeholder={inputCfg.placeholder}
                   className="chat-field flex-1"
                 />
-                <button type="submit" aria-label="Send" className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-cyan text-[#021318]">
+                <button type="submit" aria-label="Send" className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-cyan text-white">
                   <Send className="h-4 w-4" />
                 </button>
               </form>
@@ -302,7 +302,7 @@ export function Chatbot() {
           width: 100%;
           border-radius: 0.85rem;
           border: 1px solid var(--border);
-          background: rgba(255, 255, 255, 0.03);
+          background:#f7f9fc;
           padding: 0.6rem 0.85rem;
           font-size: 0.95rem;
           color: var(--text);
@@ -313,7 +313,7 @@ export function Chatbot() {
           color: var(--text-muted);
         }
         .chat-field:focus {
-          border-color: rgba(0, 212, 255, 0.5);
+          border-color: rgba(10, 102, 255, 0.5);
         }
       `}</style>
     </>

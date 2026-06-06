@@ -49,7 +49,7 @@ export function ExitIntentPopup() {
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
             className="glass-2 relative w-full max-w-lg overflow-hidden rounded-3xl p-8"
           >
-            <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full opacity-40 blur-3xl" style={{ background: "radial-gradient(circle, rgba(16,185,129,0.5), transparent 70%)" }} />
+            <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full opacity-40 blur-3xl" style={{ background: "radial-gradient(circle, rgba(10,102,255,0.5), transparent 70%)" }} />
             <button type="button" onClick={() => setOpen(false)} aria-label="Close" className="absolute right-5 top-5 text-ink-muted hover:text-ink">
               <X className="h-5 w-5" />
             </button>
