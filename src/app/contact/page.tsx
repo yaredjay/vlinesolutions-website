@@ -33,7 +33,7 @@ export default function ContactPage({ searchParams }: { searchParams: { plan?: s
               <ul className="mt-7 space-y-6">
                 <Item icon={Phone} label="Phone" value={site.phone} href={site.phoneHref} />
                 <Item icon={Mail} label="Email" value={site.email} href={site.emailHref} />
-                <Item icon={MapPin} label="Office" value={`${site.address.line1}, ${site.address.city}, ${site.address.state} ${site.address.zip}`} />
+                <Item icon={MapPin} label="Office" value={site.location} />
               </ul>
               <div className="mt-9 rounded-2xl border border-money/25 bg-money/[0.06] p-5">
                 <p className="text-[1.0625rem] font-semibold text-ink">No payment until you approve setup.</p>

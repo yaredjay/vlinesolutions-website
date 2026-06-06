@@ -23,11 +23,11 @@ export const site = {
   emailHref: "mailto:info@vlinesolutions.com",
   formDeliveryEmail: "yared@vlinesolutions.com", // where contact/quote forms are emailed
 
+  // Public display location only (full street address intentionally omitted)
+  location: "Campbell, CA",
   address: {
-    line1: "1725 South Bascom Ave #208",
     city: "Campbell",
     state: "CA",
-    zip: "95008",
   },
 
   platforms: [
@@ -69,6 +69,7 @@ export const trustBarItems = [
 
 export const nav: { label: string; href: string }[] = [
   { label: "Solutions", href: "/solutions" },
+  { label: "Pricing", href: "/solutions#pricing" },
   { label: "Industries", href: "/industries" },
   { label: "Custom AI", href: "/custom" },
   { label: "Assessment", href: "/assessment" },

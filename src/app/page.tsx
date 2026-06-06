@@ -10,6 +10,7 @@ import {
 import { PainGrid } from "@/components/home/PainGrid";
 import { RoiCalculator } from "@/components/home/RoiCalculator";
 import { CostComparison } from "@/components/shared/CostComparison";
+import { Pricing } from "@/components/solutions/Pricing";
 import { Testimonials } from "@/components/shared/Testimonials";
 import { IndustryStrip } from "@/components/shared/IndustryStrip";
 import { Guarantee } from "@/components/shared/Guarantee";
@@ -40,10 +41,11 @@ export default function HomePage() {
       <div className="band-tint"><HowItWorks /></div>
       <div className="band-white"><Results /></div>
       <div className="band-tint"><CostComparison /></div>
-      <div className="band-white"><Testimonials /></div>
-      <div className="band-tint"><IndustryStrip /></div>
-      <div className="band-white"><Integrations items={integ} /></div>
-      <div className="band-tint"><PoweredBy partners={partners} /></div>
+      <div className="band-white"><Pricing /></div>
+      <div className="band-tint"><Testimonials /></div>
+      <div className="band-white"><IndustryStrip /></div>
+      <div className="band-tint"><Integrations items={integ} /></div>
+      <div className="band-white"><PoweredBy partners={partners} /></div>
       <CustomPreview />
       <div className="band-tint"><BusinessValue /></div>
       <div className="band-white"><Guarantee /></div>

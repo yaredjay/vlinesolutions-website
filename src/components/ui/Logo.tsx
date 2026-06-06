@@ -1,6 +1,6 @@
 import { cn } from "@/lib/cn";
 
-export function Logo({ className, mark = false }: { className?: string; mark?: boolean }) {
+export function Logo({ className, mark = false, tone = "dark" }: { className?: string; mark?: boolean; tone?: "dark" | "light" }) {
   return (
     <span className={cn("inline-flex items-center gap-2.5", className)} aria-label="V-Line Solutions">
       <span className="relative inline-flex h-8 w-8 items-center justify-center">
@@ -17,8 +17,8 @@ export function Logo({ className, mark = false }: { className?: string; mark?: b
         </svg>
       </span>
       {!mark && (
-        <span className="text-[17px] font-bold tracking-tight text-ink">
-          V-Line<span className="font-medium text-ink-secondary"> Solutions</span>
+        <span className={cn("text-[17px] font-bold tracking-tight", tone === "light" ? "text-white" : "text-ink")}>
+          V-Line<span className={cn("font-medium", tone === "light" ? "text-white/60" : "text-ink-secondary")}> Solutions</span>
         </span>
       )}
     </span>

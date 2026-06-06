@@ -60,7 +60,7 @@ export default function AboutPage() {
               <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-line bg-surface text-cyan"><MapPin className="h-5 w-5" /></span>
               <div className="text-[1.0625rem] text-ink">
                 <p className="font-semibold">{site.legalName}</p>
-                <p className="text-ink-secondary">{site.address.line1}, {site.address.city}, {site.address.state} {site.address.zip}</p>
+                <p className="text-ink-secondary">{site.location}</p>
                 <Link href="/government" className="mt-2 inline-block text-body-sm text-cyan link-underline">Government & procurement →</Link>
               </div>
             </div>

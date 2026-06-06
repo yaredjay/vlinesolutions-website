@@ -1,7 +1,7 @@
 import type { LucideIcon } from "lucide-react";
 import {
   PhoneMissed, Clock, Users, MessageCircle, Compass, Wrench,
-  Phone, CalendarCheck, DollarSign,
+  Phone, CalendarCheck, DollarSign, ShieldCheck, FileSignature, Target,
 } from "lucide-react";
 
 /* STATS TICKER — industry facts (illustrative; cite sources before launch) */
@@ -133,8 +133,8 @@ export const businessValue = [
 ];
 
 /* GUARANTEE */
-export const guarantees = [
-  { icon: "🛡️", title: "30-Day Money-Back", body: "Don't see results in 30 days? Full refund. Setup, monthly, everything. No questions." },
-  { icon: "📋", title: "No Contracts", body: "Month-to-month. No annual commitments. No cancellation fees." },
-  { icon: "📊", title: "Results Defined Upfront", body: "Before we build, we agree on success metrics. Then we measure together." },
+export const guarantees: { icon: LucideIcon; title: string; body: string }[] = [
+  { icon: ShieldCheck, title: "30-Day Money-Back", body: "Don't see results in 30 days? Full refund. Setup, monthly, everything. No questions." },
+  { icon: FileSignature, title: "No Contracts", body: "Month-to-month. No annual commitments. No cancellation fees." },
+  { icon: Target, title: "Results Defined Upfront", body: "Before we build, we agree on success metrics. Then we measure together." },
 ];

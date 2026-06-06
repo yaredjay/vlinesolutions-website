@@ -13,8 +13,10 @@ export function Guarantee() {
           {guarantees.map((g) => (
             <StaggerItem key={g.title}>
               <div className="glass card-hover h-full rounded-3xl p-8 text-center">
-                <div className="text-4xl">{g.icon}</div>
-                <h3 className="mt-4 text-xl font-bold">{g.title}</h3>
+                <span className="mx-auto grid h-14 w-14 place-items-center rounded-2xl border border-line bg-surface-2 text-cyan">
+                  <g.icon className="h-7 w-7" />
+                </span>
+                <h3 className="mt-5 text-xl font-bold">{g.title}</h3>
                 <p className="mt-3 text-body-sm leading-relaxed text-ink-secondary">{g.body}</p>
               </div>
             </StaggerItem>
