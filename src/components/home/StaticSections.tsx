@@ -105,9 +105,11 @@ export function ThreeWays() {
 /* ---------------- Outcomes (counters) ---------------- */
 export function Outcomes() {
   return (
-    <section className="relative py-24">
-      <div className="container-edge">
+    <section className="band-blue relative py-24">
+      <div className="grid-overlay" />
+      <div className="container-edge relative">
         <SectionHeader
+          tone="dark"
           eyebrow="Save Time. Make Money. Grow."
           title="Here's What AI Actually Does For Your Business"
           description="Not hype. Not buzzwords. Real outcomes."
@@ -115,12 +117,12 @@ export function Outcomes() {
         <Stagger className="mt-14 grid gap-6 md:grid-cols-3">
           {outcomes.map((o) => (
             <StaggerItem key={o.label}>
-              <div className="glass card-hover h-full rounded-3xl p-8 text-center">
-                <p className="text-3xs font-semibold uppercase tracking-[0.2em] text-cyan">{o.label}</p>
-                <div className="mt-3 text-[3.25rem] font-extrabold leading-none text-ink">
+              <div className="h-full rounded-3xl border border-white/15 bg-white/10 p-8 text-center backdrop-blur-md">
+                <p className="text-3xs font-semibold uppercase tracking-[0.2em] text-white/80">{o.label}</p>
+                <div className="mt-3 text-[3.25rem] font-extrabold leading-none text-white">
                   <AnimatedCounter to={o.value} prefix={o.prefix} suffix={o.suffix} />
                 </div>
-                <p className="mt-4 text-body-sm leading-relaxed text-ink-secondary">{o.body}</p>
+                <p className="mt-4 text-body-sm leading-relaxed text-white/85">{o.body}</p>
               </div>
             </StaggerItem>
           ))}

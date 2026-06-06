@@ -1,0 +1,30 @@
+"use client";
+
+import Image from "next/image";
+import { Stagger, StaggerItem } from "@/components/ui/Reveal";
+import { builtOn } from "@/data/partners";
+
+export function PoweredBy() {
+  return (
+    <section className="relative py-20">
+      <div className="container-edge">
+        <p className="text-center text-3xs font-semibold uppercase tracking-[0.2em] text-ink-muted">
+          Built on enterprise-grade AI &amp; infrastructure
+        </p>
+        <Stagger className="mt-9 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6" step={0.05}>
+          {builtOn.map((p) => (
+            <StaggerItem key={p.name}>
+              <div className="flex h-20 items-center justify-center rounded-2xl border border-line bg-white px-4 shadow-[0_8px_24px_-18px_rgba(13,40,120,0.25)] transition-all duration-300 hover:-translate-y-1 hover:border-cyan/30">
+                {p.logo ? (
+                  <Image src={p.logo} alt={p.name} width={120} height={36} className="h-7 w-auto max-w-[110px] object-contain" />
+                ) : (
+                  <span className="text-[1.05rem] font-bold tracking-tight text-ink-secondary">{p.name}</span>
+                )}
+              </div>
+            </StaggerItem>
+          ))}
+        </Stagger>
+      </div>
+    </section>
+  );
+}
