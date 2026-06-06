@@ -48,23 +48,54 @@ export function ThreeWays() {
           description="Proven products for common needs. Custom builds for unique challenges. Everything guaranteed."
         />
         <Stagger className="mt-14 grid gap-6 md:grid-cols-3">
-          {pathways.map((p) => (
-            <StaggerItem key={p.title}>
-              <div className="glass card-hover group relative flex h-full flex-col overflow-hidden rounded-3xl p-8">
-                <span className="grid h-12 w-12 place-items-center rounded-2xl border border-line bg-surface text-cyan">
-                  <p.icon className="h-6 w-6" />
-                </span>
-                <h3 className="mt-6 text-2xl font-bold">{p.title}</h3>
-                <p className="mt-3 text-body-sm leading-relaxed text-ink-secondary">{p.body}</p>
-                <div className="mt-6 inline-flex w-fit rounded-full border border-cyan/30 bg-cyan/[0.07] px-3 py-1.5 text-[0.875rem] font-semibold text-cyan">
-                  {p.tag}
+          {pathways.map((p, i) => {
+            const featured = i === 1; // Custom AI — blue panel
+            return (
+              <StaggerItem key={p.title}>
+                <div
+                  className={
+                    featured
+                      ? "blue-panel card-hover group relative flex h-full flex-col overflow-hidden rounded-3xl p-8 shadow-[0_30px_70px_-30px_rgba(10,102,255,0.6)]"
+                      : "glass card-hover group relative flex h-full flex-col overflow-hidden rounded-3xl p-8"
+                  }
+                >
+                  {featured && (
+                    <span className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-white/15 blur-2xl" />
+                  )}
+                  <span
+                    className={
+                      featured
+                        ? "grid h-12 w-12 place-items-center rounded-2xl bg-white/15 text-white"
+                        : "grid h-12 w-12 place-items-center rounded-2xl border border-line bg-surface text-cyan"
+                    }
+                  >
+                    <p.icon className="h-6 w-6" />
+                  </span>
+                  <h3 className={featured ? "mt-6 text-2xl font-extrabold text-white" : "mt-6 text-2xl font-extrabold"}>{p.title}</h3>
+                  <p className={featured ? "mt-3 text-body-sm leading-relaxed text-white/85" : "mt-3 text-body-sm leading-relaxed text-ink-secondary"}>{p.body}</p>
+                  <div
+                    className={
+                      featured
+                        ? "mt-6 inline-flex w-fit rounded-full bg-white/20 px-3 py-1.5 text-[0.875rem] font-semibold text-white"
+                        : "mt-6 inline-flex w-fit rounded-full border border-cyan/30 bg-cyan/[0.07] px-3 py-1.5 text-[0.875rem] font-semibold text-cyan"
+                    }
+                  >
+                    {p.tag}
+                  </div>
+                  <Link
+                    href={p.href}
+                    className={
+                      featured
+                        ? "mt-7 inline-flex items-center gap-2 text-[1rem] font-semibold text-white"
+                        : "mt-7 inline-flex items-center gap-2 text-[1rem] font-semibold text-ink transition-colors group-hover:text-cyan"
+                    }
+                  >
+                    {p.cta} <ArrowRight className="h-4 w-4" />
+                  </Link>
                 </div>
-                <Link href={p.href} className="mt-7 inline-flex items-center gap-2 text-[1rem] font-semibold text-ink transition-colors group-hover:text-cyan">
-                  {p.cta} <ArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
-            </StaggerItem>
-          ))}
+              </StaggerItem>
+            );
+          })}
         </Stagger>
       </div>
     </section>

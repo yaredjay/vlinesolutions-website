@@ -17,7 +17,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-          className="mx-auto max-w-[1000px] text-balance text-center text-[2.25rem] font-bold leading-[1.05] sm:text-5xl md:text-[4rem]"
+          className="mx-auto max-w-[1000px] text-balance text-center text-[2.25rem] font-extrabold leading-[1.04] tracking-[-0.03em] sm:text-5xl md:text-[4rem]"
         >
           {site.heroLine1}
           <br className="hidden sm:block" />{" "}
@@ -62,7 +62,31 @@ export function Hero() {
             {site.proof.guaranteeDays}-day money-back guarantee. No contracts. No lock-in. Just results.
           </p>
         </motion.div>
+
+        {/* Spec cards — DBS02-X style */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.55 }}
+          className="mx-auto mt-12 grid max-w-4xl grid-cols-2 gap-3 md:grid-cols-4 md:gap-4"
+        >
+          {specs.map((s) => (
+            <div key={s.label} className="glass rounded-2xl px-5 py-5">
+              <p className="font-display text-[2rem] font-extrabold leading-none tracking-tight text-ink md:text-[2.25rem]">
+                {s.value}
+              </p>
+              <p className="mt-2 text-[0.9375rem] leading-snug text-ink-secondary">{s.label}</p>
+            </div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );
 }
+
+const specs = [
+  { value: "48 hrs", label: "Average setup time" },
+  { value: "0.4s", label: "AI answer speed" },
+  { value: "24/7", label: "Coverage, every day" },
+  { value: "30-day", label: "Money-back guarantee" },
+];

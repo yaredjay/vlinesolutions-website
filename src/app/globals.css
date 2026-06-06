@@ -92,11 +92,12 @@ html.lenis, html.lenis body { height: auto; }
 @layer base {
   h1, h2, h3, h4 {
     font-family: var(--font-display), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-    letter-spacing: -0.025em;
-    line-height: 1.06;
+    letter-spacing: -0.03em;
+    line-height: 1.04;
     font-weight: 700;
     color: var(--text);
   }
+  h1, h2 { font-weight: 800; }
 }
 
 @layer components {

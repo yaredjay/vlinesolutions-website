@@ -36,7 +36,7 @@ export function SectionHeader({
         whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-10% 0px" }}
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-        className="text-balance text-[1.75rem] font-bold leading-[1.1] sm:text-4xl md:text-[2.5rem]"
+        className="text-balance text-[1.75rem] font-extrabold leading-[1.08] tracking-[-0.03em] sm:text-4xl md:text-[2.5rem]"
       >
         {title}
       </motion.h2>

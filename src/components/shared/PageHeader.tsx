@@ -30,7 +30,7 @@ export function PageHeader({
         )}
         <motion.h1
           initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="mx-auto max-w-4xl text-balance text-[2.25rem] font-bold leading-[1.06] sm:text-5xl md:text-[3.5rem]"
+          className="mx-auto max-w-4xl text-balance text-[2.25rem] font-extrabold leading-[1.04] tracking-[-0.03em] sm:text-5xl md:text-[3.5rem]"
         >
           {title}
         </motion.h1>
