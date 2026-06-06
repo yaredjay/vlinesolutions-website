@@ -17,7 +17,7 @@ export function Integrations({ items }: { items: Partner[] }) {
         <Stagger className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-4" step={0.05}>
           {items.map((p) => (
             <StaggerItem key={p.slug}>
-              <div className="flex h-24 items-center justify-center rounded-2xl border border-line bg-white px-5 shadow-[0_8px_24px_-18px_rgba(13,40,120,0.25)] transition-all duration-300 hover:-translate-y-1 hover:border-cyan/30">
+              <div className="flex h-[88px] items-center justify-center rounded-2xl border border-line bg-white px-5 shadow-[0_8px_24px_-18px_rgba(13,40,120,0.25)] transition-all duration-300 hover:-translate-y-1 hover:border-cyan/30">
                 {p.logo ? (
                   <Image src={p.logo} alt={p.name} width={140} height={40} className="h-8 w-auto max-w-[130px] object-contain" />
                 ) : (

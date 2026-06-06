@@ -14,9 +14,9 @@ export function PoweredBy({ partners }: { partners: Partner[] }) {
         <Stagger className="mt-9 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6" step={0.05}>
           {partners.map((p) => (
             <StaggerItem key={p.slug}>
-              <div className="flex h-20 items-center justify-center rounded-2xl border border-line bg-white px-4 shadow-[0_8px_24px_-18px_rgba(13,40,120,0.25)] transition-all duration-300 hover:-translate-y-1 hover:border-cyan/30">
+              <div className="flex h-[88px] items-center justify-center rounded-2xl border border-line bg-white px-5 shadow-[0_8px_24px_-18px_rgba(13,40,120,0.25)] transition-all duration-300 hover:-translate-y-1 hover:border-cyan/30">
                 {p.logo ? (
-                  <Image src={p.logo} alt={p.name} width={120} height={36} className="h-7 w-auto max-w-[110px] object-contain" />
+                  <Image src={p.logo} alt={p.name} width={130} height={40} className="h-8 w-auto max-w-[120px] object-contain" />
                 ) : (
                   <span className="text-[1.05rem] font-bold tracking-tight text-ink-secondary">{p.name}</span>
                 )}
