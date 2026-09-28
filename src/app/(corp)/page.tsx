@@ -1,5 +1,5 @@
 import { Hero } from "@/components/sections/Hero";
-import { PathwayCards } from "@/components/sections/PathwayCards";
+import { DivisionDoors } from "@/components/sections/DivisionDoors";
 import { LogosMarquee } from "@/components/sections/LogosMarquee";
 import { Stats } from "@/components/sections/Stats";
 import { WhoWeAre } from "@/components/sections/WhoWeAre";
@@ -9,7 +9,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <PathwayCards />
+      <DivisionDoors />
       <LogosMarquee />
       <Stats />
       <WhoWeAre />

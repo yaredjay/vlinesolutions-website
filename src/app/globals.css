@@ -279,3 +279,109 @@ html.lenis, html.lenis body { height: auto; }
 @media (max-width: 768px), (pointer: coarse) {
   .cursor-dot, .cursor-ring { display: none; }
 }
+
+
+/* ===================== VLS Sport (light-only division) ===================== */
+[data-site="sport"] {
+  color-scheme: light;
+  --bg-base: #ffffff;
+  --bg-surface: #f6f8ff;
+  --bg-elevated: #ffffff;
+  --fg-primary: #0b1020;
+  --fg-secondary: #3b4257;
+  --fg-muted: #6b7387;
+  --border-subtle: rgba(11, 16, 32, 0.08);
+  --border-strong: rgba(11, 16, 32, 0.16);
+  --accent: #2b5cff;
+  --accent-glow: 43, 92, 255;
+  --accent-soft: rgba(43, 92, 255, 0.08);
+  --grid-color: rgba(11, 16, 32, 0.055);
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+}
+[data-site="sport"] ::selection { background: rgba(43, 92, 255, 0.25); color: #0b1020; }
+
+@layer components {
+  .sp-display {
+    font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+    font-variation-settings: "wdth" 112;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.035em;
+    line-height: 0.88;
+  }
+  .sp-display span { white-space: nowrap; }
+  .sp-hero {
+    font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+    font-variation-settings: "wdth" 104;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.04em;
+    line-height: 0.86;
+    white-space: nowrap;
+  }
+  .sp-cond {
+    font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+    font-variation-settings: "wdth" 68;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+  .sp-outline {
+    color: transparent;
+    -webkit-text-stroke: 1.5px rgba(11, 16, 32, 0.82);
+  }
+  @media (min-width: 768px) {
+    .sp-outline { -webkit-text-stroke: 2px rgba(11, 16, 32, 0.82); }
+  }
+  .sp-grad-court, .sp-grad-heat, .sp-grad-aurora {
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 200% 100%;
+    animation: sp-shine 9s ease-in-out infinite;
+  }
+  .sp-grad-court { background-image: linear-gradient(120deg, #2b5cff 0%, #00b3e6 55%, #5b8cff 100%); }
+  .sp-grad-heat { background-image: linear-gradient(120deg, #ff6a2c 0%, #ff3d8c 50%, #7c4dff 100%); }
+  .sp-grad-aurora { background-image: linear-gradient(120deg, #2b5cff 0%, #00c2ff 30%, #8be33b 60%, #ff7a45 100%); background-size: 220% 100%; animation-duration: 11s; }
+  .sp-eyebrow {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  @media (min-width: 768px) { .sp-eyebrow { font-size: 13px; } }
+  .sp-grid {
+    background-image: linear-gradient(rgba(11, 16, 32, 0.055) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(11, 16, 32, 0.055) 1px, transparent 1px);
+    background-size: 72px 72px;
+    mask-image: radial-gradient(ellipse at 50% 40%, #000 25%, transparent 72%);
+    -webkit-mask-image: radial-gradient(ellipse at 50% 40%, #000 25%, transparent 72%);
+  }
+  .sp-btn-primary {
+    @apply inline-flex h-14 items-center gap-3 rounded-full bg-sp-ink px-7 text-[15px] font-bold text-white shadow-[0_20px_50px_rgba(11,16,32,0.28)] transition-transform duration-300 hover:-translate-y-0.5;
+  }
+  .sp-btn-ghost {
+    @apply inline-flex h-14 items-center gap-2 rounded-full border border-white bg-white/80 px-6 text-[15px] font-semibold text-sp-ink shadow-[0_10px_30px_rgba(30,50,120,0.10)] backdrop-blur-md transition-transform duration-300 hover:-translate-y-0.5;
+  }
+  .sp-btn-white {
+    @apply inline-flex h-14 items-center gap-3 rounded-full bg-white px-7 text-[15px] font-bold text-sp-ink shadow-[0_18px_50px_rgba(0,0,0,0.2)] transition-transform duration-300 hover:-translate-y-0.5;
+  }
+  /* phone: snap-scrolling rail that bleeds to the screen edge; md and up: the caller's grid */
+  .sp-rail {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 4px 24px 14px;
+    margin: 0 -24px;
+  }
+  .sp-rail::-webkit-scrollbar { display: none; }
+  .sp-rail > * { scroll-snap-align: start; flex: 0 0 auto; }
+  @media (min-width: 768px) {
+    .sp-rail { overflow: visible; padding: 0; margin: 0; scroll-snap-type: none; }
+    .sp-rail > * { flex: 1 1 0; }
+  }
+}

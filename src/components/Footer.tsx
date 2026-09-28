@@ -40,6 +40,14 @@ export function Footer() {
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/sports"
+                  className="text-fg-secondary transition-colors hover:text-fg-primary"
+                >
+                  VLS Sport
+                </Link>
+              </li>
             </ul>
           </div>
 
