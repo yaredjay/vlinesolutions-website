@@ -16,6 +16,9 @@ export function middleware(req: NextRequest) {
 
   const { pathname } = req.nextUrl;
 
+  // Generated metadata images (og/twitter) are addressed by their real path; never redirect or rewrite them.
+  if (/\/(opengraph|twitter)-image/.test(pathname)) return NextResponse.next();
+
   if (pathname === SPORT_PATH || pathname.startsWith(`${SPORT_PATH}/`)) {
     const url = req.nextUrl.clone();
     url.pathname = pathname.slice(SPORT_PATH.length) || "/";
