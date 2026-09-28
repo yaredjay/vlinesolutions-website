@@ -4,7 +4,8 @@ import Link from "next/link";
 import { createContext, useContext, type ComponentProps } from "react";
 import { CORP_URL, sportHref } from "@/lib/sport";
 
-type SportBase = { base: string; corpUrl: string };
+/** corpUrl is null when the corporate site is hidden (SPORT_ONLY). */
+type SportBase = { base: string; corpUrl: string | null };
 
 const Ctx = createContext<SportBase>({ base: "/sports", corpUrl: CORP_URL });
 

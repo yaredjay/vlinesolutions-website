@@ -34,9 +34,11 @@ export function SportNav() {
   return (
     <header className={cn("fixed inset-x-0 top-0 z-50 transition-all duration-500", scrolled ? "pt-2" : "pt-3")}>
       <div className="container-edge">
-        <div className="mb-2 flex justify-center">
-          <BrandSwitcher active="sport" corpHref={corpHome} sportHref={sportHref(base, "/")} tone="light" />
-        </div>
+        {corpHome && (
+          <div className="mb-2 flex justify-center">
+            <BrandSwitcher active="sport" corpHref={corpHome} sportHref={sportHref(base, "/")} tone="light" />
+          </div>
+        )}
         <div
           className={cn(
             "flex items-center justify-between rounded-full border px-3 py-2 transition-all duration-500 md:px-4",
@@ -123,9 +125,11 @@ export function SportNav() {
                   <span aria-hidden className="h-2 w-2 rounded-full bg-sp-volt" />
                   Request officials
                 </SportLink>
-                <a href={corpHome} className="sp-btn-ghost justify-center">
-                  Go to V-Line Solutions
-                </a>
+                {corpHome && (
+                  <a href={corpHome} className="sp-btn-ghost justify-center">
+                    Go to V-Line Solutions
+                  </a>
+                )}
               </div>
             </motion.nav>
           </motion.div>

@@ -57,9 +57,11 @@ export function SportFooter() {
             <a href={site.emailHref} className="text-sp-ink hover:text-sp-electric">
               {site.email}
             </a>
-            <a href={corpHome} className="text-sp-ink hover:text-sp-electric">
-              V-Line Solutions
-            </a>
+            {corpHome && (
+              <a href={corpHome} className="text-sp-ink hover:text-sp-electric">
+                V-Line Solutions
+              </a>
+            )}
           </div>
         </div>
 
