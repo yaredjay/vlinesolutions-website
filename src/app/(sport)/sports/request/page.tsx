@@ -140,7 +140,6 @@ export default function RequestOfficialsPage() {
               <a href={site.emailHref} className="text-base">
                 {site.email}
               </a>
-              <span className="text-[13px] text-sp-muted">HQ · Campbell, CA</span>
               <SportLink href="/" className="mt-2 inline-flex items-center gap-2 text-[13px] font-semibold text-sp-electric">
                 Back to VLS Sport <ArrowRight className="h-3.5 w-3.5" />
               </SportLink>
