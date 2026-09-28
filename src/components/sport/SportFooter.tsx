@@ -41,15 +41,7 @@ export function SportFooter() {
             </SportLink>
           </div>
 
-          <div className="flex flex-col gap-2.5 text-sm md:col-span-3">
-            <span className="mb-1 text-xs font-bold uppercase tracking-[0.12em] text-sp-muted">HQ</span>
-            <span className="text-sp-ink">{sportBrand.hq}</span>
-            <span className="mt-1.5 text-sp-muted">
-              {site.director}, {site.directorTitle}
-            </span>
-          </div>
-
-          <div className="flex flex-col gap-2.5 text-sm md:col-span-2">
+          <div className="flex flex-col gap-2.5 text-sm md:col-span-3 md:col-start-10">
             <span className="mb-1 text-xs font-bold uppercase tracking-[0.12em] text-sp-muted">Connect</span>
             <a href={site.phoneHref} className="text-sp-ink hover:text-sp-electric">
               {site.phone}
