@@ -1,12 +1,8 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { Archivo, Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { SmoothScroll } from "@/components/providers/SmoothScroll";
-import { Cursor } from "@/components/ui/Cursor";
-import { Navigation } from "@/components/Navigation";
-import { Footer } from "@/components/Footer";
-import { StructuredData } from "@/components/StructuredData";
 import { site } from "@/data/site";
 
 const inter = Inter({
@@ -18,6 +14,14 @@ const inter = Inter({
 const display = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-display",
+  display: "swap",
+});
+
+// VLS Sport display face: variable width axis gives both the condensed ticker voice and the wide hero voice.
+const archivo = Archivo({
+  subsets: ["latin"],
+  axes: ["wdth"],
+  variable: "--font-archivo",
   display: "swap",
 });
 
@@ -90,9 +94,7 @@ export const metadata: Metadata = {
     images: ["/opengraph-image"],
   },
   icons: {
-    icon: [
-      { url: "/icon.svg", type: "image/svg+xml" },
-    ],
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
     apple: "/apple-icon.png",
   },
   formatDetection: {
@@ -116,15 +118,15 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${display.variable}`}>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${inter.variable} ${display.variable} ${archivo.variable}`}
+    >
       <body className="relative bg-bg-base text-fg-primary">
-        <StructuredData />
         <ThemeProvider>
           <SmoothScroll />
-          <Cursor />
-          <Navigation />
-          <main className="relative">{children}</main>
-          <Footer />
+          {children}
         </ThemeProvider>
       </body>
     </html>
