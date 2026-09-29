@@ -11,7 +11,7 @@ export function SportGameDay() {
   return (
     <section id="program" className="relative overflow-hidden bg-white py-20 md:py-28">
       <div className="container-edge grid gap-10 md:grid-cols-12 md:gap-6">
-        <div className="flex flex-col gap-5 md:col-span-5 md:gap-7">
+        <div className="flex min-w-0 flex-col gap-5 md:col-span-5 md:gap-7">
           <Reveal className="flex flex-col gap-5 md:gap-7">
             <span className="sp-eyebrow text-sp-electric">Sports &amp; recreation program staffing</span>
             <h2 className="sp-display text-[50px] md:text-[64px] lg:text-[70px]">
