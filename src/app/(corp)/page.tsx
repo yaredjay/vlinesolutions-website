@@ -1,5 +1,5 @@
 import { Hero } from "@/components/sections/Hero";
-import { DivisionDoors } from "@/components/sections/DivisionDoors";
+import { PathwayCards } from "@/components/sections/PathwayCards";
 import { ProofBand } from "@/components/sections/ProofBand";
 import { PlatformsPinned } from "@/components/sections/PlatformsPinned";
 import { LogosMarquee } from "@/components/sections/LogosMarquee";
@@ -17,7 +17,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <DivisionDoors />
+      <PathwayCards />
       <ProofBand />
       <PlatformsPinned />
       <LogosMarquee />

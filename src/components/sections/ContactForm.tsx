@@ -22,12 +22,21 @@ export function ContactForm() {
         setStatus("success");
         return;
       }
-      // No backend wired yet — simulate latency and succeed.
-      await new Promise((r) => setTimeout(r, 850));
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) {
+        const j = (await res.json().catch(() => ({}))) as { error?: string };
+        throw new Error(j.error || "Delivery failed.");
+      }
       setStatus("success");
       form.reset();
     } catch (err) {
-      setError("Something went wrong. Please email us directly.");
+      setError(
+        `${err instanceof Error ? err.message : "Something went wrong."} Email info@vlinesolutions.com or call (408) 516-6667.`
+      );
       setStatus("error");
     }
   }

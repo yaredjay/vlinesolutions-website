@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Logo } from "@/components/ui/Logo";
 import { nav, site } from "@/data/site";
+import { SHOW_SPORT } from "@/lib/sport";
 
 export function Footer() {
   return (
@@ -42,12 +43,22 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="/capability-statement"
+                  className="text-fg-secondary transition-colors hover:text-fg-primary"
+                >
+                  Capability statement
+                </Link>
+              </li>
+              {SHOW_SPORT && (
+              <li>
+                <Link
                   href="/sports"
                   className="text-fg-secondary transition-colors hover:text-fg-primary"
                 >
                   VLS Sport
                 </Link>
               </li>
+              )}
             </ul>
           </div>
 

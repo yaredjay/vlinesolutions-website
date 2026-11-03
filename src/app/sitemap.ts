@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { SPORT_ONLY } from "@/lib/sport";
+import { SHOW_SPORT, SPORT_ONLY } from "@/lib/sport";
 
 export const dynamic = "force-static";
 
@@ -22,8 +22,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { path: "/government", priority: 0.9, changeFrequency: "weekly" },
         { path: "/about", priority: 0.7, changeFrequency: "monthly" },
         { path: "/contact", priority: 0.7, changeFrequency: "monthly" },
-        { path: "/sports", priority: 0.9, changeFrequency: "weekly" },
-        { path: "/sports/request", priority: 0.8, changeFrequency: "monthly" },
+        { path: "/capability-statement", priority: 0.8, changeFrequency: "monthly" },
+        ...(SHOW_SPORT
+          ? [
+              { path: "/sports", priority: 0.9, changeFrequency: "weekly" as const },
+              { path: "/sports/request", priority: 0.8, changeFrequency: "monthly" as const },
+            ]
+          : []),
       ];
 
   return routes.map(({ path, priority, changeFrequency }) => ({

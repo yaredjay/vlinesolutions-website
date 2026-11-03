@@ -8,6 +8,7 @@ import { Menu, X } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { BrandSwitcher } from "@/components/sport/BrandSwitcher";
+import { SHOW_SPORT } from "@/lib/sport";
 import { nav } from "@/data/site";
 import { cn } from "@/lib/cn";
 
@@ -39,9 +40,11 @@ export function Navigation() {
       )}
     >
       <div className="container-edge">
-        <div className="mb-2 flex justify-center">
-          <BrandSwitcher active="corp" corpHref="/" sportHref="/sports" />
-        </div>
+        {SHOW_SPORT && (
+          <div className="mb-2 flex justify-center">
+            <BrandSwitcher active="corp" corpHref="/" sportHref="/sports" />
+          </div>
+        )}
         <div
           className={cn(
             "flex items-center justify-between rounded-full px-4 py-2 transition-all duration-500",
@@ -154,10 +157,12 @@ export function Navigation() {
                 transition={{ delay: 0.4, duration: 0.4 }}
                 className="mt-auto flex flex-col gap-3 pt-8"
               >
-                <Link href="/sports" className="btn-ghost w-full justify-center">
-                  VLS Sport · Officiating
-                  <span aria-hidden>→</span>
-                </Link>
+                {SHOW_SPORT && (
+                  <Link href="/sports" className="btn-ghost w-full justify-center">
+                    VLS Sport · Officiating
+                    <span aria-hidden>→</span>
+                  </Link>
+                )}
                 <Link href="/contact" className="btn-primary w-full justify-center">
                   Contact us
                   <span aria-hidden>→</span>

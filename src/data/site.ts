@@ -57,6 +57,14 @@ export const naicsLabels: Record<string, string> = {
   "561920": "Convention & Trade Show Organizers",
 };
 
+/** NAICS grouped by domain so a technology evaluator sees focus first. */
+export const naicsGroups: { domain: string; codes: string[] }[] = [
+  { domain: "Software, data and systems", codes: ["541511", "541512", "541519", "518210", "541715"] },
+  { domain: "Professional and program services", codes: ["541611", "541690", "561110", "561311", "561320"] },
+  { domain: "Facilities and field operations", codes: ["561210", "561720", "238210", "238220"] },
+  { domain: "Events and program delivery", codes: ["711310", "711320", "561920"] },
+];
+
 export const stats = [
   { value: 17, suffix: "", label: "NAICS Codes" },
   { value: 3, suffix: "", label: "Multi-Year Government Contracts" },
