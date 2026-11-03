@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "V-Line Solutions — Government-Grade Solutions. Startup-Speed Delivery.";
+export const alt = "V-Line Solutions — Every system delivered. Every program staffed. Every agency supported.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -93,8 +93,8 @@ export default async function OG() {
               maxWidth: 1000,
             }}
           >
-            <span>Government-Grade Solutions.</span>
-            <span style={{ color: "#00d4ff" }}>Startup-Speed Delivery.</span>
+            <span>Every system delivered.</span>
+            <span style={{ color: "#00d4ff" }}>Every agency supported.</span>
           </div>
           <div
             style={{
@@ -106,7 +106,7 @@ export default async function OG() {
               lineHeight: 1.35,
             }}
           >
-            AI Technology &amp; Workforce Solutions for the public sector and enterprise.
+            Technology and workforce solutions for the public sector, built in Silicon Valley.
           </div>
         </div>
 

@@ -1,10 +1,10 @@
 export const site = {
   name: "V-Line Solutions",
   legalName: "V-Line Solutions LLC",
-  tagline: "Government-Grade Solutions. Startup-Speed Delivery.",
+  tagline: "Every system delivered. Every program staffed. Every agency supported.",
   description:
-    "AI Technology & Workforce Solutions for Public Sector and Enterprise.",
-  bio: "V-Line Solutions is a California-based technology and workforce services firm delivering AI systems, intelligent automation, and mission-critical staffing to government agencies and enterprise clients nationwide.",
+    "Technology and workforce solutions for the public sector, built in Silicon Valley and delivered to the agencies that run the country's programs.",
+  bio: "Founded in 2022 in Campbell, California, V-Line Solutions is a woman-owned firm that helps government agencies deploy, scale and sustain the systems and the people their programs depend on.",
   address: {
     line1: "1725 South Bascom Ave #208",
     city: "Campbell",

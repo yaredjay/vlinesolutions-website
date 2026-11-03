@@ -2,9 +2,9 @@ import { cn } from "@/lib/cn";
 
 export function Logo({ className, mark = false }: { className?: string; mark?: boolean }) {
   return (
-    <span className={cn("inline-flex items-center gap-2.5", className)} aria-label="V-Line Solutions">
-      <span className="relative inline-flex h-7 w-7 items-center justify-center">
-        <svg viewBox="0 0 32 32" className="h-7 w-7" fill="none" aria-hidden="true">
+    <span className={cn("inline-flex items-center gap-3", className)} aria-label="V-Line Solutions">
+      <span className="relative inline-flex h-9 w-9 items-center justify-center">
+        <svg viewBox="0 0 32 32" className="h-9 w-9" fill="none" aria-hidden="true">
           <defs>
             <linearGradient id="vls-grad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
               <stop offset="0" stopColor="currentColor" stopOpacity="0.95" />
@@ -19,7 +19,7 @@ export function Logo({ className, mark = false }: { className?: string; mark?: b
         </svg>
       </span>
       {!mark && (
-        <span className="text-[15px] font-semibold tracking-tight">
+        <span className="text-[18px] font-semibold tracking-tight">
           V-Line<span className="text-fg-muted font-normal"> Solutions</span>
         </span>
       )}

@@ -27,8 +27,8 @@ export function LogosMarquee() {
   return (
     <section className="relative py-16">
       <div className="container-edge">
-        <p className="text-center text-xs uppercase tracking-[0.22em] text-fg-muted">
-          Trusted across federal, state, and local government
+        <p className="mx-auto max-w-3xl text-center text-xs uppercase leading-relaxed tracking-[0.22em] text-fg-muted">
+          Trusted by federal, state and local agencies delivering public programs across the United States
         </p>
       </div>
       <div

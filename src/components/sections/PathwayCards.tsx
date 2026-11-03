@@ -12,7 +12,7 @@ const pathways = [
     eyebrow: "Division 01",
     title: "Technology Solutions",
     description:
-      "AI systems, agentic automation, secure platforms, and cloud — purpose-built for public-sector outcomes.",
+      "A digital modernization partner for government: AI, automation, secure platforms and data, delivered at startup speed.",
     bullets: ["Artificial Intelligence", "Agentic Automation", "Cybersecurity & Cloud"],
   },
   {
@@ -21,7 +21,7 @@ const pathways = [
     eyebrow: "Division 02",
     title: "Workforce Solutions",
     description:
-      "Mission-ready personnel across facilities, events, sports, IT, administration, and the skilled trades.",
+      "Credentialed people for facilities, events, administration, IT and the skilled trades, deployed on the agency's schedule.",
     bullets: ["Facilities & Janitorial", "Events & Sports Operations", "IT & Skilled Trades"],
   },
 ];
@@ -36,7 +36,7 @@ export function PathwayCards() {
             Two Divisions. One Standard.
           </span>
           <h2 className="mt-5 font-display text-4xl font-medium leading-[1.05] tracking-tightest md:text-5xl">
-            <span className="gradient-text">Pick your pathway.</span>
+            <span className="gradient-text">Built on public-sector delivery.</span>
           </h2>
         </div>
 

@@ -1,35 +1,24 @@
 import { Hero } from "@/components/sections/Hero";
+import { Stats } from "@/components/sections/Stats";
 import { PathwayCards } from "@/components/sections/PathwayCards";
-import { ProofBand } from "@/components/sections/ProofBand";
-import { PlatformsPinned } from "@/components/sections/PlatformsPinned";
 import { LogosMarquee } from "@/components/sections/LogosMarquee";
-import { PastPerformance } from "@/components/sections/PastPerformance";
-import { HowWeWork } from "@/components/sections/HowWeWork";
 import { WhoWeAre } from "@/components/sections/WhoWeAre";
 import { CTA } from "@/components/sections/CTA";
 
-/**
- * Homepage order follows the anatomy of credible systems integrators
- * (thesis → proof → platforms → clients → past performance → method →
- * who we are → call to action).
- */
 export default function HomePage() {
   return (
     <>
       <Hero />
+      <Stats />
       <PathwayCards />
-      <ProofBand />
-      <PlatformsPinned />
       <LogosMarquee />
-      <PastPerformance />
-      <HowWeWork />
       <WhoWeAre />
       <CTA
         eyebrow="Engage"
-        title="Bring us your hardest project."
-        body="Government scale, startup pace. Tell us the constraint, the contract, the deadline."
-        primary={{ label: "Start a conversation", href: "/contact" }}
-        secondary={{ label: "See government credentials", href: "/government" }}
+        title="Let's build something that lasts."
+        body="Tell us about your program and we'll help you find the right path."
+        primary={{ label: "Get in touch", href: "/contact" }}
+        secondary={{ label: "Government credentials", href: "/government" }}
       />
     </>
   );

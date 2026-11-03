@@ -36,7 +36,7 @@ export function Navigation() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-500",
-        scrolled ? "pt-3" : "pt-5"
+        scrolled ? "pt-2" : "pt-3"
       )}
     >
       <div className="container-edge">

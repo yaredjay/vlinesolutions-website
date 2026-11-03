@@ -29,18 +29,24 @@ export function Hero() {
       <div className="container-edge relative z-10">
         <h1
           ref={title}
-          className="mx-auto max-w-[1080px] text-balance text-center font-display font-medium leading-[0.98] tracking-tightest text-[clamp(2.6rem,7.5vw,6.4rem)]"
+          className="mx-auto max-w-[1080px] text-balance text-center font-display font-medium leading-[1.02] tracking-tightest text-[clamp(2.3rem,6.2vw,5.4rem)]"
         >
           <span className="block overflow-hidden pb-[0.08em]">
             <span data-line className="block">
-              <span className="gradient-text">Government-Grade</span>{" "}
-              <span className="text-fg-primary/95">Solutions.</span>
+              <span className="text-fg-secondary">Every system</span>{" "}
+              <span className="gradient-text">delivered.</span>
             </span>
           </span>
           <span className="block overflow-hidden pb-[0.08em]">
             <span data-line className="block">
-              <span className="text-fg-secondary">Startup-Speed</span>{" "}
-              <span className="gradient-text">Delivery.</span>
+              <span className="text-fg-secondary">Every program</span>{" "}
+              <span className="gradient-text">staffed.</span>
+            </span>
+          </span>
+          <span className="block overflow-hidden pb-[0.08em]">
+            <span data-line className="block">
+              <span className="text-fg-secondary">Every agency</span>{" "}
+              <span className="gradient-text">supported.</span>
             </span>
           </span>
         </h1>
@@ -51,8 +57,8 @@ export function Hero() {
           transition={{ duration: 0.85, delay: 0.25 }}
           className="mx-auto mt-7 max-w-2xl text-pretty text-center text-base leading-relaxed text-fg-secondary md:text-lg"
         >
-          AI Technology &amp; Workforce Solutions for the public sector and
-          enterprise — engineered for compliance, designed for speed.
+          Technology and workforce solutions for the public sector, built in
+          Silicon Valley and delivered to the agencies that run the country&apos;s programs.
         </motion.p>
 
         <motion.div
@@ -64,8 +70,8 @@ export function Hero() {
           <Link href="/technology" className="btn-primary">
             Explore Technology <ArrowRight className="h-4 w-4" />
           </Link>
-          <Link href="/workforce" className="btn-ghost">
-            Explore Workforce <ArrowUpRight className="h-4 w-4" />
+          <Link href="/contact" className="btn-ghost">
+            Talk to us <ArrowUpRight className="h-4 w-4" />
           </Link>
         </motion.div>
 
