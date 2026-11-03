@@ -13,11 +13,19 @@ export const CORP_URL = "https://vlinesolutions.com";
  * While true, vlinesolutions.com itself serves VLS Sport at the root and the
  * corporate pages (technology, workforce, government, about, contact) redirect
  * to the sport homepage. The brand switcher and corporate links are hidden.
- * Set NEXT_PUBLIC_SPORT_ONLY=false (Vercel env) to restore the two-brand setup
- * (corp site at the root, VLS Sport at /sports and sports.vlinesolutions.com).
- * Defaults to true so production is unchanged until the variable is set.
+ * NEXT_PUBLIC_SPORT_ONLY=false restores the two-brand setup (corp site at the
+ * root, VLS Sport at /sports and sports.vlinesolutions.com). When the variable
+ * is unset, production and local builds keep the sport placeholder and Vercel
+ * preview deployments show the corporate site, so pull requests can be reviewed
+ * without touching production.
  */
-export const SPORT_ONLY = process.env.NEXT_PUBLIC_SPORT_ONLY !== "false";
+const vercelEnv = process.env.NEXT_PUBLIC_VERCEL_ENV ?? process.env.VERCEL_ENV;
+const sportOnlyEnv = process.env.NEXT_PUBLIC_SPORT_ONLY;
+export const SPORT_ONLY =
+  sportOnlyEnv !== undefined
+    ? sportOnlyEnv !== "false"
+    : // Production keeps the sport placeholder until the variable is set; previews show the corporate site.
+      vercelEnv !== "preview";
 
 /**
  * VLS Sport is a placeholder while the corporate site is finished. Until
