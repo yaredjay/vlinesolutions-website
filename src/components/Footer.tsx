@@ -87,7 +87,7 @@ export function Footer() {
           <p>© 2026 {site.legalName}. All rights reserved.</p>
           <p className="flex items-center gap-2">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_12px_2px_var(--accent)]" />
-            {site.registration} · {site.classification} · DUNS {site.duns}
+            {site.registration} · {site.classification} · UEI {site.uei}
           </p>
         </div>
       </div>

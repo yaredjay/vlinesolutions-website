@@ -15,9 +15,11 @@ export const site = {
   phoneHref: "tel:+14085166667",
   email: "info@vlinesolutions.com",
   emailHref: "mailto:info@vlinesolutions.com",
-  director: "Yared Birmeji",
-  directorTitle: "Director of Operations",
-  duns: "123412642",
+  director: "Yared Tadesse Birmeji",
+  directorTitle: "Chief Operating Officer",
+  ceo: "Bethlehem Guall",
+  ceoTitle: "Chief Executive Officer",
+  uei: "ZHBKRDQ94TE5",
   classification: "Small Business",
   registration: "SAM.gov Registered",
 };
@@ -57,8 +59,8 @@ export const naicsLabels: Record<string, string> = {
 
 export const stats = [
   { value: 17, suffix: "", label: "NAICS Codes" },
-  { value: 100, suffix: "%", label: "Compliance Aligned" },
-  { value: 24, suffix: "/7", label: "Mission Support" },
+  { value: 3, suffix: "", label: "Multi-Year Government Contracts" },
+  { value: 2, suffix: "", label: "Platforms in Production" },
 ];
 
 export const sectors = [

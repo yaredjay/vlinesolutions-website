@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { MapPin, Phone, Mail, User2 } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
 import { PageHero } from "@/components/sections/PageHero";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 import { CTA } from "@/components/sections/CTA";
@@ -117,18 +117,29 @@ export default function AboutPage() {
               <span className="relative text-xs uppercase tracking-[0.22em] text-fg-muted">
                 Leadership
               </span>
-              <div className="relative mt-6 flex items-center gap-5">
-                <span className="grid h-16 w-16 place-items-center rounded-2xl border border-border-subtle bg-bg-elevated/70 text-accent">
-                  <User2 className="h-7 w-7" />
-                </span>
-                <div>
-                  <p className="font-display text-2xl font-medium tracking-tight">{site.director}</p>
-                  <p className="text-sm text-fg-secondary">{site.directorTitle}</p>
+              <div className="relative mt-6 space-y-5">
+                <div className="flex items-center gap-5">
+                  <span className="grid h-16 w-16 shrink-0 place-items-center rounded-2xl border border-border-subtle bg-bg-elevated/70 font-mono text-sm tracking-[0.12em] text-fg-primary">
+                    BG
+                  </span>
+                  <div>
+                    <p className="font-display text-2xl font-medium tracking-tight">{site.ceo}</p>
+                    <p className="text-sm text-fg-secondary">{site.ceoTitle}</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-5">
+                  <span className="grid h-16 w-16 shrink-0 place-items-center rounded-2xl border border-border-subtle bg-bg-elevated/70 font-mono text-sm tracking-[0.12em] text-fg-primary">
+                    YB
+                  </span>
+                  <div>
+                    <p className="font-display text-2xl font-medium tracking-tight">{site.director}</p>
+                    <p className="text-sm text-fg-secondary">{site.directorTitle} · Lead Engineer and Systems Architect</p>
+                  </div>
                 </div>
               </div>
               <p className="relative mt-8 max-w-md text-fg-secondary">
-                Leads operations across both divisions — from public-sector capture to multi-site
-                workforce deployment — with a single bar for quality and accountability.
+                A woman-owned firm led by its founders: corporate governance, contracts and quality on one side;
+                architecture, engineering and delivery on the other. One bar for accountability across every engagement.
               </p>
             </Reveal>
 

@@ -1,29 +1,49 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import { getGsap, prefersReducedMotion } from "@/lib/gsap";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { HeroScene } from "@/components/three/HeroScene";
 
 export function Hero() {
+  const title = useRef<HTMLHeadingElement>(null);
+
+  useEffect(() => {
+    const el = title.current;
+    if (!el || prefersReducedMotion()) return;
+    const { gsap } = getGsap();
+    const lines = el.querySelectorAll<HTMLElement>("[data-line]");
+    const tween = gsap.from(lines, { yPercent: 110, duration: 1.15, ease: "power3.out", stagger: 0.1, delay: 0.12 });
+    return () => {
+      tween.kill();
+    };
+  }, []);
+
   return (
     <section className="relative overflow-hidden pt-40 md:pt-48">
       <div className="absolute inset-0 grid-bg opacity-50 radial-fade" aria-hidden />
       <HeroScene />
 
       <div className="container-edge relative">
-        <motion.h1
-          initial={{ opacity: 0, y: 26 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.95, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+        <h1
+          ref={title}
           className="mx-auto max-w-[1080px] text-balance text-center font-display font-medium leading-[0.98] tracking-tightest text-[clamp(2.6rem,7.5vw,6.4rem)]"
         >
-          <span className="gradient-text">Government-Grade</span>{" "}
-          <span className="text-fg-primary/95">Solutions.</span>
-          <br />
-          <span className="text-fg-secondary">Startup-Speed</span>{" "}
-          <span className="gradient-text">Delivery.</span>
-        </motion.h1>
+          <span className="block overflow-hidden pb-[0.08em]">
+            <span data-line className="block">
+              <span className="gradient-text">Government-Grade</span>{" "}
+              <span className="text-fg-primary/95">Solutions.</span>
+            </span>
+          </span>
+          <span className="block overflow-hidden pb-[0.08em]">
+            <span data-line className="block">
+              <span className="text-fg-secondary">Startup-Speed</span>{" "}
+              <span className="gradient-text">Delivery.</span>
+            </span>
+          </span>
+        </h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}

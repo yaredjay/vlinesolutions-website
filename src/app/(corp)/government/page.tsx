@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 const credentials = [
   { icon: Building2, label: "Entity", value: site.legalName, sub: "California" },
   { icon: BadgeCheck, label: "Registration", value: site.registration, sub: "Active" },
-  { icon: Hash, label: "DUNS", value: site.duns, sub: "Universal" },
+  { icon: Hash, label: "UEI", value: site.uei, sub: "SAM.gov Unique Entity ID" },
   { icon: ShieldCheck, label: "Classification", value: site.classification, sub: "Federal designation" },
 ];
 
