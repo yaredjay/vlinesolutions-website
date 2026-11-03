@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from "react";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
 import { getGsap, prefersReducedMotion } from "@/lib/gsap";
 import { tomorrow } from "@/data/systems";
 
@@ -83,11 +82,10 @@ export function Tomorrow() {
           </p>
           <Link
             href="/technology"
-            className="group inline-flex items-center gap-2 text-sm text-fg-primary transition-colors hover:text-accent"
+            className="inline-flex items-center border-b border-border-strong pb-0.5 text-sm text-fg-primary transition-colors hover:border-accent hover:text-accent"
             data-cursor="hover"
           >
             See what we build
-            <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
           </Link>
         </div>
       </div>

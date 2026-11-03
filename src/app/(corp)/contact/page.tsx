@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Mail, MapPin, Phone } from "lucide-react";
 import { PageHero } from "@/components/sections/PageHero";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { Reveal } from "@/components/ui/Reveal";
@@ -51,10 +50,9 @@ export default function ContactPage() {
               <h3 className="relative font-display text-2xl font-medium tracking-tight">Direct lines</h3>
 
               <ul className="relative mt-8 space-y-6">
-                <ContactItem icon={Phone} label="Phone" value={site.phone} href={site.phoneHref} />
-                <ContactItem icon={Mail} label="Email" value={site.email} href={site.emailHref} />
+                <ContactItem label="Phone" value={site.phone} href={site.phoneHref} />
+                <ContactItem label="Email" value={site.email} href={site.emailHref} />
                 <ContactItem
-                  icon={MapPin}
                   label="Office"
                   value={`${site.address.city}, California`}
                 />
@@ -76,21 +74,17 @@ export default function ContactPage() {
 }
 
 function ContactItem({
-  icon: Icon,
   label,
   value,
   href,
 }: {
-  icon: React.ComponentType<{ className?: string }>;
   label: string;
   value: string;
   href?: string;
 }) {
   const Inner = (
     <div className="flex items-start gap-4">
-      <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl border border-border-subtle bg-bg-elevated/70 text-accent">
-        <Icon className="h-4 w-4" />
-      </span>
+      <span className="mt-2.5 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-accent shadow-[0_0_10px_var(--accent)]" />
       <div>
         <p className="text-3xs uppercase tracking-[0.2em] text-fg-muted">{label}</p>
         <p className="mt-1 text-sm text-fg-primary">{value}</p>

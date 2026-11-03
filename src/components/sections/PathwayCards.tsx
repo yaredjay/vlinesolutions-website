@@ -2,22 +2,18 @@
 
 import Link from "next/link";
 import { useCallback, useRef } from "react";
-import { ArrowUpRight, ArrowRight, Fingerprint, Landmark, ShieldCheck } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 
 const pillars = [
   {
-    icon: Fingerprint,
     title: "Digital public infrastructure",
     body: "Identity, registries, payments and the exchange layer that lets a government share data without losing control of it.",
   },
   {
-    icon: Landmark,
     title: "Service and budget platforms",
     body: "Permits, benefits, case management and the systems that plan, release and account for public money.",
   },
   {
-    icon: ShieldCheck,
     title: "Data, cloud and security",
     body: "Trusted data, sovereign cloud and security designed in from the first line. Infrastructure an institution can own and defend.",
   },
@@ -119,8 +115,8 @@ export function PathwayCards() {
                       States and to the programs modernizing government around the world.
                     </p>
                   </div>
-                  <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-border-subtle bg-bg-elevated/70 transition-transform duration-500 group-hover:rotate-45">
-                    <ArrowUpRight className="h-4 w-4 text-fg-primary" />
+                  <span className="shrink-0 pt-2 text-sm text-fg-muted transition-colors group-hover:text-accent">
+                    Explore
                   </span>
                 </div>
               </Link>
@@ -136,16 +132,13 @@ export function PathwayCards() {
                   className="liquid liquid-tint group flex h-full flex-col rounded-[1.75rem] p-7 md:p-8"
                   data-cursor="hover"
                 >
-                  <span className="grid h-11 w-11 place-items-center rounded-2xl border border-white/10 bg-white/[0.06] text-accent shadow-[inset_0_1px_0_rgba(255,255,255,0.18)]">
-                    <p.icon className="h-5 w-5" />
-                  </span>
+                  <span className="h-px w-10 bg-gradient-to-r from-accent to-transparent" />
                   <h4 className="mt-6 font-display text-xl font-medium tracking-tight md:text-[1.35rem]">
                     {p.title}
                   </h4>
                   <p className="mt-3 text-sm leading-relaxed text-fg-secondary">{p.body}</p>
-                  <span className="mt-auto flex items-center gap-1 pt-6 text-xs text-fg-muted transition-colors group-hover:text-fg-primary">
+                  <span className="mt-auto pt-6 text-xs text-fg-muted transition-colors group-hover:text-fg-primary">
                     Explore
-                    <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
                   </span>
                 </Link>
               </Reveal>
@@ -157,10 +150,9 @@ export function PathwayCards() {
               And the people who keep them running:{" "}
               <Link
                 href="/workforce"
-                className="group inline-flex items-center gap-1 text-fg-secondary transition-colors hover:text-accent"
+                className="border-b border-border-strong text-fg-secondary transition-colors hover:border-accent hover:text-accent"
               >
                 workforce solutions
-                <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
               </Link>
             </p>
           </Reveal>

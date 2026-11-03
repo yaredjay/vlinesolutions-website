@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { MapPin, Phone, Mail } from "lucide-react";
 import { PageHero } from "@/components/sections/PageHero";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 import { CTA } from "@/components/sections/CTA";
@@ -123,20 +122,20 @@ export default function AboutPage() {
               <h3 className="relative font-display text-2xl font-medium tracking-tight">Headquarters</h3>
               <ul className="relative mt-6 space-y-4">
                 <li className="flex items-start gap-3">
-                  <MapPin className="mt-0.5 h-4 w-4 text-accent" />
+                  <span className="mt-2 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-accent shadow-[0_0_10px_var(--accent)]" />
                   <div className="text-sm text-fg-secondary">
                     <p className="text-fg-primary">{site.legalName}</p>
                     <p>{site.address.city}, California</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Phone className="mt-0.5 h-4 w-4 text-accent" />
+                  <span className="mt-2 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-accent shadow-[0_0_10px_var(--accent)]" />
                   <a className="text-sm text-fg-secondary hover:text-fg-primary" href={site.phoneHref}>
                     {site.phone}
                   </a>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Mail className="mt-0.5 h-4 w-4 text-accent" />
+                  <span className="mt-2 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-accent shadow-[0_0_10px_var(--accent)]" />
                   <a className="text-sm text-fg-secondary hover:text-fg-primary" href={site.emailHref}>
                     {site.email}
                   </a>

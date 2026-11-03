@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 
 export function CTA({
@@ -58,7 +57,6 @@ export function CTA({
               <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
                 <Link href={primary.href} className="btn-primary">
                   {primary.label}
-                  <ArrowRight className="h-4 w-4" />
                 </Link>
                 {secondary && (
                   <Link href={secondary.href} className="btn-ghost">

@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { getGsap, prefersReducedMotion } from "@/lib/gsap";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { HeroScene } from "@/components/three/HeroScene";
 
 export function Hero() {
@@ -69,10 +68,10 @@ export function Hero() {
           className="mt-9 flex flex-wrap items-center justify-center gap-3"
         >
           <Link href="/technology" className="btn-primary">
-            Explore Technology <ArrowRight className="h-4 w-4" />
+            Explore Technology
           </Link>
           <Link href="/contact" className="btn-ghost">
-            Talk to us <ArrowUpRight className="h-4 w-4" />
+            Talk to us
           </Link>
         </motion.div>
 

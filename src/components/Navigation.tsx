@@ -92,7 +92,6 @@ export function Navigation() {
             <ThemeToggle />
             <Link href="/contact" className="btn-primary hidden text-sm md:inline-flex">
               Contact
-              <span aria-hidden>→</span>
             </Link>
             <button
               type="button"
@@ -165,7 +164,6 @@ export function Navigation() {
                 )}
                 <Link href="/contact" className="btn-primary w-full justify-center">
                   Contact us
-                  <span aria-hidden>→</span>
                 </Link>
               </motion.div>
             </motion.nav>

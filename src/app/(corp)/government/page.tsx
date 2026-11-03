@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Building2, ShieldCheck, BadgeCheck, Hash } from "lucide-react";
 import { PageHero } from "@/components/sections/PageHero";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Stagger, StaggerItem } from "@/components/ui/Reveal";
@@ -21,10 +20,10 @@ export const metadata: Metadata = {
 };
 
 const credentials = [
-  { icon: Building2, label: "Entity", value: site.legalName, sub: "California" },
-  { icon: BadgeCheck, label: "Formed", value: "October 2022", sub: "Limited liability company, California" },
-  { icon: Hash, label: "UEI", value: site.uei, sub: "Unique Entity ID" },
-  { icon: ShieldCheck, label: "Ownership", value: "Woman-owned small business", sub: "Not SBA WOSB-certified" },
+  { label: "Entity", value: site.legalName, sub: "California" },
+  { label: "Formed", value: "October 2022", sub: "Limited liability company, California" },
+  { label: "UEI", value: site.uei, sub: "Unique Entity ID" },
+  { label: "Ownership", value: "Woman-owned small business", sub: "Not SBA WOSB-certified" },
 ];
 
 export default function GovernmentPage() {
@@ -58,10 +57,8 @@ export default function GovernmentPage() {
                       "radial-gradient(circle, rgba(var(--accent-glow),0.5) 0%, transparent 70%)",
                   }}
                 />
-                <div className="relative grid h-10 w-10 place-items-center rounded-xl border border-border-subtle bg-bg-elevated/70 text-accent">
-                  <c.icon className="h-5 w-5" />
-                </div>
-                <p className="mt-4 text-3xs uppercase tracking-[0.2em] text-fg-muted">{c.label}</p>
+                <div className="relative h-px w-10 bg-gradient-to-r from-accent to-transparent" />
+                <p className="mt-5 text-3xs uppercase tracking-[0.2em] text-fg-muted">{c.label}</p>
                 <p className="mt-1 font-display text-xl font-medium tracking-tight">{c.value}</p>
                 <p className="mt-1 text-xs text-fg-muted">{c.sub}</p>
               </StaggerItem>

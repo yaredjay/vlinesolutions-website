@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, Check } from "lucide-react";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -95,7 +94,7 @@ export function ContactForm() {
                 exit={{ opacity: 0, y: -6 }}
                 className="inline-flex items-center gap-2"
               >
-                Message received <Check className="h-4 w-4" />
+                Message received
               </motion.span>
             ) : status === "submitting" ? (
               <motion.span
@@ -115,7 +114,7 @@ export function ContactForm() {
                 exit={{ opacity: 0 }}
                 className="inline-flex items-center gap-2"
               >
-                Send message <ArrowRight className="h-4 w-4" />
+                Send message
               </motion.span>
             )}
           </AnimatePresence>
