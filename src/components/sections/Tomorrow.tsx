@@ -47,8 +47,8 @@ export function Tomorrow() {
 
       <div className="container-edge relative">
         <p className="max-w-2xl text-pretty text-fg-secondary md:text-lg">
-          The programs that fund public systems have already written down what
-          tomorrow should look like. We build toward it.
+          Countries have already written down what a clean, digital tomorrow looks
+          like. Our work is to help them get there — system by system.
         </p>
 
         <ul className="mt-14 md:mt-20">

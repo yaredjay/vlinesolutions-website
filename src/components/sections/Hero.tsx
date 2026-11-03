@@ -57,8 +57,9 @@ export function Hero() {
           transition={{ duration: 0.85, delay: 0.25 }}
           className="mx-auto mt-7 max-w-2xl text-pretty text-center text-base leading-relaxed text-fg-secondary md:text-lg"
         >
-          Technology and workforce solutions for the public sector, built in
-          Silicon Valley and delivered to the agencies that run the country&apos;s programs.
+          The systems that move a country&apos;s digital growth forward — built in
+          Silicon Valley for the agencies and programs working toward a cleaner, more
+          connected tomorrow.
         </motion.p>
 
         <motion.div

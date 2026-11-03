@@ -16,6 +16,11 @@ export const systemsBuilt = [
     body: "Government-to-person payments that arrive on time, reconcile to the ledger and reach people without a bank branch nearby.",
   },
   {
+    id: "agriculture",
+    title: "Agriculture and markets",
+    body: "Farmer registries, advisory services and digital markets that connect a harvest to a buyer and a subsidy to the right field.",
+  },
+  {
     id: "budget",
     title: "Budget and treasury",
     body: "Public money planned, released and accounted for in one system — from the budget call to the audited statement.",
@@ -39,11 +44,6 @@ export const systemsBuilt = [
     id: "education",
     title: "Education and skills",
     body: "School and learner records, teacher management and the platforms that bring a curriculum to a classroom without broadband.",
-  },
-  {
-    id: "agriculture",
-    title: "Agriculture and markets",
-    body: "Farmer registries, advisory services and digital markets that connect a harvest to a buyer and a subsidy to the right field.",
   },
   {
     id: "procurement",

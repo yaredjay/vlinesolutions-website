@@ -31,6 +31,14 @@ export function CTA({
               }}
             />
             <div className="absolute inset-0 grid-bg-sm opacity-25" aria-hidden />
+            {/* Signal line: a pulse travelling the top edge, like an arc traveller. */}
+            <svg aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-px w-full overflow-visible">
+              <line x1="0" y1="0.5" x2="100%" y2="0.5" stroke="rgba(var(--accent-glow),0.25)" strokeWidth="1" />
+              <circle r="2.5" cy="0.5" fill="var(--accent)" style={{ filter: "drop-shadow(0 0 8px var(--accent))" }}>
+                <animate attributeName="cx" from="-2%" to="102%" dur="7s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.92;1" dur="7s" repeatCount="indefinite" />
+              </circle>
+            </svg>
             <div
               className="pointer-events-none absolute -bottom-24 left-1/2 h-72 w-[80%] -translate-x-1/2 animate-pulse-glow"
               aria-hidden

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import type { ReactNode } from "react";
 import { GradientOrbs } from "@/components/ui/GradientOrbs";
+import { PointField } from "@/components/ui/PointField";
 import { cn } from "@/lib/cn";
 
 export function PageHero({
@@ -22,6 +23,7 @@ export function PageHero({
     <section className={cn("relative overflow-hidden pt-40 pb-20 md:pt-48 md:pb-28", className)}>
       <div className="absolute inset-0 grid-bg opacity-50 radial-fade" aria-hidden />
       <GradientOrbs variant="subtle" />
+      <PointField className="opacity-80 [mask-image:radial-gradient(80%_90%_at_60%_40%,black,transparent)]" />
       <div className="container-edge relative">
         <motion.h1
           initial={{ opacity: 0, y: 22 }}
