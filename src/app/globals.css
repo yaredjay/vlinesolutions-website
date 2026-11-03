@@ -536,3 +536,11 @@ html.lenis, html.lenis body { height: auto; }
     .liquid-divider::after { transition: none; }
   }
 }
+
+/* light flowing across a texture surface */
+@keyframes texture-flow {
+  0% { transform: translateX(-55%); }
+  100% { transform: translateX(55%); }
+}
+.texture-flow { animation: texture-flow 14s ease-in-out infinite alternate; }
+@media (prefers-reduced-motion: reduce) { .texture-flow { animation: none; } }

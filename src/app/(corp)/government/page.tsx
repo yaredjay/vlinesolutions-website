@@ -23,7 +23,7 @@ const credentials = [
   { label: "Entity", value: site.legalName, sub: "California" },
   { label: "Formed", value: "October 2022", sub: "Limited liability company, California" },
   { label: "UEI", value: site.uei, sub: "Unique Entity ID" },
-  { label: "Ownership", value: "Woman-owned small business", sub: "Not SBA WOSB-certified" },
+  { label: "Ownership", value: "Woman-owned small business", sub: "California small business" },
 ];
 
 export default function GovernmentPage() {

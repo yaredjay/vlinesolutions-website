@@ -45,7 +45,7 @@ export default function CapabilityStatementPage() {
             </div>
             <dl className="grid gap-1 text-right font-mono text-[11px] text-fg-secondary">
               <div><dt className="sr-only">UEI</dt><dd>UEI {site.uei}</dd></div>
-              <div><dt className="sr-only">Status</dt><dd>Small business · Woman-owned (not SBA WOSB-certified)</dd></div>
+              <div><dt className="sr-only">Status</dt><dd>Small business · Woman-owned</dd></div>
               <div><dt className="sr-only">Formed</dt><dd>Formed October 2022 · California LLC</dd></div>
               <div><dt className="sr-only">Address</dt><dd>{site.address.city}, California</dd></div>
             </dl>

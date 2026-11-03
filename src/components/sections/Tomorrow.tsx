@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { getGsap, prefersReducedMotion } from "@/lib/gsap";
 import { tomorrow } from "@/data/systems";
+import { TextureLight } from "@/components/ui/TextureLight";
 
 /**
  * Where the work is going. The stated goals of the programs that fund
@@ -43,6 +44,7 @@ export function Tomorrow() {
         }}
       />
       <div className="absolute inset-0 grid-bg opacity-[0.35] [mask-image:radial-gradient(70%_60%_at_50%_50%,black,transparent)]" />
+      <TextureLight src="/textures/mesh-01.jpg" side="right" />
 
       <div className="container-edge relative">
         <p className="max-w-2xl text-pretty text-fg-secondary md:text-lg">
