@@ -7,7 +7,7 @@ export type ServiceCategory = {
 };
 
 /**
- * Technology: the systems governments commission every day — the same
+ * Technology: the systems governments commission every day: the same
  * building blocks that national digital programs, development banks and
  * modernizing agencies fund, written in the vocabulary those programs use.
  */
@@ -47,7 +47,7 @@ export const technology: ServiceCategory[] = [
     number: "03",
     title: "Public Finance and Budget Systems",
     blurb:
-      "The systems that plan, execute and account for public money — from the budget call to the audited statement.",
+      "The systems that plan, execute and account for public money, from the budget call to the audited statement.",
     items: [
       "Budget planning, execution and treasury systems",
       "Financial management information systems",
@@ -62,7 +62,7 @@ export const technology: ServiceCategory[] = [
     number: "04",
     title: "Data, Analytics and Decision Systems",
     blurb:
-      "Trusted data that moves from collection to decision — governed, interoperable and visible to the people accountable for it.",
+      "Trusted data that moves from collection to decision: governed, interoperable and visible to the people accountable for it.",
     items: [
       "National and sector data platforms",
       "Statistical, monitoring and evaluation systems",
@@ -77,7 +77,7 @@ export const technology: ServiceCategory[] = [
     number: "05",
     title: "Intelligent Automation",
     blurb:
-      "Document-heavy, rule-heavy work handled by systems — with a person at every decision that needs one.",
+      "Document-heavy, rule-heavy work handled by systems, with a person at every decision that needs one.",
     items: [
       "Document intelligence and digitization of records",
       "Workflow orchestration and process re-engineering",
@@ -144,7 +144,7 @@ export const workforce: ServiceCategory[] = [
     number: "01",
     title: "Technology Staffing",
     blurb:
-      "Engineers, architects and analysts placed on agency teams — vetted for the work, cleared for the environment, ready on the start date.",
+      "Engineers, architects and analysts placed on agency teams: vetted for the work, cleared for the environment, ready on the start date.",
     items: [
       "Software engineers and full-stack developers",
       "Cloud, DevOps and platform engineers",
@@ -206,7 +206,7 @@ export const workforce: ServiceCategory[] = [
     number: "05",
     title: "Event and Community Program Operations",
     blurb:
-      "Credentialed staff for public events, venues and community programs — scheduled, supervised and reported on the agency's terms.",
+      "Credentialed staff for public events, venues and community programs, scheduled, supervised and reported on the agency's terms.",
     items: [
       "Event operations, access control and guest services",
       "Venue setup, logistics and breakdown",
@@ -218,7 +218,7 @@ export const workforce: ServiceCategory[] = [
   },
 ];
 
-/** How an engagement is staffed — the models agencies buy. */
+/** How an engagement is staffed: the models agencies buy. */
 export const staffingModels = [
   {
     title: "Staff augmentation",
@@ -230,7 +230,7 @@ export const staffingModels = [
   },
   {
     title: "Surge and seasonal",
-    body: "Capacity that scales to the program calendar — rollouts, enrollment windows, seasons and peak demand.",
+    body: "Capacity that scales to the program calendar: rollouts, enrollment windows, seasons and peak demand.",
   },
   {
     title: "Operate and maintain",

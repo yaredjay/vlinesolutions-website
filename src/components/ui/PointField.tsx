@@ -5,7 +5,7 @@ import { prefersReducedMotion } from "@/lib/gsap";
 
 /**
  * A sparse field of drifting points with one faint arc and a travelling
- * pulse — the globe's point cloud, flattened and at rest. Canvas 2D, a few
+ * pulse: the globe's point cloud, flattened and at rest. Canvas 2D, a few
  * hundred points at most, paused when off-screen. Under reduced motion it
  * renders a single static frame.
  */

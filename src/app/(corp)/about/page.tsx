@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "V-Line Solutions LLC is a woman-owned technology and workforce firm headquartered in Campbell, California. We build the systems public programs run on and place the people who keep them running.",
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "About — V-Line Solutions",
+    title: "About | V-Line Solutions",
     description:
       "A Silicon Valley firm built for public service.",
     url: "https://vlinesolutions.com/about",
@@ -53,7 +53,7 @@ export default function AboutPage() {
             <span className="text-fg-primary">public service.</span>
           </>
         }
-        description="V-Line Solutions builds the systems public programs run on and places the people who keep them running — for agencies across the United States and the development programs modernizing government around the world. The rigor of a federal integrator, the speed of a Silicon Valley firm."
+        description="V-Line Solutions builds the systems public programs run on and places the people who keep them running, for agencies across the United States and the development programs modernizing government around the world. The rigor of a federal integrator, the speed of a Silicon Valley firm."
       />
 
       {/* Mission */}
@@ -69,7 +69,7 @@ export default function AboutPage() {
               </p>
               <p className="mt-6 max-w-2xl text-pretty leading-relaxed text-fg-secondary">
                 Public programs deserve one partner who can design the system, secure the
-                cloud it runs on, and place the people who keep it running — without
+                cloud it runs on, and place the people who keep it running, without
                 handoffs, without finger-pointing, and without inflated timelines.
               </p>
             </Reveal>
@@ -110,30 +110,11 @@ export default function AboutPage() {
                     "radial-gradient(circle, rgba(var(--accent-glow),0.55) 0%, transparent 70%)",
                 }}
               />
-              <h3 className="relative font-display text-2xl font-medium tracking-tight">Leadership</h3>
-              <div className="relative mt-6 space-y-5">
-                <div className="flex items-center gap-5">
-                  <span className="grid h-16 w-16 shrink-0 place-items-center rounded-2xl border border-border-subtle bg-bg-elevated/70 font-mono text-sm tracking-[0.12em] text-fg-primary">
-                    BG
-                  </span>
-                  <div>
-                    <p className="font-display text-2xl font-medium tracking-tight">{site.ceo}</p>
-                    <p className="text-sm text-fg-secondary">{site.ceoTitle}</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-5">
-                  <span className="grid h-16 w-16 shrink-0 place-items-center rounded-2xl border border-border-subtle bg-bg-elevated/70 font-mono text-sm tracking-[0.12em] text-fg-primary">
-                    YB
-                  </span>
-                  <div>
-                    <p className="font-display text-2xl font-medium tracking-tight">{site.director}</p>
-                    <p className="text-sm text-fg-secondary">{site.directorTitle} · Lead Engineer and Systems Architect</p>
-                  </div>
-                </div>
-              </div>
-              <p className="relative mt-8 max-w-md text-fg-secondary">
-                A woman-owned firm led by its founders: corporate governance, contracts and quality on one side;
-                architecture, engineering and delivery on the other. One bar for accountability across every engagement.
+              <h3 className="relative font-display text-2xl font-medium tracking-tight">Founder-led</h3>
+              <p className="relative mt-6 max-w-md text-fg-secondary">
+                A woman-owned firm led by its founders: corporate governance, contracts and
+                quality on one side; architecture, engineering and delivery on the other. One
+                bar for accountability across every engagement, and a principal on every project.
               </p>
             </Reveal>
 
@@ -145,10 +126,7 @@ export default function AboutPage() {
                   <MapPin className="mt-0.5 h-4 w-4 text-accent" />
                   <div className="text-sm text-fg-secondary">
                     <p className="text-fg-primary">{site.legalName}</p>
-                    <p>{site.address.line1}</p>
-                    <p>
-                      {site.address.city}, {site.address.state} {site.address.zip}
-                    </p>
+                    <p>{site.address.city}, California</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
@@ -172,7 +150,7 @@ export default function AboutPage() {
       <CTA
         eyebrow="Engage"
         title="Let's get to work."
-        body="Tell us about the program, the agency, or the operation. We'll respond fast — and direct."
+        body="Tell us about the program, the agency, or the operation. We'll respond fast, and direct."
         primary={{ label: "Contact V-Line Solutions", href: "/contact" }}
       />
     </>

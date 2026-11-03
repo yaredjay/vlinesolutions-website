@@ -16,7 +16,7 @@ export function HowWeBuild() {
         <Reveal delay={0.08}>
           <p className="mt-5 max-w-2xl text-pretty text-fg-secondary md:text-lg">
             Security, accessibility and audit are designed in, not bolted on. The
-            client sees working software every week and owns the result outright —
+            client sees working software every week and owns the result outright:
             code, data and documentation.
           </p>
         </Reveal>
@@ -24,7 +24,8 @@ export function HowWeBuild() {
           {method.map((m) => (
             <StaggerItem
               key={m.title}
-              className="relative overflow-hidden rounded-3xl glass glow-ring p-7 md:p-8"
+              className="liquid overflow-hidden rounded-3xl p-7 md:p-8"
+              data-liquid
             >
               <div className="absolute inset-0 grid-bg-sm opacity-25 [mask-image:linear-gradient(to_bottom,black,transparent_85%)]" />
               <h3 className="relative font-display text-2xl font-medium tracking-tight">{m.title}</h3>

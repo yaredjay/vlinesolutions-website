@@ -9,7 +9,7 @@ import { tomorrow } from "@/data/systems";
 /**
  * Where the work is going. The stated goals of the programs that fund
  * public digital systems, set in large type and revealed line by line as
- * the reader scrolls — the tomorrow V-Line builds toward.
+ * the reader scrolls: the tomorrow V-Line builds toward.
  */
 export function Tomorrow() {
   const root = useRef<HTMLElement>(null);
@@ -48,7 +48,7 @@ export function Tomorrow() {
       <div className="container-edge relative">
         <p className="max-w-2xl text-pretty text-fg-secondary md:text-lg">
           Countries have already written down what a clean, digital tomorrow looks
-          like. Our work is to help them get there — system by system.
+          like. Our work is to help them get there, system by system.
         </p>
 
         <ul className="mt-14 md:mt-20">
@@ -78,7 +78,7 @@ export function Tomorrow() {
 
         <div className="mt-14 flex flex-col gap-6 md:mt-20 md:flex-row md:items-end md:justify-between">
           <p className="max-w-xl text-pretty text-fg-secondary md:text-lg">
-            One system, one program, one deployment at a time — built so the
+            One system, one program, one deployment at a time, built so the
             institution owns it, and staffed so it keeps running after we leave.
           </p>
           <Link

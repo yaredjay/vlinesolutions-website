@@ -18,10 +18,8 @@ export function StructuredData() {
     },
     address: {
       "@type": "PostalAddress",
-      streetAddress: site.address.line1,
       addressLocality: site.address.city,
       addressRegion: site.address.state,
-      postalCode: site.address.zip,
       addressCountry: "US",
     },
     contactPoint: [
@@ -56,10 +54,8 @@ export function StructuredData() {
     priceRange: "$$$$",
     address: {
       "@type": "PostalAddress",
-      streetAddress: site.address.line1,
       addressLocality: site.address.city,
       addressRegion: site.address.state,
-      postalCode: site.address.zip,
       addressCountry: "US",
     },
     geo: {

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "V-Line Solutions designs, builds and runs the systems public programs depend on: digital public infrastructure, service and budget platforms, data systems, sector information systems and the secure cloud underneath them.",
   alternates: { canonical: "/technology" },
   openGraph: {
-    title: "Technology Solutions — V-Line Solutions",
+    title: "Technology Solutions | V-Line Solutions",
     description:
       "Systems governments can own: identity and registries, payments, budget and service platforms, data, cloud and security.",
     url: "https://vlinesolutions.com/technology",
@@ -29,7 +29,7 @@ export default function TechnologyPage() {
             <span className="text-fg-primary">can own.</span>
           </>
         }
-        description="We design, build and run the platforms public programs depend on — for agencies across the United States and the development programs modernizing government around the world. Secure by design, interoperable by default, and handed over with the people trained to run them."
+        description="We design, build and run the platforms public programs depend on, for agencies across the United States and the development programs modernizing government around the world. Secure by design, interoperable by default, and handed over with the people trained to run them."
       />
       <ServiceCategoryGrid categories={technology} />
       <HowWeBuild />

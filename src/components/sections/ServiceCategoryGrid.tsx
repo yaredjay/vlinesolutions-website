@@ -30,20 +30,12 @@ function ServiceCard({ category, index }: { category: ServiceCategory; index: nu
       whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-8% 0px" }}
       transition={{ duration: 0.75, delay: (index % 2) * 0.06, ease: [0.22, 1, 0.36, 1] }}
-      className={cn(
-        "group relative overflow-hidden rounded-3xl glass glow-ring p-7 md:p-9",
-        "transition-all duration-500"
-      )}
+      className={cn("group liquid overflow-hidden rounded-3xl p-7 md:p-9")}
+      data-liquid
+      data-liquid-delay={(index % 2) * 160}
       data-cursor="hover"
     >
-      <div
-        className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full opacity-30 blur-3xl transition-opacity duration-500 group-hover:opacity-60"
-        style={{
-          background:
-            "radial-gradient(circle, rgba(var(--accent-glow),0.55) 0%, transparent 70%)",
-        }}
-      />
-      <div className="absolute inset-0 grid-bg-sm opacity-30 [mask-image:linear-gradient(to_bottom,black,transparent_85%)]" />
+      <div className="absolute inset-0 grid-bg-sm opacity-20 [mask-image:linear-gradient(to_bottom,black,transparent_85%)]" />
 
       <div className="absolute right-6 top-6 z-10 md:right-8 md:top-8">
         <button

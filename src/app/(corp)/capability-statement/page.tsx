@@ -47,7 +47,7 @@ export default function CapabilityStatementPage() {
               <div><dt className="sr-only">UEI</dt><dd>UEI {site.uei}</dd></div>
               <div><dt className="sr-only">Status</dt><dd>Small business · Woman-owned (not SBA WOSB-certified)</dd></div>
               <div><dt className="sr-only">Formed</dt><dd>Formed October 2022 · California LLC</dd></div>
-              <div><dt className="sr-only">Address</dt><dd>{site.address.line1}, {site.address.city}, {site.address.state} {site.address.zip}</dd></div>
+              <div><dt className="sr-only">Address</dt><dd>{site.address.city}, California</dd></div>
             </dl>
           </header>
 
@@ -95,14 +95,14 @@ export default function CapabilityStatementPage() {
               </Block>
               <Block title="Company data">
                 <p className="text-xs leading-relaxed text-fg-secondary">
-                  {site.legalName} · {site.address.line1}, {site.address.city}, {site.address.state} {site.address.zip} · Government purchase cards accepted · Net-30 · W-9 and certificates of insurance on request
+                  {site.legalName} · {site.address.city}, California · Government purchase cards accepted · Net-30 · W-9 and certificates of insurance on request
                 </p>
               </Block>
               <Block title="Point of contact">
                 <p className="text-sm">
-                  <b className="font-medium text-fg-primary">{site.director}</b>, {site.directorTitle}
+                  <b className="font-medium text-fg-primary">Operations</b>
                   <br />
-                  <span className="font-mono text-xs text-fg-secondary">{site.phone} · yared@vlinesolutions.com · vlinesolutions.com</span>
+                  <span className="font-mono text-xs text-fg-secondary">{site.phone} · {site.email} · vlinesolutions.com</span>
                 </p>
               </Block>
             </div>

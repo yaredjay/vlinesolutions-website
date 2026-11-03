@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "V-Line Solutions — Every system delivered. Every program staffed. Every agency supported.";
+export const alt = "V-Line Solutions | Every system delivered. Every program staffed. Every agency supported.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

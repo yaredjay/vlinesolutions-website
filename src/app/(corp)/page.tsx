@@ -5,6 +5,7 @@ import { SystemsBuilt } from "@/components/sections/SystemsBuilt";
 import { Tomorrow } from "@/components/sections/Tomorrow";
 import { WhoWeAre } from "@/components/sections/WhoWeAre";
 import { CTA } from "@/components/sections/CTA";
+import { LiquidDivider } from "@/components/ui/LiquidDivider";
 
 export default function HomePage() {
   return (
@@ -12,7 +13,9 @@ export default function HomePage() {
       <Hero />
       <PathwayCards />
       <LogosMarquee />
+      <LiquidDivider className="mt-6" />
       <SystemsBuilt />
+      <LiquidDivider />
       <Tomorrow />
       <WhoWeAre />
       <CTA

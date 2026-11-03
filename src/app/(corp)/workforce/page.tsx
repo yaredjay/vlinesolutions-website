@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "V-Line Solutions places engineers, analysts and technical crews on agency teams, with the maintenance, program and event staff that keep a deployment running. Screened, credentialed and on site on the start date.",
   alternates: { canonical: "/workforce" },
   openGraph: {
-    title: "Workforce Solutions — V-Line Solutions",
+    title: "Workforce Solutions | V-Line Solutions",
     description:
       "Technology staffing first, with the technical crews, maintenance and program operations that keep public programs running.",
     url: "https://vlinesolutions.com/workforce",
@@ -29,7 +29,7 @@ export default function WorkforcePage() {
             <span className="text-fg-primary">public programs.</span>
           </>
         }
-        description="Engineers and analysts placed on your team, technical crews on your sites, and the maintenance, program and event staff that keep a deployment running. One accountable partner for every role — screened, credentialed and on site on the start date."
+        description="Engineers and analysts placed on your team, technical crews on your sites, and the maintenance, program and event staff that keep a deployment running. One accountable partner for every role, screened, credentialed and on site on the start date."
       />
       <ServiceCategoryGrid categories={workforce} />
       <StaffingModels />

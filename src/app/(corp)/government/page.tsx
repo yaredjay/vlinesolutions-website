@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     "V-Line Solutions LLC is a woman-owned small business serving federal, state and local agencies. Credentials, purchasing mechanisms and sectors served for public-sector buyers.",
   alternates: { canonical: "/government" },
   openGraph: {
-    title: "Government Contracts — V-Line Solutions",
+    title: "Government Contracts | V-Line Solutions",
     description:
       "Woman-owned small business serving federal, state and local agencies.",
     url: "https://vlinesolutions.com/government",
@@ -110,7 +110,7 @@ export default function GovernmentPage() {
           <SectionHeader
             eyebrow="Sectors Served"
             title="Where our work shows up."
-            description="V-Line Solutions delivers across the public mission set — from the agency office to the field operation."
+            description="V-Line Solutions delivers across the public mission set, from the agency office to the field operation."
           />
           <Stagger className="mt-12 flex flex-wrap justify-center gap-3" step={0.04}>
             {sectors.map((s) => (

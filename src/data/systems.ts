@@ -1,6 +1,6 @@
 /**
  * The systems commissioned by governments and development programs every
- * day — the work V-Line builds toward. Written in the vocabulary of the
+ * day: the work V-Line builds toward. Written in the vocabulary of the
  * programs that fund them (national digital strategies, World Bank, ADB,
  * EU Global Gateway), without the jargon.
  */
@@ -23,7 +23,7 @@ export const systemsBuilt = [
   {
     id: "budget",
     title: "Budget and treasury",
-    body: "Public money planned, released and accounted for in one system — from the budget call to the audited statement.",
+    body: "Public money planned, released and accounted for in one system, from the budget call to the audited statement.",
   },
   {
     id: "services",
@@ -33,7 +33,7 @@ export const systemsBuilt = [
   {
     id: "exchange",
     title: "Data exchange",
-    body: "Agencies that share data across boundaries without losing control of it — so a citizen tells the government something once.",
+    body: "Agencies that share data across boundaries without losing control of it, so a citizen tells the government something once.",
   },
   {
     id: "health",
@@ -59,7 +59,7 @@ export const systemsBuilt = [
 
 /**
  * Where the world is going. These are the stated goals of the national and
- * multilateral programs that fund public digital systems — the tomorrow
+ * multilateral programs that fund public digital systems: the tomorrow
  * V-Line builds toward, one system and one program at a time.
  */
 export const tomorrow = [
@@ -86,6 +86,6 @@ export const tomorrow = [
   {
     id: "platforms",
     lead: "From pilots to platforms",
-    rest: "— from fragmented systems to interoperable ecosystems that institutions own and run themselves.",
+    rest: "from fragmented systems to interoperable ecosystems that institutions own and run themselves.",
   },
 ];

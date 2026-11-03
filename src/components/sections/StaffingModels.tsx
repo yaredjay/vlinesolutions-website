@@ -17,7 +17,8 @@ export function StaffingModels() {
           {staffingModels.map((m) => (
             <StaggerItem
               key={m.title}
-              className="relative overflow-hidden rounded-3xl glass glow-ring p-7 md:p-8"
+              className="liquid overflow-hidden rounded-3xl p-7 md:p-8"
+              data-liquid
             >
               <div className="absolute inset-0 grid-bg-sm opacity-25 [mask-image:linear-gradient(to_bottom,black,transparent_85%)]" />
               <h3 className="relative font-display text-2xl font-medium tracking-tight">{m.title}</h3>

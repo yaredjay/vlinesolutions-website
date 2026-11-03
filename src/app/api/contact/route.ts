@@ -25,12 +25,12 @@ export async function POST(req: Request) {
 
   const to = (process.env.CONTACT_TO ?? "info@vlinesolutions.com").split(",").map((s) => s.trim());
   const from = process.env.CONTACT_FROM ?? "V-Line Solutions <noreply@vlinesolutions.com>";
-  const text = [`Name: ${name}`, `Email: ${email}`, `Organization: ${organization || "—"}`, "", message].join("\n");
+  const text = [`Name: ${name}`, `Email: ${email}`, `Organization: ${organization || "n/a"}`, "", message].join("\n");
 
   const res = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
-    body: JSON.stringify({ from, to, reply_to: email, subject: `Website inquiry — ${name}${organization ? ` (${organization})` : ""}`, text }),
+    body: JSON.stringify({ from, to, reply_to: email, subject: `Website inquiry: ${name}${organization ? ` (${organization})` : ""}`, text }),
   });
 
   if (!res.ok) return NextResponse.json({ error: "Delivery failed." }, { status: 502 });

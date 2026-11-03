@@ -8,12 +8,12 @@ import { site } from "@/data/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Reach V-Line Solutions for government technology, AI systems, and mission-critical workforce engagements. Call (408) 516-6667, email info@vlinesolutions.com, or send a message — Campbell, California.",
+    "Reach V-Line Solutions for public-sector technology and workforce engagements. Call (408) 516-6667, email info@vlinesolutions.com, or send a message. Campbell, California.",
   alternates: { canonical: "/contact" },
   openGraph: {
-    title: "Contact — V-Line Solutions",
+    title: "Contact | V-Line Solutions",
     description:
-      "Government technology, AI systems, and mission-critical workforce — let's talk.",
+      "Public-sector technology and workforce. Let's talk.",
     url: "https://vlinesolutions.com/contact",
   },
 };
@@ -30,7 +30,7 @@ export default function ContactPage() {
             <span className="text-fg-primary">project.</span>
           </>
         }
-        description="Procurement, programs, partnerships — send a message and we'll route it directly to operations leadership."
+        description="Procurement, programs, partnerships: send a message and we'll route it directly to operations leadership."
       />
 
       <section className="relative pb-32">
@@ -56,15 +56,15 @@ export default function ContactPage() {
                 <ContactItem
                   icon={MapPin}
                   label="Office"
-                  value={`${site.address.line1}, ${site.address.city}, ${site.address.state} ${site.address.zip}`}
+                  value={`${site.address.city}, California`}
                 />
               </ul>
 
               <div className="relative mt-10 rounded-2xl border border-border-subtle bg-bg-elevated/40 p-5">
                 <p className="text-3xs uppercase tracking-[0.2em] text-fg-muted">For procurement</p>
                 <p className="mt-2 text-sm text-fg-secondary">
-                  Capabilities statements, NAICS-aligned bid packages, and teaming responses
-                  available on request. Reference your solicitation number where possible.
+                  Past-performance references, W-9 and certificates of insurance available on
+                  request. Reference your solicitation number where possible.
                 </p>
               </div>
             </div>

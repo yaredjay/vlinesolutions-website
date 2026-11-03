@@ -68,10 +68,7 @@ export function Footer() {
             </p>
             <address className="mt-5 space-y-1 text-sm not-italic text-fg-secondary">
               <p>{site.legalName}</p>
-              <p>{site.address.line1}</p>
-              <p>
-                {site.address.city}, {site.address.state} {site.address.zip}
-              </p>
+              <p>{site.address.city}, California</p>
             </address>
           </div>
 
