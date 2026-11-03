@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 
-const ParticleField = dynamic(() => import("./ParticleField"), {
+const Globe = dynamic(() => import("./Globe"), {
   ssr: false,
   loading: () => null,
 });
@@ -14,9 +14,7 @@ export function HeroScene() {
   useEffect(() => {
     if (typeof window === "undefined") return;
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const coarse = window.matchMedia("(pointer: coarse)").matches;
-    const small = window.innerWidth < 768;
-    if (reduced || coarse || small) return;
+    if (reduced) return;
     // Defer until idle for smooth first paint
     const cb = () => setEnabled(true);
     if ("requestIdleCallback" in window) {
@@ -27,8 +25,8 @@ export function HeroScene() {
   }, []);
 
   return (
-    <div className="pointer-events-none absolute inset-0 -z-10">
-      {/* Mobile + reduced-motion fallback */}
+    <div className="pointer-events-none absolute inset-0 z-0">
+      {/* Reduced-motion fallback and first-paint glow under the globe */}
       <div
         aria-hidden
         className="absolute inset-0 [mask-image:radial-gradient(ellipse_60%_55%_at_50%_45%,black_55%,transparent_95%)]"
@@ -39,7 +37,7 @@ export function HeroScene() {
       />
       {enabled && (
         <div className="absolute inset-0">
-          <ParticleField />
+          <Globe heroSelector=".hero-root" />
         </div>
       )}
     </div>

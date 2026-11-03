@@ -22,11 +22,11 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden pt-40 md:pt-48">
-      <div className="absolute inset-0 grid-bg opacity-50 radial-fade" aria-hidden />
+    <section className="hero-root relative overflow-hidden pt-40 md:pt-48">
+      <div className="absolute inset-0 grid-bg opacity-40 radial-fade" aria-hidden />
       <HeroScene />
 
-      <div className="container-edge relative">
+      <div className="container-edge relative z-10">
         <h1
           ref={title}
           className="mx-auto max-w-[1080px] text-balance text-center font-display font-medium leading-[0.98] tracking-tightest text-[clamp(2.6rem,7.5vw,6.4rem)]"
