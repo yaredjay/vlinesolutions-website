@@ -8,12 +8,12 @@ import { site } from "@/data/site";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "V-Line Solutions LLC is a California-based technology and workforce services firm headquartered in Campbell, CA. We deliver AI systems, intelligent automation, and mission-critical staffing to government agencies and enterprise clients nationwide.",
+    "V-Line Solutions LLC is a woman-owned technology and workforce firm headquartered in Campbell, California. We build the systems public programs run on and place the people who keep them running.",
   alternates: { canonical: "/about" },
   openGraph: {
     title: "About — V-Line Solutions",
     description:
-      "California-based firm delivering government-grade quality at startup speed.",
+      "A Silicon Valley firm built for public service.",
     url: "https://vlinesolutions.com/about",
   },
 };
@@ -22,7 +22,7 @@ const principles = [
   {
     n: "01",
     title: "Operate at mission speed",
-    body: "Public sector outcomes shouldn't wait for vendor cadence. We move on the agency's clock.",
+    body: "Public outcomes shouldn't wait for vendor cadence. We move on the agency's clock and show working software every week.",
   },
   {
     n: "02",
@@ -32,12 +32,12 @@ const principles = [
   {
     n: "03",
     title: "Field reliable people",
-    body: "Workforce delivery is a craft. We treat it that way — every shift, every site, every event.",
+    body: "Placement is a craft. Every assignment has a named lead, a replacement bench and reporting the agency can use.",
   },
   {
     n: "04",
-    title: "Refuse the vendor cliché",
-    body: "No bloated decks. No padded SOWs. We win on delivery, not on procurement theater.",
+    title: "Hand it over complete",
+    body: "Code, data, documentation and trained people. The institution owns what we build, and can run it without us.",
   },
 ];
 
@@ -48,12 +48,12 @@ export default function AboutPage() {
         eyebrow="About"
         title={
           <>
-            <span className="gradient-text">A California firm</span>{" "}
-            <span className="text-fg-secondary">built for</span>{" "}
-            <span className="text-fg-primary">public-sector velocity.</span>
+            <span className="gradient-text">From Silicon Valley,</span>{" "}
+            <span className="text-fg-secondary">for</span>{" "}
+            <span className="text-fg-primary">public service.</span>
           </>
         }
-        description="V-Line Solutions LLC delivers AI systems, intelligent automation, and mission-critical staffing to government agencies and enterprise clients nationwide — with the rigor of a federal integrator and the speed of a modern technology firm."
+        description="V-Line Solutions builds the systems public programs run on and places the people who keep them running — for agencies across the United States and the development programs modernizing government around the world. The rigor of a federal integrator, the speed of a Silicon Valley firm."
       />
 
       {/* Mission */}
@@ -61,17 +61,16 @@ export default function AboutPage() {
         <div className="container-edge">
           <div className="grid items-start gap-12 md:grid-cols-12">
             <Reveal as="div" className="md:col-span-4">
-              <span className="text-xs uppercase tracking-[0.22em] text-fg-muted">Our mission</span>
-              <div className="mt-3 h-px w-16 bg-gradient-to-r from-accent to-transparent" />
+              <div className="h-px w-16 bg-gradient-to-r from-accent to-transparent" />
             </Reveal>
             <Reveal as="div" delay={0.05} className="md:col-span-8">
               <p className="text-balance font-display text-2xl font-medium leading-snug tracking-tight md:text-[2rem]">
                 {site.bio}
               </p>
               <p className="mt-6 max-w-2xl text-pretty leading-relaxed text-fg-secondary">
-                We exist because public-sector teams deserve a partner who can architect the AI
-                system, secure the cloud, and field the crew that runs the building — without
-                handoffs, without finger-pointing, without inflated timelines.
+                Public programs deserve one partner who can design the system, secure the
+                cloud it runs on, and place the people who keep it running — without
+                handoffs, without finger-pointing, and without inflated timelines.
               </p>
             </Reveal>
           </div>
@@ -88,10 +87,7 @@ export default function AboutPage() {
                 className="relative overflow-hidden rounded-3xl glass glow-ring p-8"
               >
                 <div className="absolute inset-0 grid-bg-sm opacity-25 [mask-image:linear-gradient(to_bottom,black,transparent_85%)]" />
-                <span className="relative font-display text-xs uppercase tracking-[0.28em] text-fg-muted">
-                  Principle / {p.n}
-                </span>
-                <h3 className="relative mt-3 font-display text-2xl font-medium tracking-tight md:text-3xl">
+                <h3 className="relative font-display text-2xl font-medium tracking-tight md:text-3xl">
                   {p.title}
                 </h3>
                 <p className="relative mt-3 max-w-md text-fg-secondary">{p.body}</p>
@@ -114,9 +110,7 @@ export default function AboutPage() {
                     "radial-gradient(circle, rgba(var(--accent-glow),0.55) 0%, transparent 70%)",
                 }}
               />
-              <span className="relative text-xs uppercase tracking-[0.22em] text-fg-muted">
-                Leadership
-              </span>
+              <h3 className="relative font-display text-2xl font-medium tracking-tight">Leadership</h3>
               <div className="relative mt-6 space-y-5">
                 <div className="flex items-center gap-5">
                   <span className="grid h-16 w-16 shrink-0 place-items-center rounded-2xl border border-border-subtle bg-bg-elevated/70 font-mono text-sm tracking-[0.12em] text-fg-primary">
@@ -145,9 +139,7 @@ export default function AboutPage() {
 
             <Reveal delay={0.06} className="relative overflow-hidden rounded-3xl glass p-10">
               <div className="absolute inset-0 grid-bg-sm opacity-30" />
-              <span className="relative text-xs uppercase tracking-[0.22em] text-fg-muted">
-                Headquarters
-              </span>
+              <h3 className="relative font-display text-2xl font-medium tracking-tight">Headquarters</h3>
               <ul className="relative mt-6 space-y-4">
                 <li className="flex items-start gap-3">
                   <MapPin className="mt-0.5 h-4 w-4 text-accent" />

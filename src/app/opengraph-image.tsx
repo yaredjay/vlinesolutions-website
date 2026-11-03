@@ -123,11 +123,11 @@ export default async function OG() {
           }}
         >
           <div style={{ display: "flex", gap: 24 }}>
-            <span>SAM.gov Registered</span>
+            <span>Campbell, California</span>
             <span>·</span>
             <span>Small Business</span>
             <span>·</span>
-            <span>17 NAICS Codes</span>
+            <span>Woman-owned small business</span>
           </div>
           <div style={{ display: "flex" }}>vlinesolutions.com</div>
         </div>

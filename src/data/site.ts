@@ -4,7 +4,7 @@ export const site = {
   tagline: "Every system delivered. Every program staffed. Every agency supported.",
   description:
     "Technology and workforce solutions for the public sector, built in Silicon Valley and delivered to the agencies that run the country's programs.",
-  bio: "Founded in 2022 in Campbell, California, V-Line Solutions is a woman-owned firm that helps government agencies deploy, scale and sustain the systems and the people their programs depend on.",
+  bio: "Founded in 2022 in Campbell, California, V-Line Solutions is a woman-owned firm that builds the systems public programs run on and places the people who keep them running — for agencies across the United States and the development programs modernizing government around the world.",
   address: {
     line1: "1725 South Bascom Ave #208",
     city: "Campbell",
@@ -21,7 +21,7 @@ export const site = {
   ceoTitle: "Chief Executive Officer",
   uei: "ZHBKRDQ94TE5",
   classification: "Small Business",
-  registration: "SAM.gov Registered",
+  registration: "Woman-owned small business",
 };
 
 export const nav: { label: string; href: string }[] = [

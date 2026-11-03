@@ -2,22 +2,20 @@ import type { Metadata } from "next";
 import { Building2, ShieldCheck, BadgeCheck, Hash } from "lucide-react";
 import { PageHero } from "@/components/sections/PageHero";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
+import { Stagger, StaggerItem } from "@/components/ui/Reveal";
 import { GovernmentClients } from "@/components/sections/GovernmentClients";
 import { CTA } from "@/components/sections/CTA";
-import Link from "next/link";
-import { FileText } from "lucide-react";
-import { contractMechanisms, naicsGroups, naicsLabels, sectors, site } from "@/data/site";
+import { contractMechanisms, sectors, site } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Government Contracts",
   description:
-    "V-Line Solutions LLC: woman-owned small business, prime contractor to the U.S. Air Force, City of San José and Anne Arundel County, registered across 17 NAICS codes. Credentials, past performance and purchasing mechanisms for public-sector buyers.",
+    "V-Line Solutions LLC is a woman-owned small business serving federal, state and local agencies. Credentials, purchasing mechanisms and sectors served for public-sector buyers.",
   alternates: { canonical: "/government" },
   openGraph: {
     title: "Government Contracts — V-Line Solutions",
     description:
-      "Woman-owned small business, prime contractor to federal and municipal clients, 17 NAICS codes.",
+      "Woman-owned small business serving federal, state and local agencies.",
     url: "https://vlinesolutions.com/government",
   },
 };
@@ -25,7 +23,7 @@ export const metadata: Metadata = {
 const credentials = [
   { icon: Building2, label: "Entity", value: site.legalName, sub: "California" },
   { icon: BadgeCheck, label: "Formed", value: "October 2022", sub: "Limited liability company, California" },
-  { icon: Hash, label: "UEI", value: site.uei, sub: "SAM.gov Unique Entity ID" },
+  { icon: Hash, label: "UEI", value: site.uei, sub: "Unique Entity ID" },
   { icon: ShieldCheck, label: "Ownership", value: "Woman-owned small business", sub: "Not SBA WOSB-certified" },
 ];
 
@@ -36,12 +34,12 @@ export default function GovernmentPage() {
         eyebrow="Government Contracts"
         title={
           <>
-            <span className="gradient-text">Purpose-Built</span>{" "}
-            <span className="text-fg-secondary">for Public Sector</span>{" "}
-            <span className="text-fg-primary">Procurement.</span>
+            <span className="gradient-text">Built to be bought</span>{" "}
+            <span className="text-fg-secondary">the way</span>{" "}
+            <span className="text-fg-primary">government buys.</span>
           </>
         }
-        description="From SAP awards to multi-year IDIQs, V-Line Solutions is ready to compete, win, and deliver. Below: the credentials, codes, and mechanisms agencies need to engage us today."
+        description="From simplified acquisitions to multi-year task orders, we are set up to be bought the way agencies buy. Below: the credentials, the agencies we have served, and the mechanisms available to engage us."
       />
 
       {/* Credentials */}
@@ -74,57 +72,13 @@ export default function GovernmentPage() {
 
       <GovernmentClients />
 
-      {/* NAICS */}
-      <section className="relative py-24">
-        <div className="container-edge">
-          <SectionHeader
-            eyebrow="NAICS Codes"
-            title="17 codes. Four domains."
-            description="Grouped the way an evaluator reads them: software and systems first, then professional services, facilities and program delivery."
-          />
-          <Stagger className="mt-12 grid gap-5 md:grid-cols-2">
-            {naicsGroups.map((g) => (
-              <StaggerItem key={g.domain} className="relative overflow-hidden rounded-3xl glass p-7 md:p-8">
-                <div className="absolute inset-0 grid-bg-sm opacity-20 [mask-image:linear-gradient(to_bottom,black,transparent_85%)]" />
-                <div className="relative flex items-baseline justify-between border-b border-border-subtle pb-4">
-                  <h3 className="font-display text-xl font-medium tracking-tight">{g.domain}</h3>
-                  <span className="font-mono text-xs text-fg-muted">{String(g.codes.length).padStart(2, "0")}</span>
-                </div>
-                <ul className="relative mt-4 divide-y divide-border-subtle">
-                  {g.codes.map((code) => (
-                    <li key={code} className="flex items-start justify-between gap-6 py-3">
-                      <span className="font-display text-lg font-medium tracking-tight text-fg-primary">{code}</span>
-                      <span className="text-right text-sm leading-snug text-fg-secondary">{naicsLabels[code]}</span>
-                    </li>
-                  ))}
-                </ul>
-              </StaggerItem>
-            ))}
-          </Stagger>
-          <Reveal className="mt-8">
-            <Link
-              href="/capability-statement"
-              className="group flex items-center justify-between gap-4 rounded-2xl border border-border-subtle bg-bg-surface/50 px-6 py-5 text-sm text-fg-secondary transition-colors hover:text-fg-primary"
-            >
-              <span className="flex items-center gap-3">
-                <FileText className="h-4 w-4 text-accent" />
-                <span>
-                  <span className="font-medium text-fg-primary">Capability statement</span> · one page: competencies, past performance, differentiators, company data.
-                </span>
-              </span>
-              <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
-            </Link>
-          </Reveal>
-        </div>
-      </section>
-
       {/* How We Work */}
       <section className="relative py-24">
         <div className="container-edge">
           <SectionHeader
             eyebrow="How We Work With Government"
             title="Engage us through the vehicle that fits."
-            description="From single awards to long-form task orders, our delivery model meets agencies where they procure."
+            description="From single awards to long-form task orders, we meet agencies where they procure."
           />
           <Stagger className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {contractMechanisms.map((m, i) => (
@@ -133,10 +87,7 @@ export default function GovernmentPage() {
                 className="relative overflow-hidden rounded-2xl glass glow-ring p-7"
               >
                 <div className="absolute inset-0 grid-bg-sm opacity-25 [mask-image:linear-gradient(to_bottom,black,transparent)]" />
-                <span className="relative font-display text-xs uppercase tracking-[0.22em] text-fg-muted">
-                  Mechanism / 0{i + 1}
-                </span>
-                <h3 className="relative mt-3 font-display text-lg font-medium tracking-tight md:text-xl">
+                <h3 className="relative font-display text-lg font-medium tracking-tight md:text-xl">
                   {m.title}
                 </h3>
                 <p className="relative mt-2 text-sm leading-relaxed text-fg-secondary">{m.body}</p>
@@ -177,7 +128,7 @@ export default function GovernmentPage() {
       <CTA
         eyebrow="Procurement"
         title="Submit an RFP or request references."
-        body="Capability statement, past-performance references, W-9 and certificates of insurance on request. One business day to a reply from a named person."
+        body="Past-performance references, W-9 and certificates of insurance on request. One business day to a reply from a named person."
         primary={{ label: "Contact us", href: "/contact" }}
         secondary={{ label: "Technology solutions", href: "/technology" }}
       />

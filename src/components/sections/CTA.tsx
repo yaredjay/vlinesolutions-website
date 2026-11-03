@@ -41,11 +41,7 @@ export function CTA({
             />
 
             <div className="relative mx-auto max-w-2xl text-center">
-              <span className="inline-flex items-center gap-2 rounded-full border border-border-subtle bg-bg-elevated/60 px-3 py-1 text-xs uppercase tracking-[0.18em] text-fg-secondary backdrop-blur-md">
-                <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_10px_var(--accent)]" />
-                {eyebrow}
-              </span>
-              <h2 className="mt-5 font-display text-4xl font-medium leading-[1.05] tracking-tightest md:text-5xl">
+              <h2 className="font-display text-4xl font-medium leading-[1.05] tracking-tightest md:text-5xl">
                 <span className="gradient-text">{title}</span>
               </h2>
               <p className="mx-auto mt-5 max-w-xl text-pretty text-base text-fg-secondary md:text-lg">

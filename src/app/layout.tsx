@@ -47,7 +47,6 @@ export const metadata: Metadata = {
     "GovTech",
     "intelligent automation",
     "California government contractor",
-    "SAM.gov registered",
     "small business contractor",
     "V-Line Solutions",
     "vlinesolutions",

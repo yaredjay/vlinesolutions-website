@@ -9,20 +9,18 @@ const pathways = [
   {
     href: "/technology",
     icon: Cpu,
-    eyebrow: "Division 01",
     title: "Technology Solutions",
     description:
-      "A digital modernization partner for government: AI, automation, secure platforms and data, delivered at startup speed.",
-    bullets: ["Artificial Intelligence", "Agentic Automation", "Cybersecurity & Cloud"],
+      "We design, build and run the systems public programs depend on: registries and identity, payments, budget and service platforms, data and the secure cloud underneath them. Built to be owned by the agency that runs them.",
+    bullets: ["Digital public infrastructure", "Service and budget platforms", "Data, cloud and security"],
   },
   {
     href: "/workforce",
     icon: HardHat,
-    eyebrow: "Division 02",
     title: "Workforce Solutions",
     description:
-      "Credentialed people for facilities, events, administration, IT and the skilled trades, deployed on the agency's schedule.",
-    bullets: ["Facilities & Janitorial", "Events & Sports Operations", "IT & Skilled Trades"],
+      "Engineers, analysts and technical crews placed on agency teams, with the maintenance, program and event staff that keep a deployment running. Screened, credentialed and on site on the start date.",
+    bullets: ["Technology staffing", "Technical crews and field support", "Program and maintenance operations"],
   },
 ];
 
@@ -31,12 +29,8 @@ export function PathwayCards() {
     <section className="relative py-28">
       <div className="container-edge">
         <div className="mx-auto max-w-xl text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-border-subtle bg-bg-surface/60 px-3 py-1 text-xs uppercase tracking-[0.18em] text-fg-secondary backdrop-blur-md">
-            <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_10px_var(--accent)]" />
-            Two Divisions. One Standard.
-          </span>
-          <h2 className="mt-5 font-display text-4xl font-medium leading-[1.05] tracking-tightest md:text-5xl">
-            <span className="gradient-text">Built on public-sector delivery.</span>
+          <h2 className="font-display text-4xl font-medium leading-[1.05] tracking-tightest md:text-5xl">
+            <span className="gradient-text">Two ways we show up for the public sector.</span>
           </h2>
         </div>
 
@@ -57,10 +51,7 @@ export function PathwayCards() {
                 />
                 <div className="absolute inset-0 grid-bg-sm opacity-30 [mask-image:linear-gradient(to_bottom,black,transparent)]" />
 
-                <div className="relative flex items-center justify-between">
-                  <span className="text-xs uppercase tracking-[0.22em] text-fg-muted">
-                    {p.eyebrow}
-                  </span>
+                <div className="relative flex items-center justify-end">
                   <span className="grid h-10 w-10 place-items-center rounded-full border border-border-subtle bg-bg-elevated/70 transition-transform duration-500 group-hover:rotate-45">
                     <ArrowUpRight className="h-4 w-4 text-fg-primary" />
                   </span>

@@ -48,9 +48,7 @@ export default function ContactPage() {
                     "radial-gradient(circle, rgba(var(--accent-glow),0.5) 0%, transparent 70%)",
                 }}
               />
-              <span className="relative text-xs uppercase tracking-[0.22em] text-fg-muted">
-                Direct lines
-              </span>
+              <h3 className="relative font-display text-2xl font-medium tracking-tight">Direct lines</h3>
 
               <ul className="relative mt-8 space-y-6">
                 <ContactItem icon={Phone} label="Phone" value={site.phone} href={site.phoneHref} />

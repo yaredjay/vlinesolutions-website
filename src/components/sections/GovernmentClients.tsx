@@ -25,7 +25,7 @@ export function GovernmentClients() {
         <SectionHeader
           eyebrow="Government Clients"
           title="Agencies we've supported."
-          description="A representative cross-section of public-sector organizations V-Line Solutions has served — from federal departments to county seats."
+          description="Federal, state, county and municipal agencies we have worked with."
         />
 
         <div className="mt-14 space-y-10">
@@ -42,17 +42,9 @@ export function GovernmentClients() {
                 />
 
                 <div className="relative flex items-baseline justify-between border-b border-border-subtle pb-5">
-                  <div>
-                    <p className="text-3xs uppercase tracking-[0.22em] text-fg-muted">
-                      Tier
-                    </p>
-                    <h3 className="mt-1 font-display text-2xl font-medium tracking-tight">
-                      {groupLabels[group.cat]}
-                    </h3>
-                  </div>
-                  <span className="font-mono text-xs text-fg-muted">
-                    {String(group.list.length).padStart(2, "0")} clients
-                  </span>
+                  <h3 className="font-display text-2xl font-medium tracking-tight">
+                    {groupLabels[group.cat]}
+                  </h3>
                 </div>
 
                 <Stagger

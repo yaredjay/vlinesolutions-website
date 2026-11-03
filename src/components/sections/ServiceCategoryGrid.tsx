@@ -6,19 +6,13 @@ import { ChevronDown } from "lucide-react";
 import type { ServiceCategory } from "@/data/services";
 import { cn } from "@/lib/cn";
 
-export function ServiceCategoryGrid({
-  categories,
-  accentLabel,
-}: {
-  categories: ServiceCategory[];
-  accentLabel: string;
-}) {
+export function ServiceCategoryGrid({ categories }: { categories: ServiceCategory[] }) {
   return (
     <section className="relative py-16 md:py-24">
       <div className="container-edge">
         <div className="grid gap-5 md:grid-cols-2">
           {categories.map((cat, i) => (
-            <ServiceCard key={cat.id} category={cat} index={i} accentLabel={accentLabel} />
+            <ServiceCard key={cat.id} category={cat} index={i} />
           ))}
         </div>
       </div>
@@ -26,15 +20,7 @@ export function ServiceCategoryGrid({
   );
 }
 
-function ServiceCard({
-  category,
-  index,
-  accentLabel,
-}: {
-  category: ServiceCategory;
-  index: number;
-  accentLabel: string;
-}) {
+function ServiceCard({ category, index }: { category: ServiceCategory; index: number }) {
   const [open, setOpen] = useState(index < 2);
   const reduced = useReducedMotion();
 
@@ -59,12 +45,7 @@ function ServiceCard({
       />
       <div className="absolute inset-0 grid-bg-sm opacity-30 [mask-image:linear-gradient(to_bottom,black,transparent_85%)]" />
 
-      <div className="relative flex items-start justify-between gap-6">
-        <div className="flex items-start gap-5">
-          <span className="font-display text-xs uppercase tracking-[0.28em] text-fg-muted">
-            {accentLabel} / {category.number}
-          </span>
-        </div>
+      <div className="absolute right-6 top-6 z-10 md:right-8 md:top-8">
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
@@ -79,7 +60,7 @@ function ServiceCard({
         </button>
       </div>
 
-      <h3 className="relative mt-5 font-display text-2xl font-medium leading-snug tracking-tight md:text-[1.65rem]">
+      <h3 className="relative pr-12 font-display text-2xl font-medium leading-snug tracking-tight md:text-[1.65rem]">
         {category.title}
       </h3>
       <p className="relative mt-3 max-w-md text-sm leading-relaxed text-fg-secondary">

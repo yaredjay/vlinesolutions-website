@@ -9,10 +9,7 @@ export function WhoWeAre() {
       <div className="container-edge">
         <div className="grid items-start gap-12 md:grid-cols-12">
           <Reveal as="div" className="md:col-span-4">
-            <span className="text-xs uppercase tracking-[0.22em] text-fg-muted">
-              Who we are
-            </span>
-            <div className="mt-3 h-px w-16 bg-gradient-to-r from-accent to-transparent" />
+            <div className="h-px w-16 bg-gradient-to-r from-accent to-transparent" />
           </Reveal>
           <Reveal as="div" delay={0.05} className="md:col-span-8">
             <p className="text-balance font-display text-2xl font-medium leading-snug tracking-tight text-fg-primary md:text-[2rem]">
@@ -20,10 +17,10 @@ export function WhoWeAre() {
             </p>
             <div className="mt-8 grid grid-cols-2 gap-4 text-sm sm:grid-cols-4">
               {[
-                { k: "HQ", v: "Campbell, CA" },
-                { k: "Founded", v: "California, USA" },
-                { k: "Sector", v: "Tech + Workforce" },
-                { k: "Status", v: site.classification },
+                { k: "Headquarters", v: "Campbell, California" },
+                { k: "Founded", v: "2022" },
+                { k: "Ownership", v: "Woman-owned" },
+                { k: "Work", v: "Technology and workforce" },
               ].map((f) => (
                 <div
                   key={f.k}

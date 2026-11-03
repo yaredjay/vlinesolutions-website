@@ -25,25 +25,13 @@ export function SectionHeader({
         className
       )}
     >
-      {eyebrow && (
-        <motion.span
-          initial={reduced ? false : { opacity: 0, y: 10 }}
-          whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-15% 0px" }}
-          transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 rounded-full border border-border-subtle bg-bg-surface/60 px-3 py-1 text-xs uppercase tracking-[0.18em] text-fg-secondary backdrop-blur-md"
-        >
-          <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_10px_var(--accent)]" />
-          {eyebrow}
-        </motion.span>
-      )}
       <motion.h2
         initial={reduced ? false : { opacity: 0, y: 18 }}
         whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-10% 0px" }}
         transition={{ duration: 0.75, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
         className={cn(
-          "mt-5 font-display text-balance text-4xl font-medium leading-[1.05] tracking-tightest md:text-5xl lg:text-[3.6rem]",
+          "font-display text-balance text-4xl font-medium leading-[1.05] tracking-tightest md:text-5xl lg:text-[3.6rem]",
           "gradient-text"
         )}
       >
