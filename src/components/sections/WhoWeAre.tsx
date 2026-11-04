@@ -15,12 +15,13 @@ export function WhoWeAre() {
             <p className="text-balance font-display text-2xl font-medium leading-snug tracking-tight text-fg-primary md:text-[2rem]">
               {site.bio}
             </p>
-            <div className="mt-8 grid grid-cols-2 gap-4 text-sm sm:grid-cols-4">
+            <h3 className="mt-10 font-display text-lg font-medium tracking-tight">Corporate Profile</h3>
+            <div className="mt-4 grid grid-cols-2 gap-4 text-sm sm:grid-cols-4">
               {[
-                { k: "Work", v: "Design, build, modernize, run" },
-                { k: "Ownership", v: "Woman-owned" },
-                { k: "Focus", v: "Public-sector systems" },
-                { k: "Reach", v: "United States and global programs" },
+                { k: "Work", v: "Design, build, modernize, operate" },
+                { k: "Ownership", v: "Woman-Owned Small Business" },
+                { k: "Focus", v: "Public-sector systems and national digital infrastructure" },
+                { k: "Reach", v: "United States federal programs and global programs" },
               ].map((f) => (
                 <div
                   key={f.k}
