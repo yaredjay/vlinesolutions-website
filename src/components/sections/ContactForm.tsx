@@ -34,7 +34,7 @@ export function ContactForm() {
       form.reset();
     } catch (err) {
       setError(
-        `${err instanceof Error ? err.message : "Something went wrong."} Email info@vlinesolutions.com or call (408) 516-6667.`
+        `${err instanceof Error ? err.message : "Something went wrong."} Email info@vlinesolutions.com.`
       );
       setStatus("error");
     }

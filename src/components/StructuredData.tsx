@@ -20,7 +20,6 @@ export function StructuredData() {
       {
         "@type": "ContactPoint",
         contactType: "customer service",
-        telephone: site.phone,
         email: site.email,
         areaServed: "US",
         availableLanguage: "en",
@@ -28,7 +27,6 @@ export function StructuredData() {
       {
         "@type": "ContactPoint",
         contactType: "sales",
-        telephone: site.phone,
         email: site.email,
         areaServed: "US",
       },
@@ -43,7 +41,6 @@ export function StructuredData() {
     name: site.legalName,
     image: `${siteUrl}/icon.png`,
     url: siteUrl,
-    telephone: site.phone,
     email: site.email,
     priceRange: "$$$$",
     areaServed: {

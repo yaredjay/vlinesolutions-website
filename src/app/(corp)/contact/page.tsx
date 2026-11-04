@@ -7,7 +7,7 @@ import { site } from "@/data/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Reach V-Line Solutions for public-sector technology, modernization and system building. Call (408) 516-6667, email info@vlinesolutions.com, or send a message.",
+    "Reach V-Line Solutions for public-sector technology, modernization and system building. Email info@vlinesolutions.com or send a message.",
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "Contact | V-Line Solutions",
@@ -50,7 +50,6 @@ export default function ContactPage() {
               <h3 className="relative font-display text-2xl font-medium tracking-tight">Direct lines</h3>
 
               <ul className="relative mt-8 space-y-6">
-                <ContactItem label="Phone" value={site.phone} href={site.phoneHref} />
                 <ContactItem label="Email" value={site.email} href={site.emailHref} />
               </ul>
 

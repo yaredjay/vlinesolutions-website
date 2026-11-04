@@ -68,11 +68,6 @@ export function Footer() {
             </p>
             <ul className="mt-5 space-y-3 text-sm text-fg-secondary">
               <li>
-                <a className="hover:text-fg-primary" href={site.phoneHref}>
-                  {site.phone}
-                </a>
-              </li>
-              <li>
                 <a className="hover:text-fg-primary" href={site.emailHref}>
                   {site.email}
                 </a>
