@@ -31,12 +31,12 @@ export default function GovernmentPage() {
         eyebrow="Government Contracts"
         title={
           <>
-            <span className="gradient-text">Built for the institutions</span>{" "}
+            <span className="gradient-text">Built for the ministries</span>{" "}
             <span className="text-fg-secondary">that</span>{" "}
             <span className="text-fg-primary">anchor nations.</span>
           </>
         }
-        description="Ministries, national authorities and public agencies engage V-Line Solutions to build, secure and operate their primary digital infrastructure."
+        description="Ministries and national authorities engage V-Line Solutions to build, secure, and operate their primary digital infrastructure."
       />
 
       {/* Credentials */}
