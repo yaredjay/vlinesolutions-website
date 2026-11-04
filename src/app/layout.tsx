@@ -37,8 +37,8 @@ export const metadata: Metadata = {
   applicationName: site.name,
   generator: "Next.js",
   keywords: [
-    "enterprise systems",
-    "SaaS platforms",
+    "national digital infrastructure",
+    "sovereign digital systems",
     "digital public infrastructure",
     "public sector AI",
     "government contracting",

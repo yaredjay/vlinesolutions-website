@@ -7,7 +7,7 @@ import { site } from "@/data/site";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "V-Line Solutions LLC is a woman-owned Silicon Valley technology firm. We design, build and run enterprise systems and SaaS platforms.",
+    "V-Line Solutions LLC is a woman-owned Silicon Valley technology firm. We build and deploy national digital infrastructure.",
   alternates: { canonical: "/about" },
   openGraph: {
     title: "About | V-Line Solutions",
@@ -52,7 +52,7 @@ export default function AboutPage() {
             <span className="text-fg-primary">public service.</span>
           </>
         }
-        description="V-Line Solutions designs, builds and runs enterprise systems and SaaS platforms, across the United States and for the national programs building digital infrastructure around the world. The rigor of an enterprise integrator, the speed of a Silicon Valley product team."
+        description="V-Line Solutions builds, secures and operates digital public infrastructure for ministries, national authorities and public agencies. The rigor of a national-systems integrator, the resilience to run in any environment."
       />
 
       {/* Mission */}
@@ -68,8 +68,8 @@ export default function AboutPage() {
               </p>
               <p className="mt-6 max-w-2xl text-pretty leading-relaxed text-fg-secondary">
                 One team designs the system, builds it, secures the cloud it runs on and
-                hands it over complete. The result is what we are measured on: a service
-                that works for the person using it, the first time and every time.
+                completes the technology transfer. What remains is infrastructure the
+                institution owns and the public trusts.
               </p>
             </Reveal>
           </div>

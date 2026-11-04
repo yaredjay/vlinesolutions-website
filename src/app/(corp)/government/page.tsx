@@ -9,7 +9,7 @@ import { sectors, site } from "@/data/site";
 export const metadata: Metadata = {
   title: "Government Contracts",
   description:
-    "V-Line Solutions LLC is a woman-owned small business building and modernizing systems for federal, state and local agencies. Credentials, agencies served and sectors.",
+    "V-Line Solutions builds, secures and operates primary digital infrastructure for ministries, national authorities and public agencies. Credentials, agencies served and sectors.",
   alternates: { canonical: "/government" },
   openGraph: {
     title: "Government Contracts | V-Line Solutions",
@@ -31,12 +31,12 @@ export default function GovernmentPage() {
         eyebrow="Government Contracts"
         title={
           <>
-            <span className="gradient-text">A modernization partner</span>{" "}
-            <span className="text-fg-secondary">to the</span>{" "}
-            <span className="text-fg-primary">public sector.</span>
+            <span className="gradient-text">Built for the institutions</span>{" "}
+            <span className="text-fg-secondary">that</span>{" "}
+            <span className="text-fg-primary">anchor nations.</span>
           </>
         }
-        description="Federal, state and local agencies engage us to build, modernize and run the systems their programs depend on. Below: who we are on paper, the agencies we have worked with, and where the work shows up."
+        description="Ministries, national authorities and public agencies engage V-Line Solutions to build, secure and operate their primary digital infrastructure."
       />
 
       {/* Credentials */}
@@ -91,7 +91,7 @@ export default function GovernmentPage() {
 
       <CTA
         title="Have a modernization program in motion?"
-        body="Tell us the system, the agency and the timeline. We'll come back with an architecture, a delivery plan and a price."
+        body="Tell us the system, the institution and the timeline. We come back with an architecture and a delivery plan."
         primary={{ label: "Start a conversation", href: "/contact" }}
         secondary={{ label: "What we build", href: "/technology" }}
       />

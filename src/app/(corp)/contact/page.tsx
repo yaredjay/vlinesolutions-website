@@ -7,12 +7,12 @@ import { site } from "@/data/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Reach V-Line Solutions about enterprise systems and SaaS platforms. Email info@vlinesolutions.com or send a message.",
+    "Reach V-Line Solutions about national digital infrastructure. Email info@vlinesolutions.com or send a message.",
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "Contact | V-Line Solutions",
     description:
-      "Enterprise systems and SaaS platforms. Let's talk.",
+      "National digital infrastructure. Let's talk.",
     url: "https://vlinesolutions.com/contact",
   },
 };
@@ -29,7 +29,7 @@ export default function ContactPage() {
             <span className="text-fg-primary">project.</span>
           </>
         }
-        description="Procurement, programs, partnerships: send a message and we'll route it directly to operations leadership."
+        description="Tell us the system, the institution and the timeline. Messages go directly to operations leadership."
       />
 
       <section className="relative pb-32">

@@ -62,9 +62,8 @@ export function SystemsBuilt() {
                 <p className="mt-6 max-w-md text-pretty text-fg-secondary md:text-lg">
                   Somewhere today a ministry is commissioning a registry, a treasury is
                   retiring a paper ledger, and a city is putting a permit online for the
-                  first time. These are the systems national programs are budgeting for,
-                  and the systems we build, from Silicon Valley to the institutions that
-                  run them.
+                  first time. These are the systems we build and deploy, from Silicon
+                  Valley to the institutions that run them.
                 </p>
               </Reveal>
               <Reveal delay={0.14}>

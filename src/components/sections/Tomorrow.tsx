@@ -48,8 +48,8 @@ export function Tomorrow() {
 
       <div className="container-edge relative">
         <p className="max-w-2xl text-pretty text-fg-secondary md:text-lg">
-          Countries have already written down what a clean, digital tomorrow looks
-          like. Our work is to help them get there, system by system.
+          National digital strategies are already written. We deploy them, system by
+          system.
         </p>
 
         <ul className="mt-14 md:mt-20">
@@ -79,8 +79,8 @@ export function Tomorrow() {
 
         <div className="mt-14 flex flex-col gap-6 md:mt-20 md:flex-row md:items-end md:justify-between">
           <p className="max-w-xl text-pretty text-fg-secondary md:text-lg">
-            One system, one program, one deployment at a time, so a service that once
-            took months takes minutes, and a better tomorrow arrives on schedule.
+            One deployment at a time. What remains is secure infrastructure your
+            government owns and your public trusts.
           </p>
           <Link
             href="/technology"

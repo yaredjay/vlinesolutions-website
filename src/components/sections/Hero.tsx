@@ -56,9 +56,9 @@ export function Hero() {
           transition={{ duration: 0.85, delay: 0.25 }}
           className="mx-auto mt-7 max-w-2xl text-pretty text-center text-base leading-relaxed text-fg-secondary md:text-lg"
         >
-          We design, build and run enterprise systems and SaaS platforms, engineered in
-          Silicon Valley, so a benefit arrives on time, a record exists for every person
-          and a service works the first time. A better tomorrow, delivered.
+          V-Line Solutions builds and deploys national digital infrastructure for the
+          programs a country runs on. Delivered in months. Owned entirely by the
+          sovereign institution.
         </motion.p>
 
         <motion.div

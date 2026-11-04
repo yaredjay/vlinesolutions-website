@@ -106,7 +106,7 @@ export default async function OG() {
               lineHeight: 1.35,
             }}
           >
-            Enterprise systems and SaaS platforms, in service of a better tomorrow.
+            National digital infrastructure for the programs a country depends on.
           </div>
         </div>
 
