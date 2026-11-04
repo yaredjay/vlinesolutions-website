@@ -17,7 +17,7 @@ export const technology: ServiceCategory[] = [
     number: "01",
     title: "Digital Public Infrastructure",
     blurb:
-      "The foundational layers every digital government is built on: identity, registries, payments and the exchange that lets them talk to each other.",
+      "The foundational layers every digital nation is built on: identity, registries, payments and the exchange that lets them talk to each other.",
     items: [
       "Digital identity and credential systems",
       "Civil, business and beneficiary registries",
@@ -30,7 +30,7 @@ export const technology: ServiceCategory[] = [
   {
     id: "service-delivery",
     number: "02",
-    title: "Government Service Platforms",
+    title: "Service Delivery Platforms",
     blurb:
       "Citizen- and business-facing services, built once and delivered on web, mobile and at the counter.",
     items: [
@@ -107,7 +107,7 @@ export const technology: ServiceCategory[] = [
     number: "07",
     title: "Cloud, Security and Resilience",
     blurb:
-      "Infrastructure a government can own: secure by design, sovereign where it has to be, recoverable when it matters.",
+      "Infrastructure an institution can own: secure by design, sovereign where it has to be, recoverable when it matters.",
     items: [
       "Cloud architecture, migration and hybrid hosting",
       "Zero-trust security and identity-access management",

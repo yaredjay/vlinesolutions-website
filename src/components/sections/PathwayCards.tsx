@@ -7,7 +7,7 @@ import { Reveal } from "@/components/ui/Reveal";
 const pillars = [
   {
     title: "Digital public infrastructure",
-    body: "Identity, registries, payments and the exchange layer that lets a government share data without losing control of it.",
+    body: "Identity, registries, payments and the exchange layer that lets institutions share data without losing control of it.",
   },
   {
     title: "Service and budget platforms",
@@ -41,11 +41,11 @@ export function PathwayCards() {
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="font-display text-balance text-4xl font-medium leading-[1.05] tracking-tightest md:text-5xl">
-              <span className="gradient-text">Systems that move a country forward.</span>
+              <span className="gradient-text">Built to run at national scale.</span>
             </h2>
             <p className="mt-5 text-pretty text-fg-secondary md:text-lg">
-              We design, build and run the platforms public programs depend on,
-              built to be owned by the institutions that run them.
+              Platforms designed, built and run by one team, and owned outright by the
+              institutions that depend on them.
             </p>
           </div>
         </Reveal>
@@ -106,12 +106,12 @@ export function PathwayCards() {
                 <div className="flex items-start justify-between gap-6">
                   <div>
                     <h3 className="font-display text-3xl font-medium tracking-tightest md:text-[2.4rem]">
-                      Technology for the public sector
+                      Systems and platforms, built to be owned
                     </h3>
                     <p className="mt-4 max-w-2xl text-pretty text-fg-secondary md:text-lg">
                       Registries and identity, payments, budget and service platforms, data and
-                      the secure cloud underneath them. Delivered to agencies across the United
-                      States and to the programs modernizing government around the world.
+                      the secure cloud underneath them. Delivered across the United States and to
+                      the national programs building digital infrastructure around the world.
                     </p>
                   </div>
                   <span className="shrink-0 pt-2 text-sm text-fg-muted transition-colors group-hover:text-accent">

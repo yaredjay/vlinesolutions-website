@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Technology Solutions | V-Line Solutions",
     description:
-      "Systems governments can own: identity and registries, payments, budget and service platforms, data, cloud and security.",
+      "Enterprise systems and SaaS platforms: identity and registries, payments, budget and service platforms, data, cloud and security.",
     url: "https://vlinesolutions.com/technology",
   },
 };
@@ -24,12 +24,12 @@ export default function TechnologyPage() {
       <PageHero
         title={
           <>
-            <span className="gradient-text">Systems</span>{" "}
-            <span className="text-fg-secondary">governments</span>{" "}
-            <span className="text-fg-primary">can own.</span>
+            <span className="gradient-text">Systems built</span>{" "}
+            <span className="text-fg-secondary">to be</span>{" "}
+            <span className="text-fg-primary">owned.</span>
           </>
         }
-        description="We design, build and run the platforms public programs depend on, for agencies across the United States and the development programs modernizing government around the world. Secure by design, interoperable by default, and handed over with the people trained to run them."
+        description="We design, build and run enterprise systems and SaaS platforms, across the United States and for the national programs building digital infrastructure around the world. Secure by design, interoperable by default, and handed over with the people trained to run them."
       />
       <ServiceCategoryGrid categories={technology} />
       <HowWeBuild />
@@ -37,7 +37,7 @@ export default function TechnologyPage() {
         title="Have a system worth building?"
         body="Bring us the requirement and the outcome. We'll come back with an architecture, a timeline and a price."
         primary={{ label: "Start a project", href: "/contact" }}
-        secondary={{ label: "Working with government", href: "/government" }}
+        secondary={{ label: "Who we work with", href: "/government" }}
       />
     </>
   );

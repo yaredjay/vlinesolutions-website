@@ -55,16 +55,16 @@ export function SystemsBuilt() {
             <div className="md:sticky md:top-32">
               <Reveal>
                 <h2 className="font-display text-balance text-4xl font-medium leading-[1.05] tracking-tightest md:text-5xl lg:text-[3.4rem]">
-                  <span className="gradient-text">The systems a government runs on.</span>
+                  <span className="gradient-text">The systems a country runs on.</span>
                 </h2>
               </Reveal>
               <Reveal delay={0.08}>
                 <p className="mt-6 max-w-md text-pretty text-fg-secondary md:text-lg">
                   Somewhere today a ministry is commissioning a registry, a treasury is
                   retiring a paper ledger, and a city is putting a permit online for the
-                  first time. These are the systems public programs are budgeting for,
-                  and the systems we build, from Silicon Valley to the agencies and
-                  development programs that run them.
+                  first time. These are the systems national programs are budgeting for,
+                  and the systems we build, from Silicon Valley to the institutions that
+                  run them.
                 </p>
               </Reveal>
               <Reveal delay={0.14}>

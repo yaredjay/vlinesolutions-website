@@ -56,9 +56,9 @@ export function Hero() {
           transition={{ duration: 0.85, delay: 0.25 }}
           className="mx-auto mt-7 max-w-2xl text-pretty text-center text-base leading-relaxed text-fg-secondary md:text-lg"
         >
-          The systems behind a country&apos;s digital growth, built in
-          Silicon Valley for the agencies and programs working toward a cleaner, more
-          connected tomorrow.
+          We design, build and run enterprise systems and SaaS platforms, engineered in
+          Silicon Valley for the institutions and programs working toward a cleaner,
+          more connected tomorrow.
         </motion.p>
 
         <motion.div

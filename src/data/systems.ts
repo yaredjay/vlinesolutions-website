@@ -53,7 +53,7 @@ export const systemsBuilt = [
   {
     id: "resilience",
     title: "Cloud, security and resilience",
-    body: "Infrastructure a government can own and defend: secure by design, sovereign where it must be, recoverable when it matters.",
+    body: "Infrastructure an institution can own and defend: secure by design, sovereign where it must be, recoverable when it matters.",
   },
 ];
 

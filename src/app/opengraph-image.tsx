@@ -106,7 +106,7 @@ export default async function OG() {
               lineHeight: 1.35,
             }}
           >
-            Digital transformation and enterprise systems for government, engineered in Silicon Valley.
+            Enterprise systems and SaaS platforms, engineered in Silicon Valley.
           </div>
         </div>
 
