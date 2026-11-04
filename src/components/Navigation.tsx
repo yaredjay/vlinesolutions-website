@@ -49,7 +49,7 @@ export function Navigation() {
           className={cn(
             "flex items-center justify-between rounded-full px-4 py-2 transition-all duration-500",
             scrolled
-              ? "glass-strong shadow-[0_8px_40px_-12px_rgba(0,0,0,0.25)]"
+              ? "liquid is-lit shadow-[0_8px_40px_-12px_rgba(0,0,0,0.35)]"
               : "border border-transparent"
           )}
         >

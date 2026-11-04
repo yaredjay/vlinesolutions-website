@@ -158,7 +158,7 @@ function Field({
           required={required}
           rows={5}
           placeholder={placeholder}
-          className="w-full resize-none rounded-2xl border border-border-subtle bg-bg-elevated/50 px-4 py-3 text-sm text-fg-primary placeholder:text-fg-muted/60 outline-none transition-all duration-300 focus:border-accent/60 focus:bg-bg-elevated focus:shadow-[0_0_0_4px_rgba(var(--accent-glow),0.10)]"
+          className="field resize-none"
         />
       ) : (
         <input
@@ -167,7 +167,7 @@ function Field({
           required={required}
           autoComplete={autoComplete}
           placeholder={placeholder}
-          className="w-full rounded-full border border-border-subtle bg-bg-elevated/50 px-4 py-3 text-sm text-fg-primary placeholder:text-fg-muted/60 outline-none transition-all duration-300 focus:border-accent/60 focus:bg-bg-elevated focus:shadow-[0_0_0_4px_rgba(var(--accent-glow),0.10)]"
+          className="field rounded-full"
         />
       )}
     </label>
