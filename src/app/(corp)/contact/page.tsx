@@ -53,13 +53,6 @@ export default function ContactPage() {
                 <ContactItem label="Email" value={site.email} href={site.emailHref} />
               </ul>
 
-              <div className="relative mt-10 rounded-2xl border border-border-subtle bg-bg-elevated/40 p-5">
-                <p className="text-3xs uppercase tracking-[0.2em] text-fg-muted">For procurement</p>
-                <p className="mt-2 text-sm text-fg-secondary">
-                  Past-performance references, W-9 and certificates of insurance available on
-                  request. Reference your solicitation number where possible.
-                </p>
-              </div>
             </div>
           </Reveal>
         </div>
