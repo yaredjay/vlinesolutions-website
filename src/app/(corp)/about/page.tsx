@@ -100,7 +100,7 @@ export default function AboutPage() {
       {/* Leadership + Office */}
       <section className="relative py-20">
         <div className="container-edge">
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="mx-auto max-w-3xl">
             <Reveal className="relative overflow-hidden rounded-3xl glass p-10">
               <div className="absolute inset-0 grid-bg-sm opacity-30" />
               <div
@@ -118,24 +118,6 @@ export default function AboutPage() {
               </p>
             </Reveal>
 
-            <Reveal delay={0.06} className="relative overflow-hidden rounded-3xl glass p-10">
-              <div className="absolute inset-0 grid-bg-sm opacity-30" />
-              <h3 className="relative font-display text-2xl font-medium tracking-tight">Reach us</h3>
-              <ul className="relative mt-6 space-y-4">
-                <li className="flex items-start gap-3">
-                  <span className="mt-2 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-accent shadow-[0_0_10px_var(--accent)]" />
-                  <div className="text-sm text-fg-secondary">
-                    <p className="text-fg-primary">{site.legalName}</p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-2 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-accent shadow-[0_0_10px_var(--accent)]" />
-                  <a className="text-sm text-fg-secondary hover:text-fg-primary" href={site.emailHref}>
-                    {site.email}
-                  </a>
-                </li>
-              </ul>
-            </Reveal>
           </div>
         </div>
       </section>
