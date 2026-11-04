@@ -1,10 +1,10 @@
 export const site = {
   name: "V-Line Solutions",
   legalName: "V-Line Solutions LLC",
-  tagline: "Every system delivered. Every program staffed. Every agency supported.",
+  tagline: "Every system delivered. Every platform modernized. Every mission advanced.",
   description:
-    "Technology and workforce solutions for the public sector, built in Silicon Valley and delivered to the agencies that run the country's programs.",
-  bio: "Founded in 2022 in Campbell, California, V-Line Solutions is a woman-owned firm that builds the systems public programs run on and places the people who keep them running, for agencies across the United States and the development programs modernizing government around the world.",
+    "Modernization and system building for the public sector. Built in Silicon Valley for the agencies and programs moving countries forward.",
+  bio: "V-Line Solutions is a Silicon Valley technology firm that designs, builds and modernizes the systems public programs run on, for agencies across the United States and the development programs moving government forward around the world.",
   address: {
     line1: "1725 South Bascom Ave #208",
     city: "Campbell",
@@ -19,14 +19,12 @@ export const site = {
   directorTitle: "Chief Operating Officer",
   ceo: "Bethlehem Guall",
   ceoTitle: "Chief Executive Officer",
-  uei: "ZHBKRDQ94TE5",
   classification: "Small Business",
   registration: "Woman-owned small business",
 };
 
 export const nav: { label: string; href: string }[] = [
   { label: "Technology", href: "/technology" },
-  { label: "Workforce", href: "/workforce" },
   { label: "Government", href: "/government" },
   { label: "About", href: "/about" },
 ];

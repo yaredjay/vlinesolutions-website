@@ -11,7 +11,7 @@ export const CORP_URL = "https://vlinesolutions.com";
 /**
  * TEMPORARY SPORT-ONLY MODE.
  * While true, vlinesolutions.com itself serves VLS Sport at the root and the
- * corporate pages (technology, workforce, government, about, contact) redirect
+ * corporate pages (technology, government, about, contact) redirect
  * to the sport homepage. The brand switcher and corporate links are hidden.
  * NEXT_PUBLIC_SPORT_ONLY=false restores the two-brand setup (corp site at the
  * root, VLS Sport at /sports and sports.vlinesolutions.com). When the variable
@@ -40,7 +40,7 @@ export const SPORT_URL = SPORT_ONLY
 export const SPORT_PATH = "/sports";
 
 /** Corporate-only routes; on a sport host they send visitors to the sport homepage. */
-export const CORP_ROUTES = ["/about", "/contact", "/government", "/technology", "/workforce", "/capability-statement"];
+export const CORP_ROUTES = ["/about", "/contact", "/government", "/technology"];
 
 /** True when a request host is one of the VLS Sport hostnames (every host in sport-only mode). */
 export function isSportHost(host: string | null | undefined): boolean {

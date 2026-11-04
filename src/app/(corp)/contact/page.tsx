@@ -7,12 +7,12 @@ import { site } from "@/data/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Reach V-Line Solutions for public-sector technology and workforce engagements. Call (408) 516-6667, email info@vlinesolutions.com, or send a message. Campbell, California.",
+    "Reach V-Line Solutions for public-sector technology, modernization and system building. Call (408) 516-6667, email info@vlinesolutions.com, or send a message.",
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "Contact | V-Line Solutions",
     description:
-      "Public-sector technology and workforce. Let's talk.",
+      "Public-sector technology, modernization and system building. Let's talk.",
     url: "https://vlinesolutions.com/contact",
   },
 };
@@ -52,10 +52,6 @@ export default function ContactPage() {
               <ul className="relative mt-8 space-y-6">
                 <ContactItem label="Phone" value={site.phone} href={site.phoneHref} />
                 <ContactItem label="Email" value={site.email} href={site.emailHref} />
-                <ContactItem
-                  label="Office"
-                  value={`${site.address.city}, California`}
-                />
               </ul>
 
               <div className="relative mt-10 rounded-2xl border border-border-subtle bg-bg-elevated/40 p-5">

@@ -4,12 +4,12 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Stagger, StaggerItem } from "@/components/ui/Reveal";
 import { GovernmentClients } from "@/components/sections/GovernmentClients";
 import { CTA } from "@/components/sections/CTA";
-import { contractMechanisms, sectors, site } from "@/data/site";
+import { sectors, site } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Government Contracts",
   description:
-    "V-Line Solutions LLC is a woman-owned small business serving federal, state and local agencies. Credentials, purchasing mechanisms and sectors served for public-sector buyers.",
+    "V-Line Solutions LLC is a woman-owned small business building and modernizing systems for federal, state and local agencies. Credentials, agencies served and sectors.",
   alternates: { canonical: "/government" },
   openGraph: {
     title: "Government Contracts | V-Line Solutions",
@@ -21,8 +21,6 @@ export const metadata: Metadata = {
 
 const credentials = [
   { label: "Entity", value: site.legalName, sub: "California" },
-  { label: "Formed", value: "October 2022", sub: "Limited liability company, California" },
-  { label: "UEI", value: site.uei, sub: "Unique Entity ID" },
   { label: "Ownership", value: "Woman-owned small business", sub: "California small business" },
 ];
 
@@ -33,22 +31,23 @@ export default function GovernmentPage() {
         eyebrow="Government Contracts"
         title={
           <>
-            <span className="gradient-text">Built to be bought</span>{" "}
-            <span className="text-fg-secondary">the way</span>{" "}
-            <span className="text-fg-primary">government buys.</span>
+            <span className="gradient-text">A modernization partner</span>{" "}
+            <span className="text-fg-secondary">to the</span>{" "}
+            <span className="text-fg-primary">public sector.</span>
           </>
         }
-        description="From simplified acquisitions to multi-year task orders, we are set up to be bought the way agencies buy. Below: the credentials, the agencies we have served, and the mechanisms available to engage us."
+        description="Federal, state and local agencies engage us to build, modernize and run the systems their programs depend on. Below: who we are on paper, the agencies we have worked with, and where the work shows up."
       />
 
       {/* Credentials */}
       <section className="relative py-10">
         <div className="container-edge">
-          <Stagger className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <Stagger className="grid gap-5 sm:grid-cols-2">
             {credentials.map((c) => (
               <StaggerItem
                 key={c.label}
-                className="relative overflow-hidden rounded-2xl glass glow-ring p-6"
+                className="liquid rounded-2xl p-6"
+                data-liquid
               >
                 <div
                   className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full opacity-40 blur-2xl"
@@ -68,38 +67,6 @@ export default function GovernmentPage() {
       </section>
 
       <GovernmentClients />
-
-      {/* How We Work */}
-      <section className="relative py-24">
-        <div className="container-edge">
-          <SectionHeader
-            eyebrow="How We Work With Government"
-            title="Engage us through the vehicle that fits."
-            description="From single awards to long-form task orders, we meet agencies where they procure."
-          />
-          <Stagger className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {contractMechanisms.map((m, i) => (
-              <StaggerItem
-                key={m.title}
-                className="relative overflow-hidden rounded-2xl glass glow-ring p-7"
-              >
-                <div className="absolute inset-0 grid-bg-sm opacity-25 [mask-image:linear-gradient(to_bottom,black,transparent)]" />
-                <h3 className="relative font-display text-lg font-medium tracking-tight md:text-xl">
-                  {m.title}
-                </h3>
-                <p className="relative mt-2 text-sm leading-relaxed text-fg-secondary">{m.body}</p>
-                <div
-                  className="pointer-events-none absolute -right-12 -top-12 h-32 w-32 rounded-full opacity-25 blur-2xl"
-                  style={{
-                    background:
-                      "radial-gradient(circle, rgba(var(--accent-glow),0.5) 0%, transparent 70%)",
-                  }}
-                />
-              </StaggerItem>
-            ))}
-          </Stagger>
-        </div>
-      </section>
 
       {/* Sectors */}
       <section className="relative py-24">
@@ -123,11 +90,10 @@ export default function GovernmentPage() {
       </section>
 
       <CTA
-        eyebrow="Procurement"
-        title="Submit an RFP or request references."
-        body="Past-performance references, W-9 and certificates of insurance on request. One business day to a reply from a named person."
-        primary={{ label: "Contact us", href: "/contact" }}
-        secondary={{ label: "Technology solutions", href: "/technology" }}
+        title="Have a modernization program in motion?"
+        body="Tell us the system, the agency and the timeline. We'll come back with an architecture, a delivery plan and a price."
+        primary={{ label: "Start a conversation", href: "/contact" }}
+        secondary={{ label: "What we build", href: "/technology" }}
       />
     </>
   );

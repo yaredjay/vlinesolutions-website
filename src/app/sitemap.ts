@@ -18,11 +18,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     : [
         { path: "/", priority: 1.0, changeFrequency: "weekly" },
         { path: "/technology", priority: 0.9, changeFrequency: "weekly" },
-        { path: "/workforce", priority: 0.9, changeFrequency: "weekly" },
         { path: "/government", priority: 0.9, changeFrequency: "weekly" },
         { path: "/about", priority: 0.7, changeFrequency: "monthly" },
         { path: "/contact", priority: 0.7, changeFrequency: "monthly" },
-        { path: "/capability-statement", priority: 0.8, changeFrequency: "monthly" },
         ...(SHOW_SPORT
           ? [
               { path: "/sports", priority: 0.9, changeFrequency: "weekly" as const },

@@ -106,7 +106,7 @@ export default async function OG() {
               lineHeight: 1.35,
             }}
           >
-            Technology and workforce solutions for the public sector, built in Silicon Valley.
+            Modernization and system building for the public sector, built in Silicon Valley.
           </div>
         </div>
 
@@ -123,7 +123,7 @@ export default async function OG() {
           }}
         >
           <div style={{ display: "flex", gap: 24 }}>
-            <span>Campbell, California</span>
+            <span>Silicon Valley</span>
             <span>·</span>
             <span>Small Business</span>
             <span>·</span>

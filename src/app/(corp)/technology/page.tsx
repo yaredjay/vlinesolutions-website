@@ -37,7 +37,7 @@ export default function TechnologyPage() {
         title="Have a system worth building?"
         body="Bring us the requirement and the outcome. We'll come back with an architecture, a timeline and a price."
         primary={{ label: "Start a project", href: "/contact" }}
-        secondary={{ label: "Workforce solutions", href: "/workforce" }}
+        secondary={{ label: "Working with government", href: "/government" }}
       />
     </>
   );

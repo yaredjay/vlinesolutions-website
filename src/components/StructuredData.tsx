@@ -16,12 +16,6 @@ export function StructuredData() {
       "@type": "Place",
       name: "California, USA",
     },
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: site.address.city,
-      addressRegion: site.address.state,
-      addressCountry: "US",
-    },
     contactPoint: [
       {
         "@type": "ContactPoint",
@@ -52,17 +46,6 @@ export function StructuredData() {
     telephone: site.phone,
     email: site.email,
     priceRange: "$$$$",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: site.address.city,
-      addressRegion: site.address.state,
-      addressCountry: "US",
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: 37.2872,
-      longitude: -121.9444,
-    },
     areaServed: {
       "@type": "Country",
       name: "United States",
@@ -74,10 +57,8 @@ export function StructuredData() {
       "Intelligent Automation",
       "Cybersecurity",
       "Cloud Architecture",
-      "Workforce Solutions",
       "Facilities Management",
       "Janitorial Services",
-      "IT Staffing",
     ],
   };
 

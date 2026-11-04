@@ -22,8 +22,7 @@ const pillars = [
 /**
  * What V-Line builds, as a cluster of liquid-glass tiles: one statement tile
  * and three tinted pillar tiles that light up left to right as they scroll
- * into view. Orbit arcs behind them carry the globe's language. A quiet line
- * underneath hands off to Workforce.
+ * into view. Orbit arcs behind them carry the globe's language.
  */
 export function PathwayCards() {
   const panel = useRef<HTMLDivElement>(null);
@@ -145,17 +144,6 @@ export function PathwayCards() {
             ))}
           </div>
 
-          <Reveal delay={0.25}>
-            <p className="relative mt-9 text-center text-sm text-fg-muted">
-              And the people who keep them running:{" "}
-              <Link
-                href="/workforce"
-                className="border-b border-border-strong text-fg-secondary transition-colors hover:border-accent hover:text-accent"
-              >
-                workforce solutions
-              </Link>
-            </p>
-          </Reveal>
         </div>
       </div>
     </section>

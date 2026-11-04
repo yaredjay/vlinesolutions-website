@@ -80,7 +80,7 @@ export function Tomorrow() {
         <div className="mt-14 flex flex-col gap-6 md:mt-20 md:flex-row md:items-end md:justify-between">
           <p className="max-w-xl text-pretty text-fg-secondary md:text-lg">
             One system, one program, one deployment at a time, built so the
-            institution owns it, and staffed so it keeps running after we leave.
+            institution owns it and can run it long after go-live.
           </p>
           <Link
             href="/technology"

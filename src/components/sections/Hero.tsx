@@ -38,14 +38,14 @@ export function Hero() {
           </span>
           <span className="block overflow-hidden pb-[0.08em]">
             <span data-line className="block">
-              <span className="text-fg-secondary">Every program</span>{" "}
-              <span className="gradient-text">staffed.</span>
+              <span className="text-fg-secondary">Every platform</span>{" "}
+              <span className="gradient-text">modernized.</span>
             </span>
           </span>
           <span className="block overflow-hidden pb-[0.08em]">
             <span data-line className="block">
-              <span className="text-fg-secondary">Every agency</span>{" "}
-              <span className="gradient-text">supported.</span>
+              <span className="text-fg-secondary">Every mission</span>{" "}
+              <span className="gradient-text">advanced.</span>
             </span>
           </span>
         </h1>
@@ -56,7 +56,7 @@ export function Hero() {
           transition={{ duration: 0.85, delay: 0.25 }}
           className="mx-auto mt-7 max-w-2xl text-pretty text-center text-base leading-relaxed text-fg-secondary md:text-lg"
         >
-          The systems that move a country&apos;s digital growth forward, built in
+          The systems behind a country&apos;s digital growth, built in
           Silicon Valley for the agencies and programs working toward a cleaner, more
           connected tomorrow.
         </motion.p>

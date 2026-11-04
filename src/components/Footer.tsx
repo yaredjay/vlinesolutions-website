@@ -41,14 +41,6 @@ export function Footer() {
                   Contact
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/capability-statement"
-                  className="text-fg-secondary transition-colors hover:text-fg-primary"
-                >
-                  Capability statement
-                </Link>
-              </li>
               {SHOW_SPORT && (
               <li>
                 <Link
@@ -64,12 +56,10 @@ export function Footer() {
 
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-fg-muted">
-              Office
+              Company
             </p>
-            <address className="mt-5 space-y-1 text-sm not-italic text-fg-secondary">
-              <p>{site.legalName}</p>
-              <p>{site.address.city}, California</p>
-            </address>
+            <p className="mt-5 text-sm text-fg-secondary">{site.legalName}</p>
+            <p className="mt-1 text-sm text-fg-secondary">Modernization and system building for the public sector</p>
           </div>
 
           <div>
@@ -95,7 +85,7 @@ export function Footer() {
           <p>© 2026 {site.legalName}. All rights reserved.</p>
           <p className="flex items-center gap-2">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_12px_2px_var(--accent)]" />
-            {site.registration} · UEI {site.uei}
+            {site.registration}
           </p>
         </div>
       </div>

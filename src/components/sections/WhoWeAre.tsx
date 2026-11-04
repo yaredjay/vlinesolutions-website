@@ -17,10 +17,10 @@ export function WhoWeAre() {
             </p>
             <div className="mt-8 grid grid-cols-2 gap-4 text-sm sm:grid-cols-4">
               {[
-                { k: "Headquarters", v: "Campbell, California" },
-                { k: "Founded", v: "2022" },
+                { k: "Work", v: "Design, build, modernize, run" },
                 { k: "Ownership", v: "Woman-owned" },
-                { k: "Work", v: "Technology and workforce" },
+                { k: "Focus", v: "Public-sector systems" },
+                { k: "Reach", v: "United States and global programs" },
               ].map((f) => (
                 <div
                   key={f.k}

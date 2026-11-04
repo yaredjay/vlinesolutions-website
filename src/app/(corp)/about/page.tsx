@@ -7,7 +7,7 @@ import { site } from "@/data/site";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "V-Line Solutions LLC is a woman-owned technology and workforce firm headquartered in Campbell, California. We build the systems public programs run on and place the people who keep them running.",
+    "V-Line Solutions LLC is a woman-owned Silicon Valley technology firm. We design, build and modernize the systems public programs run on.",
   alternates: { canonical: "/about" },
   openGraph: {
     title: "About | V-Line Solutions",
@@ -30,8 +30,8 @@ const principles = [
   },
   {
     n: "03",
-    title: "Field reliable people",
-    body: "Placement is a craft. Every assignment has a named lead, a replacement bench and reporting the agency can use.",
+    title: "Modernize in steps",
+    body: "Legacy replaced behind open interfaces, one service at a time, so nothing stops while everything improves.",
   },
   {
     n: "04",
@@ -52,7 +52,7 @@ export default function AboutPage() {
             <span className="text-fg-primary">public service.</span>
           </>
         }
-        description="V-Line Solutions builds the systems public programs run on and places the people who keep them running, for agencies across the United States and the development programs modernizing government around the world. The rigor of a federal integrator, the speed of a Silicon Valley firm."
+        description="V-Line Solutions designs, builds and modernizes the systems public programs run on, for agencies across the United States and the development programs moving government forward around the world. The rigor of a federal integrator, the speed of a Silicon Valley firm."
       />
 
       {/* Mission */}
@@ -67,9 +67,9 @@ export default function AboutPage() {
                 {site.bio}
               </p>
               <p className="mt-6 max-w-2xl text-pretty leading-relaxed text-fg-secondary">
-                Public programs deserve one partner who can design the system, secure the
-                cloud it runs on, and place the people who keep it running, without
-                handoffs, without finger-pointing, and without inflated timelines.
+                Public programs deserve one partner who can design the system, build it,
+                secure the cloud it runs on and hand it over complete, without handoffs,
+                without finger-pointing, and without inflated timelines.
               </p>
             </Reveal>
           </div>
@@ -83,7 +83,8 @@ export default function AboutPage() {
             {principles.map((p) => (
               <StaggerItem
                 key={p.n}
-                className="relative overflow-hidden rounded-3xl glass glow-ring p-8"
+                className="liquid rounded-3xl p-8"
+                data-liquid
               >
                 <div className="absolute inset-0 grid-bg-sm opacity-25 [mask-image:linear-gradient(to_bottom,black,transparent_85%)]" />
                 <h3 className="relative font-display text-2xl font-medium tracking-tight md:text-3xl">
@@ -119,13 +120,12 @@ export default function AboutPage() {
 
             <Reveal delay={0.06} className="relative overflow-hidden rounded-3xl glass p-10">
               <div className="absolute inset-0 grid-bg-sm opacity-30" />
-              <h3 className="relative font-display text-2xl font-medium tracking-tight">Headquarters</h3>
+              <h3 className="relative font-display text-2xl font-medium tracking-tight">Reach us</h3>
               <ul className="relative mt-6 space-y-4">
                 <li className="flex items-start gap-3">
                   <span className="mt-2 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-accent shadow-[0_0_10px_var(--accent)]" />
                   <div className="text-sm text-fg-secondary">
                     <p className="text-fg-primary">{site.legalName}</p>
-                    <p>{site.address.city}, California</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
