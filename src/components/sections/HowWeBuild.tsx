@@ -16,7 +16,7 @@ export function HowWeBuild() {
         <Reveal delay={0.08}>
           <p className="mt-5 max-w-2xl text-pretty text-fg-secondary md:text-lg">
             Security, accessibility and audit are designed in, not bolted on. The
-            client sees working software every week and owns the result outright:
+            client sees working software at every stage and owns the result outright:
             code, data and documentation.
           </p>
         </Reveal>

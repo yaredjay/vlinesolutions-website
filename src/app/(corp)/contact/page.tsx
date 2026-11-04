@@ -29,7 +29,7 @@ export default function ContactPage() {
             <span className="text-fg-primary">project.</span>
           </>
         }
-        description="Tell us the system, the institution and the timeline. Messages go directly to operations leadership."
+        description="Tell us the system and the institution. Messages go directly to operations leadership."
       />
 
       <section className="relative pb-32">

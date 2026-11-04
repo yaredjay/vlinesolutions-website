@@ -20,7 +20,7 @@ export default function HomePage() {
       <WhoWeAre />
       <CTA
         title="Let's build something that lasts."
-        body="Tell us about your program. We'll come back with a plan, a team and a timeline."
+        body="Tell us about your program. We come back with a plan and a team."
         primary={{ label: "Get in touch", href: "/contact" }}
         secondary={{ label: "What we build", href: "/technology" }}
       />

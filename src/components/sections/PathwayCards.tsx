@@ -15,7 +15,7 @@ const pillars = [
   },
   {
     title: "Data, cloud and security",
-    body: "Trusted data, sovereign cloud and security designed in from the first line. Resilient in any environment, owned and defended by the institution.",
+    body: "Trusted data, sovereign cloud and security designed in from the first line. Resilient by design, owned and defended by the institution.",
   },
 ];
 
@@ -44,8 +44,8 @@ export function PathwayCards() {
               <span className="gradient-text">Modernization, finished.</span>
             </h2>
             <p className="mt-5 text-pretty text-fg-secondary md:text-lg">
-              Legacy systems retired, complete technology transfer achieved, and public
-              services accessible to every citizen. That is the infrastructure we deliver.
+              Legacy systems retired, platforms the institution owns, and public services
+              people can reach. That is the infrastructure we deliver.
             </p>
           </div>
         </Reveal>
@@ -110,7 +110,7 @@ export function PathwayCards() {
                     </h3>
                     <p className="mt-4 max-w-2xl text-pretty text-fg-secondary md:text-lg">
                       Sovereign registries, national payments, budget management and secure
-                      data clouds. Deployed globally to international development standards.
+                      data clouds, built to open standards.
                     </p>
                   </div>
                   <span className="shrink-0 pt-2 text-sm text-fg-muted transition-colors group-hover:text-accent">

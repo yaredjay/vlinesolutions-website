@@ -21,7 +21,7 @@ const principles = [
   {
     n: "01",
     title: "Operate at mission speed",
-    body: "Public outcomes shouldn't wait for vendor cadence. We move on the agency's clock and show working software every week.",
+    body: "Public outcomes shouldn't wait for vendor cadence. We move on the agency's clock and show working software at every stage.",
   },
   {
     n: "02",
@@ -52,7 +52,7 @@ export default function AboutPage() {
             <span className="text-fg-primary">public service.</span>
           </>
         }
-        description="V-Line Solutions builds, secures and operates digital public infrastructure for ministries, national authorities and public agencies. The rigor of a national-systems integrator, the resilience to run in any environment."
+        description="V-Line Solutions builds, secures and operates digital public infrastructure for ministries, national authorities and public agencies. Built to be run by the institution long after handover."
       />
 
       {/* Mission */}

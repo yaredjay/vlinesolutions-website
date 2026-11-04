@@ -42,7 +42,6 @@ export function StructuredData() {
     image: `${siteUrl}/icon.png`,
     url: siteUrl,
     email: site.email,
-    priceRange: "$$$$",
     areaServed: {
       "@type": "Country",
       name: "United States",

@@ -57,8 +57,8 @@ export function Hero() {
           className="mx-auto mt-7 max-w-2xl text-pretty text-center text-base leading-relaxed text-fg-secondary md:text-lg"
         >
           V-Line Solutions builds and deploys national digital infrastructure for the
-          programs a country runs on. Delivered in months. Owned entirely by the
-          sovereign institution.
+          programs a country runs on. Built to be owned by the institution that
+          runs it.
         </motion.p>
 
         <motion.div

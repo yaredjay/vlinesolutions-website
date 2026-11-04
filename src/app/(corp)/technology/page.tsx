@@ -29,7 +29,7 @@ export default function TechnologyPage() {
             <span className="text-fg-primary">owned.</span>
           </>
         }
-        description="Digital public infrastructure built for national institutions. Interoperable by default, resilient in any environment, and delivered with complete local team training."
+        description="Digital public infrastructure built for national institutions. Interoperable by default, resilient by design, and delivered with the training to run it."
       />
       <ServiceCategoryGrid categories={technology} />
       <HowWeBuild />
