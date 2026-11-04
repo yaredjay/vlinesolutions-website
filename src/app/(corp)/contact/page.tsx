@@ -7,12 +7,12 @@ import { site } from "@/data/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Reach V-Line Solutions for public-sector technology, modernization and system building. Email info@vlinesolutions.com or send a message.",
+    "Reach V-Line Solutions for digital transformation and enterprise systems for government. Email info@vlinesolutions.com or send a message.",
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "Contact | V-Line Solutions",
     description:
-      "Public-sector technology, modernization and system building. Let's talk.",
+      "Digital transformation and enterprise systems for government. Let's talk.",
     url: "https://vlinesolutions.com/contact",
   },
 };

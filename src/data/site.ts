@@ -3,7 +3,7 @@ export const site = {
   legalName: "V-Line Solutions LLC",
   tagline: "Every system delivered. Every platform modernized. Every mission advanced.",
   description:
-    "Modernization and system building for the public sector. Built in Silicon Valley for the agencies and programs moving countries forward.",
+    "Digital transformation and enterprise systems for government. Engineered in Silicon Valley for the agencies and development programs moving countries forward.",
   bio: "V-Line Solutions is a Silicon Valley technology firm that designs, builds and modernizes the systems public programs run on, for agencies across the United States and the development programs moving government forward around the world.",
   address: {
     line1: "1725 South Bascom Ave #208",

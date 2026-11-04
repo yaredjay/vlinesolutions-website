@@ -106,7 +106,7 @@ export default async function OG() {
               lineHeight: 1.35,
             }}
           >
-            Modernization and system building for the public sector, built in Silicon Valley.
+            Digital transformation and enterprise systems for government, engineered in Silicon Valley.
           </div>
         </div>
 
