@@ -78,7 +78,7 @@ export function ContactForm() {
 
       <div className="relative mt-7 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
         <p className="text-xs text-fg-muted">
-          By submitting, you agree to be contacted by V-Line Solutions about your inquiry.
+          By submitting, you agree to be contacted about your inquiry.
         </p>
         <button
           type="submit"

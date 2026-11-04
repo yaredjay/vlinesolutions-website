@@ -4,7 +4,7 @@ export const site = {
   tagline: "Every system delivered. Every platform modernized. Every mission advanced.",
   description:
     "National digital infrastructure for the programs a country depends on. Built in Silicon Valley, owned by the institutions that run it.",
-  bio: "V-Line Solutions is a Silicon Valley technology firm. We build and deploy national digital infrastructure for the programs a country depends on, built to be owned by the institutions that run them.",
+  bio: "A Silicon Valley technology firm. We build and deploy national digital infrastructure for the programs a country depends on, built to be owned by the institutions that run them.",
   address: {
     line1: "1725 South Bascom Ave #208",
     city: "Campbell",

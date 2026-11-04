@@ -56,8 +56,8 @@ export function Hero() {
           transition={{ duration: 0.85, delay: 0.25 }}
           className="mx-auto mt-7 max-w-2xl text-pretty text-center text-base leading-relaxed text-fg-secondary md:text-lg"
         >
-          V-Line Solutions builds and deploys national digital infrastructure for the
-          programs a country runs on.
+          We build and deploy national digital infrastructure for the programs a
+          country runs on.
         </motion.p>
 
         <motion.div

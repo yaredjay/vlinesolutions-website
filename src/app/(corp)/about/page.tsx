@@ -52,7 +52,7 @@ export default function AboutPage() {
             <span className="text-fg-primary">public service.</span>
           </>
         }
-        description="V-Line Solutions builds, secures and operates digital public infrastructure for ministries, national authorities and public agencies. Built to be run by the institution long after handover."
+        description="We build, secure and operate digital public infrastructure for ministries, national authorities and public agencies. Built to be run by the institution long after handover."
       />
 
       {/* Mission */}
@@ -102,7 +102,7 @@ export default function AboutPage() {
         eyebrow="Engage"
         title="Let's get to work."
         body="Tell us about the program, the agency, or the operation. We'll respond fast, and direct."
-        primary={{ label: "Contact V-Line Solutions", href: "/contact" }}
+        primary={{ label: "Contact us", href: "/contact" }}
       />
     </>
   );

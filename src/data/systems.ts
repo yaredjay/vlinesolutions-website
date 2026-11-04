@@ -56,36 +56,3 @@ export const systemsBuilt = [
     body: "Infrastructure an institution can own and defend: secure by design, sovereign where it must be, recoverable when it matters.",
   },
 ];
-
-/**
- * Where the world is going. These are the stated goals of the national and
- * multilateral programs that fund public digital systems: the tomorrow
- * V-Line builds toward, one system and one program at a time.
- */
-export const tomorrow = [
-  {
-    id: "connected",
-    lead: "One billion people",
-    rest: "using broadband and digitally enabled public services by 2030.",
-  },
-  {
-    id: "identity",
-    lead: "Every person",
-    rest: "with a legal identity they can use to open an account, enroll a child or claim a benefit.",
-  },
-  {
-    id: "services",
-    lead: "Every key public service",
-    rest: "available online, in the languages people speak, on the devices they already own.",
-  },
-  {
-    id: "money",
-    lead: "Every public dollar",
-    rest: "traceable from budget to payment to audit, and visible to the public it serves.",
-  },
-  {
-    id: "platforms",
-    lead: "From pilots to platforms",
-    rest: "from fragmented systems to interoperable ecosystems that institutions own and run themselves.",
-  },
-];

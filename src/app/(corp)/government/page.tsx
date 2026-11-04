@@ -36,7 +36,7 @@ export default function GovernmentPage() {
             <span className="text-fg-primary">public programs.</span>
           </>
         }
-        description="Ministries, national authorities and public agencies engage V-Line Solutions to build, secure and operate their digital infrastructure."
+        description="Ministries, national authorities and public agencies engage us to build, secure and operate their digital infrastructure."
       />
 
       {/* Credentials */}
@@ -74,7 +74,7 @@ export default function GovernmentPage() {
           <SectionHeader
             eyebrow="Sectors Served"
             title="Where our work shows up."
-            description="V-Line Solutions delivers across the public mission set, from the agency office to the field operation."
+            description="Across the public mission set, from the agency office to the field operation."
           />
           <Stagger className="mt-12 flex flex-wrap justify-center gap-3" step={0.04}>
             {sectors.map((s) => (
