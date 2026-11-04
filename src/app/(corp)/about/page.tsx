@@ -97,30 +97,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Leadership + Office */}
-      <section className="relative py-20">
-        <div className="container-edge">
-          <div className="mx-auto max-w-3xl">
-            <Reveal className="relative overflow-hidden rounded-3xl glass p-10">
-              <div className="absolute inset-0 grid-bg-sm opacity-30" />
-              <div
-                className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full opacity-30 blur-3xl"
-                style={{
-                  background:
-                    "radial-gradient(circle, rgba(var(--accent-glow),0.55) 0%, transparent 70%)",
-                }}
-              />
-              <h3 className="relative font-display text-2xl font-medium tracking-tight">Founder-led</h3>
-              <p className="relative mt-6 max-w-md text-fg-secondary">
-                A woman-owned firm led by its founders: corporate governance, contracts and
-                quality on one side; architecture, engineering and delivery on the other. One
-                bar for accountability across every engagement, and a principal on every project.
-              </p>
-            </Reveal>
-
-          </div>
-        </div>
-      </section>
 
       <CTA
         eyebrow="Engage"
