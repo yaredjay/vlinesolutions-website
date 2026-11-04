@@ -8,6 +8,7 @@ import { Menu, X } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { BrandSwitcher } from "@/components/sport/BrandSwitcher";
+import { SHOW_SPORT } from "@/lib/sport";
 import { nav } from "@/data/site";
 import { cn } from "@/lib/cn";
 
@@ -35,18 +36,20 @@ export function Navigation() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-500",
-        scrolled ? "pt-3" : "pt-5"
+        scrolled ? "pt-2" : "pt-3"
       )}
     >
       <div className="container-edge">
-        <div className="mb-2 flex justify-center">
-          <BrandSwitcher active="corp" corpHref="/" sportHref="/sports" />
-        </div>
+        {SHOW_SPORT && (
+          <div className="mb-2 flex justify-center">
+            <BrandSwitcher active="corp" corpHref="/" sportHref="/sports" />
+          </div>
+        )}
         <div
           className={cn(
             "flex items-center justify-between rounded-full px-4 py-2 transition-all duration-500",
             scrolled
-              ? "glass-strong shadow-[0_8px_40px_-12px_rgba(0,0,0,0.25)]"
+              ? "liquid is-lit shadow-[0_8px_40px_-12px_rgba(0,0,0,0.35)]"
               : "border border-transparent"
           )}
         >
@@ -89,7 +92,6 @@ export function Navigation() {
             <ThemeToggle />
             <Link href="/contact" className="btn-primary hidden text-sm md:inline-flex">
               Contact
-              <span aria-hidden>→</span>
             </Link>
             <button
               type="button"
@@ -154,13 +156,14 @@ export function Navigation() {
                 transition={{ delay: 0.4, duration: 0.4 }}
                 className="mt-auto flex flex-col gap-3 pt-8"
               >
-                <Link href="/sports" className="btn-ghost w-full justify-center">
-                  VLS Sport · Officiating
-                  <span aria-hidden>→</span>
-                </Link>
+                {SHOW_SPORT && (
+                  <Link href="/sports" className="btn-ghost w-full justify-center">
+                    VLS Sport · Officiating
+                    <span aria-hidden>→</span>
+                  </Link>
+                )}
                 <Link href="/contact" className="btn-primary w-full justify-center">
                   Contact us
-                  <span aria-hidden>→</span>
                 </Link>
               </motion.div>
             </motion.nav>

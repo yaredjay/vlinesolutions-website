@@ -1,104 +1,148 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { ArrowUpRight, Cpu, HardHat } from "lucide-react";
+import { useCallback, useRef } from "react";
 import { Reveal } from "@/components/ui/Reveal";
 
-const pathways = [
+const pillars = [
   {
-    href: "/technology",
-    icon: Cpu,
-    eyebrow: "Division 01",
-    title: "Technology Solutions",
-    description:
-      "AI systems, agentic automation, secure platforms, and cloud — purpose-built for public-sector outcomes.",
-    bullets: ["Artificial Intelligence", "Agentic Automation", "Cybersecurity & Cloud"],
+    title: "Digital public infrastructure",
+    body: "Sovereign identity, registries, payments and the exchange layer that lets institutions share data without ceding control of it.",
   },
   {
-    href: "/workforce",
-    icon: HardHat,
-    eyebrow: "Division 02",
-    title: "Workforce Solutions",
-    description:
-      "Mission-ready personnel across facilities, events, sports, IT, administration, and the skilled trades.",
-    bullets: ["Facilities & Janitorial", "Events & Sports Operations", "IT & Skilled Trades"],
+    title: "Service and budget platforms",
+    body: "Permits, benefits, case management and the systems that plan, release and account for public money.",
+  },
+  {
+    title: "Data, cloud and security",
+    body: "Trusted data, sovereign cloud and security designed in from the first line. Resilient by design, owned and defended by the institution.",
   },
 ];
 
+/**
+ * What V-Line builds, as a cluster of liquid-glass tiles: one statement tile
+ * and three tinted pillar tiles that light up left to right as they scroll
+ * into view. Orbit arcs behind them carry the globe's language.
+ */
 export function PathwayCards() {
-  return (
-    <section className="relative py-28">
-      <div className="container-edge">
-        <div className="mx-auto max-w-xl text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-border-subtle bg-bg-surface/60 px-3 py-1 text-xs uppercase tracking-[0.18em] text-fg-secondary backdrop-blur-md">
-            <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_10px_var(--accent)]" />
-            Two Divisions. One Standard.
-          </span>
-          <h2 className="mt-5 font-display text-4xl font-medium leading-[1.05] tracking-tightest md:text-5xl">
-            <span className="gradient-text">Pick your pathway.</span>
-          </h2>
-        </div>
+  const panel = useRef<HTMLDivElement>(null);
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2">
-          {pathways.map((p, i) => (
-            <Reveal key={p.href} delay={i * 0.08}>
+  const onMove = useCallback((e: React.PointerEvent<HTMLDivElement>) => {
+    const el = panel.current;
+    if (!el) return;
+    const r = el.getBoundingClientRect();
+    el.style.setProperty("--mx", `${((e.clientX - r.left) / r.width) * 100}%`);
+    el.style.setProperty("--my", `${((e.clientY - r.top) / r.height) * 100}%`);
+  }, []);
+
+  return (
+    <section className="relative py-28 md:py-36">
+      <div className="container-edge">
+        <Reveal>
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="font-display text-balance text-4xl font-medium leading-[1.05] tracking-tightest md:text-5xl">
+              <span className="gradient-text">Modernization, finished.</span>
+            </h2>
+            <p className="mt-5 text-pretty text-fg-secondary md:text-lg">
+              Legacy systems retired, platforms the institution owns, and public services
+              people can reach. That is the infrastructure we deliver.
+            </p>
+          </div>
+        </Reveal>
+
+        <div
+          ref={panel}
+          onPointerMove={onMove}
+          className="relative mx-auto mt-16 max-w-5xl"
+          style={{ ["--mx" as string]: "50%", ["--my" as string]: "30%" }}
+        >
+          {/* Orbit arcs: the globe's arcs, at rest. */}
+          <svg
+            aria-hidden
+            viewBox="0 0 1000 520"
+            preserveAspectRatio="none"
+            className="pointer-events-none absolute left-1/2 top-1/2 h-[140%] w-[128%] -translate-x-1/2 -translate-y-1/2"
+            fill="none"
+          >
+            <defs>
+              <linearGradient id="orbit-g" x1="0" x2="1">
+                <stop offset="0" stopColor="var(--accent)" stopOpacity="0" />
+                <stop offset="0.5" stopColor="var(--accent)" stopOpacity="0.7" />
+                <stop offset="1" stopColor="var(--accent)" stopOpacity="0" />
+              </linearGradient>
+            </defs>
+            <path id="orbit-a" d="M 40 300 C 220 60, 780 60, 960 300" stroke="url(#orbit-g)" strokeWidth="1.2" />
+            <path id="orbit-b" d="M 60 230 C 240 440, 760 440, 940 230" stroke="url(#orbit-g)" strokeWidth="1" opacity="0.6" />
+            <circle r="2.5" fill="var(--accent)" style={{ filter: "drop-shadow(0 0 6px var(--accent))" }}>
+              <animateMotion dur="9s" repeatCount="indefinite" rotate="auto">
+                <mpath href="#orbit-a" />
+              </animateMotion>
+            </circle>
+            <circle r="2" fill="var(--accent)" opacity="0.7" style={{ filter: "drop-shadow(0 0 6px var(--accent))" }}>
+              <animateMotion dur="13s" begin="-5s" repeatCount="indefinite" rotate="auto">
+                <mpath href="#orbit-b" />
+              </animateMotion>
+            </circle>
+          </svg>
+
+          {/* pointer light shared by the cluster */}
+          <div
+            className="pointer-events-none absolute -inset-6 rounded-[3rem] opacity-80"
+            style={{
+              background:
+                "radial-gradient(420px circle at var(--mx) var(--my), rgba(var(--accent-glow),0.10), transparent 60%)",
+            }}
+          />
+
+          <div className="relative grid gap-4 md:grid-cols-3 md:gap-5">
+            {/* statement tile */}
+            <Reveal className="md:col-span-3">
               <Link
-                href={p.href}
-                className="group relative block overflow-hidden rounded-3xl glass glow-ring p-8 md:p-10"
+                href="/technology"
+                data-liquid
+                className="liquid group block rounded-[2rem] p-8 md:p-10"
                 data-cursor="hover"
               >
-                <div
-                  className="pointer-events-none absolute -right-32 -top-32 h-80 w-80 rounded-full opacity-50 blur-3xl transition-opacity duration-500 group-hover:opacity-80"
-                  style={{
-                    background:
-                      "radial-gradient(circle, rgba(var(--accent-glow),0.55) 0%, transparent 70%)",
-                  }}
-                />
-                <div className="absolute inset-0 grid-bg-sm opacity-30 [mask-image:linear-gradient(to_bottom,black,transparent)]" />
-
-                <div className="relative flex items-center justify-between">
-                  <span className="text-xs uppercase tracking-[0.22em] text-fg-muted">
-                    {p.eyebrow}
-                  </span>
-                  <span className="grid h-10 w-10 place-items-center rounded-full border border-border-subtle bg-bg-elevated/70 transition-transform duration-500 group-hover:rotate-45">
-                    <ArrowUpRight className="h-4 w-4 text-fg-primary" />
-                  </span>
-                </div>
-
-                <div className="relative mt-8 flex items-start gap-4">
-                  <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl border border-border-subtle bg-bg-elevated/70 text-accent">
-                    <p.icon className="h-5 w-5" />
-                  </span>
+                <div className="flex items-start justify-between gap-6">
                   <div>
-                    <h3 className="font-display text-3xl font-medium tracking-tightest md:text-[2.25rem]">
-                      {p.title}
+                    <h3 className="font-display text-3xl font-medium tracking-tightest md:text-[2.4rem]">
+                      National digital infrastructure
                     </h3>
-                    <p className="mt-3 max-w-md text-fg-secondary">{p.description}</p>
+                    <p className="mt-4 max-w-2xl text-pretty text-fg-secondary md:text-lg">
+                      Sovereign registries, national payments, budget management and secure
+                      data clouds, built to open standards.
+                    </p>
                   </div>
+                  <span className="shrink-0 pt-2 text-sm text-fg-muted transition-colors group-hover:text-accent">
+                    Explore
+                  </span>
                 </div>
-
-                <ul className="relative mt-10 flex flex-wrap gap-2">
-                  {p.bullets.map((b) => (
-                    <li
-                      key={b}
-                      className="rounded-full border border-border-subtle bg-bg-surface/40 px-3 py-1.5 text-xs text-fg-secondary backdrop-blur"
-                    >
-                      {b}
-                    </li>
-                  ))}
-                </ul>
-
-                <motion.div
-                  initial={{ scaleX: 0 }}
-                  whileInView={{ scaleX: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.9, delay: 0.2 + i * 0.1 }}
-                  className="relative mt-10 h-px origin-left bg-gradient-to-r from-accent via-accent/60 to-transparent"
-                />
               </Link>
             </Reveal>
-          ))}
+
+            {/* pillar tiles */}
+            {pillars.map((p, i) => (
+              <Reveal key={p.title} delay={0.1 + i * 0.08} className="h-full">
+                <Link
+                  href="/technology"
+                  data-liquid
+                  data-liquid-delay={i * 160}
+                  className="liquid liquid-tint group flex h-full flex-col rounded-[1.75rem] p-7 md:p-8"
+                  data-cursor="hover"
+                >
+                  <span className="h-px w-10 bg-gradient-to-r from-accent to-transparent" />
+                  <h4 className="mt-6 font-display text-xl font-medium tracking-tight md:text-[1.35rem]">
+                    {p.title}
+                  </h4>
+                  <p className="mt-3 text-sm leading-relaxed text-fg-secondary">{p.body}</p>
+                  <span className="mt-auto pt-6 text-xs text-fg-muted transition-colors group-hover:text-fg-primary">
+                    Explore
+                  </span>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+
         </div>
       </div>
     </section>

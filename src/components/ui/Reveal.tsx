@@ -29,6 +29,7 @@ export function Reveal({
       viewport={{ once: true, margin: "-12% 0px -8% 0px" }}
       transition={{ duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] }}
       className={cn(className)}
+      data-reveal
       {...rest}
     >
       {children}
@@ -58,6 +59,7 @@ export function Stagger({
         show: { transition: { staggerChildren: reduced ? 0 : step, delayChildren: delay } },
       }}
       className={className}
+      data-reveal
     >
       {children}
     </motion.div>
@@ -80,6 +82,7 @@ export function StaggerItem({
         show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } },
       }}
       className={className}
+      data-reveal
     >
       {children}
     </motion.div>

@@ -21,7 +21,7 @@ export function SportFooter() {
               {sportBrand.name} is powered by {site.legalName}.
             </p>
             <div className="flex flex-wrap gap-2">
-              {["SAM.gov Registered", "Small Business", `DUNS ${site.duns}`].map((t) => (
+              {["Small Business"].map((t) => (
                 <span key={t} className="rounded-lg border border-sp-ink/10 px-2.5 py-1.5 text-xs text-sp-slate">
                   {t}
                 </span>

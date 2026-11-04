@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, Check } from "lucide-react";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -22,12 +21,21 @@ export function ContactForm() {
         setStatus("success");
         return;
       }
-      // No backend wired yet — simulate latency and succeed.
-      await new Promise((r) => setTimeout(r, 850));
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) {
+        const j = (await res.json().catch(() => ({}))) as { error?: string };
+        throw new Error(j.error || "Delivery failed.");
+      }
       setStatus("success");
       form.reset();
     } catch (err) {
-      setError("Something went wrong. Please email us directly.");
+      setError(
+        `${err instanceof Error ? err.message : "Something went wrong."} Email info@vlinesolutions.com.`
+      );
       setStatus("error");
     }
   }
@@ -70,7 +78,7 @@ export function ContactForm() {
 
       <div className="relative mt-7 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
         <p className="text-xs text-fg-muted">
-          By submitting, you agree to be contacted by V-Line Solutions about your inquiry.
+          By submitting, you agree to be contacted about your inquiry.
         </p>
         <button
           type="submit"
@@ -86,7 +94,7 @@ export function ContactForm() {
                 exit={{ opacity: 0, y: -6 }}
                 className="inline-flex items-center gap-2"
               >
-                Message received <Check className="h-4 w-4" />
+                Message received
               </motion.span>
             ) : status === "submitting" ? (
               <motion.span
@@ -106,7 +114,7 @@ export function ContactForm() {
                 exit={{ opacity: 0 }}
                 className="inline-flex items-center gap-2"
               >
-                Send message <ArrowRight className="h-4 w-4" />
+                Send message
               </motion.span>
             )}
           </AnimatePresence>
@@ -150,7 +158,7 @@ function Field({
           required={required}
           rows={5}
           placeholder={placeholder}
-          className="w-full resize-none rounded-2xl border border-border-subtle bg-bg-elevated/50 px-4 py-3 text-sm text-fg-primary placeholder:text-fg-muted/60 outline-none transition-all duration-300 focus:border-accent/60 focus:bg-bg-elevated focus:shadow-[0_0_0_4px_rgba(var(--accent-glow),0.10)]"
+          className="field resize-none"
         />
       ) : (
         <input
@@ -159,7 +167,7 @@ function Field({
           required={required}
           autoComplete={autoComplete}
           placeholder={placeholder}
-          className="w-full rounded-full border border-border-subtle bg-bg-elevated/50 px-4 py-3 text-sm text-fg-primary placeholder:text-fg-muted/60 outline-none transition-all duration-300 focus:border-accent/60 focus:bg-bg-elevated focus:shadow-[0_0_0_4px_rgba(var(--accent-glow),0.10)]"
+          className="field rounded-full"
         />
       )}
     </label>

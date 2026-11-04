@@ -1,10 +1,10 @@
 export const site = {
   name: "V-Line Solutions",
   legalName: "V-Line Solutions LLC",
-  tagline: "Government-Grade Solutions. Startup-Speed Delivery.",
+  tagline: "Every system delivered. Every platform modernized. Every mission advanced.",
   description:
-    "AI Technology & Workforce Solutions for Public Sector and Enterprise.",
-  bio: "V-Line Solutions is a California-based technology and workforce services firm delivering AI systems, intelligent automation, and mission-critical staffing to government agencies and enterprise clients nationwide.",
+    "National digital infrastructure for the programs a country depends on. Built in Silicon Valley, owned by the institutions that run it.",
+  bio: "A Silicon Valley technology firm. We build and deploy national digital infrastructure for the programs a country depends on, delivered with zero vendor lock-in and owned entirely by the sovereign institution.",
   address: {
     line1: "1725 South Bascom Ave #208",
     city: "Campbell",
@@ -15,16 +15,16 @@ export const site = {
   phoneHref: "tel:+14085166667",
   email: "info@vlinesolutions.com",
   emailHref: "mailto:info@vlinesolutions.com",
-  director: "Yared Birmeji",
-  directorTitle: "Director of Operations",
-  duns: "123412642",
+  director: "Yared Tadesse Birmeji",
+  directorTitle: "Chief Operating Officer",
+  ceo: "Bethlehem Guall",
+  ceoTitle: "Chief Executive Officer",
   classification: "Small Business",
-  registration: "SAM.gov Registered",
+  registration: "Woman-owned small business",
 };
 
 export const nav: { label: string; href: string }[] = [
   { label: "Technology", href: "/technology" },
-  { label: "Workforce", href: "/workforce" },
   { label: "Government", href: "/government" },
   { label: "About", href: "/about" },
 ];
@@ -55,10 +55,18 @@ export const naicsLabels: Record<string, string> = {
   "561920": "Convention & Trade Show Organizers",
 };
 
+/** NAICS grouped by domain so a technology evaluator sees focus first. */
+export const naicsGroups: { domain: string; codes: string[] }[] = [
+  { domain: "Software, data and systems", codes: ["541511", "541512", "541519", "518210", "541715"] },
+  { domain: "Professional and program services", codes: ["541611", "541690", "561110", "561311", "561320"] },
+  { domain: "Facilities and field operations", codes: ["561210", "561720", "238210", "238220"] },
+  { domain: "Events and program delivery", codes: ["711310", "711320", "561920"] },
+];
+
 export const stats = [
   { value: 17, suffix: "", label: "NAICS Codes" },
-  { value: 100, suffix: "%", label: "Compliance Aligned" },
-  { value: 24, suffix: "/7", label: "Mission Support" },
+  { value: 3, suffix: "", label: "Multi-Year Government Contracts" },
+  { value: 2, suffix: "", label: "Platforms in Production" },
 ];
 
 export const sectors = [

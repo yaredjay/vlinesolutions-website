@@ -1,29 +1,54 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { getGsap, prefersReducedMotion } from "@/lib/gsap";
 import { HeroScene } from "@/components/three/HeroScene";
 
 export function Hero() {
+  const title = useRef<HTMLHeadingElement>(null);
+
+  useEffect(() => {
+    const el = title.current;
+    if (!el || prefersReducedMotion()) return;
+    const { gsap } = getGsap();
+    const lines = el.querySelectorAll<HTMLElement>("[data-line]");
+    const tween = gsap.from(lines, { yPercent: 110, duration: 1.15, ease: "power3.out", stagger: 0.1, delay: 0.12 });
+    return () => {
+      tween.kill();
+    };
+  }, []);
+
   return (
-    <section className="relative overflow-hidden pt-40 md:pt-48">
-      <div className="absolute inset-0 grid-bg opacity-50 radial-fade" aria-hidden />
+    <section className="hero-root relative overflow-hidden pt-40 md:pt-48">
+      <div className="absolute inset-0 grid-bg opacity-40 radial-fade" aria-hidden />
       <HeroScene />
 
-      <div className="container-edge relative">
-        <motion.h1
-          initial={{ opacity: 0, y: 26 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.95, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-          className="mx-auto max-w-[1080px] text-balance text-center font-display font-medium leading-[0.98] tracking-tightest text-[clamp(2.6rem,7.5vw,6.4rem)]"
+      <div className="container-edge relative z-10">
+        <h1
+          ref={title}
+          className="mx-auto max-w-[1080px] text-balance text-center font-display font-medium leading-[1.02] tracking-tightest text-[clamp(2.3rem,6.2vw,5.4rem)]"
         >
-          <span className="gradient-text">Government-Grade</span>{" "}
-          <span className="text-fg-primary/95">Solutions.</span>
-          <br />
-          <span className="text-fg-secondary">Startup-Speed</span>{" "}
-          <span className="gradient-text">Delivery.</span>
-        </motion.h1>
+          <span className="block overflow-hidden pb-[0.08em]">
+            <span data-line className="block">
+              <span className="text-fg-secondary">Every system</span>{" "}
+              <span className="gradient-text">delivered.</span>
+            </span>
+          </span>
+          <span className="block overflow-hidden pb-[0.08em]">
+            <span data-line className="block">
+              <span className="text-fg-secondary">Every platform</span>{" "}
+              <span className="gradient-text">modernized.</span>
+            </span>
+          </span>
+          <span className="block overflow-hidden pb-[0.08em]">
+            <span data-line className="block">
+              <span className="text-fg-secondary">Every mission</span>{" "}
+              <span className="gradient-text">advanced.</span>
+            </span>
+          </span>
+        </h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -31,8 +56,8 @@ export function Hero() {
           transition={{ duration: 0.85, delay: 0.25 }}
           className="mx-auto mt-7 max-w-2xl text-pretty text-center text-base leading-relaxed text-fg-secondary md:text-lg"
         >
-          AI Technology &amp; Workforce Solutions for the public sector and
-          enterprise — engineered for compliance, designed for speed.
+          We build and deploy national digital infrastructure for the programs a
+          country runs on.
         </motion.p>
 
         <motion.div
@@ -42,10 +67,10 @@ export function Hero() {
           className="mt-9 flex flex-wrap items-center justify-center gap-3"
         >
           <Link href="/technology" className="btn-primary">
-            Explore Technology <ArrowRight className="h-4 w-4" />
+            Explore Technology
           </Link>
-          <Link href="/workforce" className="btn-ghost">
-            Explore Workforce <ArrowUpRight className="h-4 w-4" />
+          <Link href="/contact" className="btn-ghost">
+            Talk to us
           </Link>
         </motion.div>
 

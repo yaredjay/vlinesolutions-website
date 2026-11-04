@@ -1,24 +1,26 @@
 import { Hero } from "@/components/sections/Hero";
-import { DivisionDoors } from "@/components/sections/DivisionDoors";
+import { PathwayCards } from "@/components/sections/PathwayCards";
 import { LogosMarquee } from "@/components/sections/LogosMarquee";
-import { Stats } from "@/components/sections/Stats";
+import { SystemsBuilt } from "@/components/sections/SystemsBuilt";
 import { WhoWeAre } from "@/components/sections/WhoWeAre";
 import { CTA } from "@/components/sections/CTA";
+import { LiquidDivider } from "@/components/ui/LiquidDivider";
 
 export default function HomePage() {
   return (
     <>
       <Hero />
-      <DivisionDoors />
+      <PathwayCards />
       <LogosMarquee />
-      <Stats />
+      <LiquidDivider className="mt-6" />
+      <SystemsBuilt />
+      <LiquidDivider />
       <WhoWeAre />
       <CTA
-        eyebrow="Engage"
-        title="Bring us your hardest project."
-        body="Government scale, startup pace. Tell us the constraint, the contract, the deadline."
-        primary={{ label: "Start a conversation", href: "/contact" }}
-        secondary={{ label: "See government credentials", href: "/government" }}
+        title="Let's build something that lasts."
+        body="Tell us about your program. We come back with a plan and a team."
+        primary={{ label: "Get in touch", href: "/contact" }}
+        secondary={{ label: "What we build", href: "/technology" }}
       />
     </>
   );

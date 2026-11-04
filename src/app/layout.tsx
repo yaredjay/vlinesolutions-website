@@ -3,6 +3,7 @@ import { Archivo, Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { SmoothScroll } from "@/components/providers/SmoothScroll";
+import { LiquidLights } from "@/components/providers/LiquidLights";
 import { site } from "@/data/site";
 
 const inter = Inter({
@@ -29,25 +30,22 @@ const siteUrl = "https://vlinesolutions.com";
 
 export const metadata: Metadata = {
   title: {
-    default: `${site.name} — ${site.tagline}`,
-    template: `%s — ${site.name}`,
+    default: `${site.name} | ${site.tagline}`,
+    template: `%s | ${site.name}`,
   },
   description: site.description,
   applicationName: site.name,
   generator: "Next.js",
   keywords: [
-    "government technology",
-    "AI for government",
+    "national digital infrastructure",
+    "sovereign digital systems",
+    "digital public infrastructure",
     "public sector AI",
     "government contracting",
-    "workforce solutions",
     "facilities management",
     "janitorial services",
-    "IT staffing",
     "GovTech",
     "intelligent automation",
-    "California government contractor",
-    "SAM.gov registered",
     "small business contractor",
     "V-Line Solutions",
     "vlinesolutions",
@@ -72,7 +70,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: `${site.name} — ${site.tagline}`,
+    title: `${site.name} | ${site.tagline}`,
     description: site.description,
     type: "website",
     siteName: site.name,
@@ -83,13 +81,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: `${site.name} — ${site.tagline}`,
+        alt: `${site.name} | ${site.tagline}`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.name} — ${site.tagline}`,
+    title: `${site.name} | ${site.tagline}`,
     description: site.description,
     images: ["/opengraph-image"],
   },
@@ -126,6 +124,7 @@ export default function RootLayout({
       <body className="relative bg-bg-base text-fg-primary">
         <ThemeProvider>
           <SmoothScroll />
+          <LiquidLights />
           {children}
         </ThemeProvider>
       </body>

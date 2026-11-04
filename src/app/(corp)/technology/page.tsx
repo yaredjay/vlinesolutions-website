@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/PageHero";
 import { ServiceCategoryGrid } from "@/components/sections/ServiceCategoryGrid";
-import { FeaturedPlatforms } from "@/components/sections/FeaturedPlatforms";
+import { HowWeBuild } from "@/components/sections/HowWeBuild";
 import { CTA } from "@/components/sections/CTA";
 import { technology } from "@/data/services";
 
 export const metadata: Metadata = {
   title: "Technology Solutions",
   description:
-    "V-Line Solutions builds AI systems, intelligent automation, secure cloud platforms, and data infrastructure for government agencies and enterprise clients. Seven service lines, one delivery standard.",
+    "V-Line Solutions builds and deploys digital public infrastructure for national institutions: sovereign registries, national payments, budget management, sector systems and secure data clouds.",
   alternates: { canonical: "/technology" },
   openGraph: {
-    title: "Technology Solutions — V-Line Solutions",
+    title: "Technology Solutions | V-Line Solutions",
     description:
-      "AI, agentic automation, secure platforms, data, and cloud — engineered for the public sector.",
+      "Digital public infrastructure: sovereign registries, national payments, budget management, data, cloud and security.",
     url: "https://vlinesolutions.com/technology",
   },
 };
@@ -22,24 +22,22 @@ export default function TechnologyPage() {
   return (
     <>
       <PageHero
-        eyebrow="Technology Solutions"
         title={
           <>
-            <span className="gradient-text">Intelligent Systems</span>{" "}
-            <span className="text-fg-secondary">for Government</span>{" "}
-            <span className="text-fg-primary">and Enterprise.</span>
+            <span className="gradient-text">Systems built</span>{" "}
+            <span className="text-fg-secondary">to be</span>{" "}
+            <span className="text-fg-primary">owned.</span>
           </>
         }
-        description="Seven service lines, one delivery standard. We design, build, secure, and operate the systems that move public-sector outcomes forward."
+        description="Digital public infrastructure built for national institutions. Interoperable by default, resilient by design, and delivered with the training to run it."
       />
-      <ServiceCategoryGrid categories={technology} accentLabel="TECH" />
-      <FeaturedPlatforms />
+      <ServiceCategoryGrid categories={technology} />
+      <HowWeBuild />
       <CTA
-        eyebrow="Build with us"
-        title="Have a system worth building?"
-        body="Bring us the constraint and the outcome. We will respond with an architecture, a timeline, and a price."
+        title="Have a system to build?"
+        body="Bring us the requirement. We come back with an architecture, a team and a delivery plan."
         primary={{ label: "Start a project", href: "/contact" }}
-        secondary={{ label: "Workforce solutions", href: "/workforce" }}
+        secondary={{ label: "Who we work with", href: "/government" }}
       />
     </>
   );

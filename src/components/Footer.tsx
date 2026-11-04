@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Logo } from "@/components/ui/Logo";
 import { nav, site } from "@/data/site";
+import { SHOW_SPORT } from "@/lib/sport";
 
 export function Footer() {
   return (
@@ -40,6 +41,7 @@ export function Footer() {
                   Contact
                 </Link>
               </li>
+              {SHOW_SPORT && (
               <li>
                 <Link
                   href="/sports"
@@ -48,20 +50,16 @@ export function Footer() {
                   VLS Sport
                 </Link>
               </li>
+              )}
             </ul>
           </div>
 
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-fg-muted">
-              Office
+              Company
             </p>
-            <address className="mt-5 space-y-1 text-sm not-italic text-fg-secondary">
-              <p>{site.legalName}</p>
-              <p>{site.address.line1}</p>
-              <p>
-                {site.address.city}, {site.address.state} {site.address.zip}
-              </p>
-            </address>
+            <p className="mt-5 text-sm text-fg-secondary">{site.legalName}</p>
+            <p className="mt-1 text-sm text-fg-secondary">National digital infrastructure for the programs a country depends on</p>
           </div>
 
           <div>
@@ -69,11 +67,6 @@ export function Footer() {
               Connect
             </p>
             <ul className="mt-5 space-y-3 text-sm text-fg-secondary">
-              <li>
-                <a className="hover:text-fg-primary" href={site.phoneHref}>
-                  {site.phone}
-                </a>
-              </li>
               <li>
                 <a className="hover:text-fg-primary" href={site.emailHref}>
                   {site.email}
@@ -87,7 +80,7 @@ export function Footer() {
           <p>© 2026 {site.legalName}. All rights reserved.</p>
           <p className="flex items-center gap-2">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_12px_2px_var(--accent)]" />
-            {site.registration} · {site.classification} · DUNS {site.duns}
+            {site.registration}
           </p>
         </div>
       </div>

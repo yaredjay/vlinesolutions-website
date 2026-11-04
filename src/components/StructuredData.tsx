@@ -16,19 +16,10 @@ export function StructuredData() {
       "@type": "Place",
       name: "California, USA",
     },
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: site.address.line1,
-      addressLocality: site.address.city,
-      addressRegion: site.address.state,
-      postalCode: site.address.zip,
-      addressCountry: "US",
-    },
     contactPoint: [
       {
         "@type": "ContactPoint",
         contactType: "customer service",
-        telephone: site.phone,
         email: site.email,
         areaServed: "US",
         availableLanguage: "en",
@@ -36,7 +27,6 @@ export function StructuredData() {
       {
         "@type": "ContactPoint",
         contactType: "sales",
-        telephone: site.phone,
         email: site.email,
         areaServed: "US",
       },
@@ -51,22 +41,7 @@ export function StructuredData() {
     name: site.legalName,
     image: `${siteUrl}/icon.png`,
     url: siteUrl,
-    telephone: site.phone,
     email: site.email,
-    priceRange: "$$$$",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: site.address.line1,
-      addressLocality: site.address.city,
-      addressRegion: site.address.state,
-      postalCode: site.address.zip,
-      addressCountry: "US",
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: 37.2872,
-      longitude: -121.9444,
-    },
     areaServed: {
       "@type": "Country",
       name: "United States",
@@ -78,10 +53,8 @@ export function StructuredData() {
       "Intelligent Automation",
       "Cybersecurity",
       "Cloud Architecture",
-      "Workforce Solutions",
       "Facilities Management",
       "Janitorial Services",
-      "IT Staffing",
     ],
   };
 

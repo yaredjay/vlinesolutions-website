@@ -2,104 +2,45 @@
 
 import Image from "next/image";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
-import { clients, type Client } from "@/data/clients";
+import { Reveal } from "@/components/ui/Reveal";
+import { clients } from "@/data/clients";
 
-const order: Client["category"][] = ["Federal", "State & Local", "City"];
-
-const groupLabels: Record<Client["category"], string> = {
-  Federal: "Federal",
-  "State & Local": "State & County",
-  City: "Municipal",
-};
-
+/** Agencies we've supported: one compact liquid panel, every logo together. */
 export function GovernmentClients() {
-  const grouped = order.map((cat) => ({
-    cat,
-    list: clients.filter((c) => c.category === cat),
-  }));
-
   return (
-    <section className="relative py-28">
+    <section className="relative py-24 md:py-28">
       <div className="container-edge">
         <SectionHeader
-          eyebrow="Government Clients"
-          title="Agencies we've supported."
-          description="A representative cross-section of public-sector organizations V-Line Solutions has served — from federal departments to county seats."
+          title="Agencies we've worked with."
+          description="Federal, state, county and municipal, on one standard."
         />
-
-        <div className="mt-14 space-y-10">
-          {grouped.map((group) => (
-            <Reveal key={group.cat}>
-              <div className="relative overflow-hidden rounded-3xl glass p-7 md:p-10">
-                <div className="absolute inset-0 grid-bg-sm opacity-25 [mask-image:linear-gradient(to_bottom,black,transparent_85%)]" />
-                <div
-                  className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full opacity-30 blur-3xl"
-                  style={{
-                    background:
-                      "radial-gradient(circle, rgba(var(--accent-glow),0.45) 0%, transparent 70%)",
-                  }}
-                />
-
-                <div className="relative flex items-baseline justify-between border-b border-border-subtle pb-5">
-                  <div>
-                    <p className="text-3xs uppercase tracking-[0.22em] text-fg-muted">
-                      Tier
-                    </p>
-                    <h3 className="mt-1 font-display text-2xl font-medium tracking-tight">
-                      {groupLabels[group.cat]}
-                    </h3>
-                  </div>
-                  <span className="font-mono text-xs text-fg-muted">
-                    {String(group.list.length).padStart(2, "0")} clients
-                  </span>
-                </div>
-
-                <Stagger
-                  className="relative mt-7 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4"
-                  step={0.06}
+        <Reveal className="mt-12">
+          <div data-liquid className="liquid rounded-[2rem] p-3 md:p-4">
+            <ul className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:gap-3 lg:grid-cols-4">
+              {clients.map((c, i) => (
+                <li
+                  key={c.id}
+                  className="group relative flex h-36 flex-col items-center justify-center gap-3 rounded-[1.25rem] border border-white/[0.04] bg-white/[0.02] px-5 transition-colors duration-500 hover:bg-white/[0.05] md:h-40"
+                  title={c.name}
+                  style={{ transitionDelay: `${i * 30}ms` }}
                 >
-                  {group.list.map((client) => (
-                    <StaggerItem key={client.id}>
-                      <ClientCard client={client} />
-                    </StaggerItem>
-                  ))}
-                </Stagger>
-              </div>
-            </Reveal>
-          ))}
-        </div>
+                  <Image
+                    src={c.src}
+                    alt={c.name}
+                    width={c.width}
+                    height={c.height}
+                    sizes="180px"
+                    className="h-16 w-auto max-w-[150px] object-contain opacity-85 transition-opacity duration-500 group-hover:opacity-100 md:h-[4.5rem]"
+                  />
+                  <p className="text-center text-[0.72rem] leading-tight text-fg-muted transition-colors duration-300 group-hover:text-fg-secondary">
+                    {c.short}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Reveal>
       </div>
     </section>
-  );
-}
-
-function ClientCard({ client }: { client: Client }) {
-  return (
-    <div
-      className="group relative flex h-[260px] flex-col items-center justify-center gap-5 overflow-hidden rounded-2xl border border-border-subtle bg-bg-elevated/40 p-6 transition-all duration-500 hover:-translate-y-1 hover:border-border-strong"
-      title={client.name}
-    >
-      <div
-        className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-        style={{
-          background:
-            "radial-gradient(60% 80% at 50% 0%, rgba(var(--accent-glow),0.18), transparent 70%)",
-        }}
-      />
-      <div className="relative flex h-32 w-full items-center justify-center">
-        <Image
-          src={client.src}
-          alt={client.name}
-          width={client.width}
-          height={client.height}
-          sizes="220px"
-          className="h-32 w-auto max-w-[200px] object-contain transition-opacity duration-500 group-hover:opacity-100"
-        />
-      </div>
-      <p className="relative text-center text-xs font-medium leading-tight text-fg-secondary transition-colors duration-300 group-hover:text-fg-primary">
-        {client.short}
-      </p>
-    </div>
   );
 }
