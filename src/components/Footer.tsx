@@ -59,7 +59,7 @@ export function Footer() {
               Company
             </p>
             <p className="mt-5 text-sm text-fg-secondary">{site.legalName}</p>
-            <p className="mt-1 text-sm text-fg-secondary">Enterprise systems and SaaS platforms, engineered in Silicon Valley</p>
+            <p className="mt-1 text-sm text-fg-secondary">Top-tier systems, in service of a better tomorrow</p>
           </div>
 
           <div>

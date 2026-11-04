@@ -41,11 +41,12 @@ export function PathwayCards() {
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="font-display text-balance text-4xl font-medium leading-[1.05] tracking-tightest md:text-5xl">
-              <span className="gradient-text">Built to run at national scale.</span>
+              <span className="gradient-text">Judged by the result on the other end.</span>
             </h2>
             <p className="mt-5 text-pretty text-fg-secondary md:text-lg">
-              Platforms designed, built and run by one team, and owned outright by the
-              institutions that depend on them.
+              A permit issued in minutes instead of months. A payment that reaches a
+              village without a bank. A record that follows a person for life. That is
+              the measure of every system we deliver.
             </p>
           </div>
         </Reveal>

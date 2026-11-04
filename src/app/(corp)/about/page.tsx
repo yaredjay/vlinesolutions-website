@@ -68,8 +68,8 @@ export default function AboutPage() {
               </p>
               <p className="mt-6 max-w-2xl text-pretty leading-relaxed text-fg-secondary">
                 One team designs the system, builds it, secures the cloud it runs on and
-                hands it over complete, without handoffs, without finger-pointing, and
-                without inflated timelines.
+                hands it over complete. The result is what we are measured on: a service
+                that works for the person using it, the first time and every time.
               </p>
             </Reveal>
           </div>

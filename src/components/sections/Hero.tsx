@@ -57,8 +57,8 @@ export function Hero() {
           className="mx-auto mt-7 max-w-2xl text-pretty text-center text-base leading-relaxed text-fg-secondary md:text-lg"
         >
           We design, build and run enterprise systems and SaaS platforms, engineered in
-          Silicon Valley for the institutions and programs working toward a cleaner,
-          more connected tomorrow.
+          Silicon Valley, so a benefit arrives on time, a record exists for every person
+          and a service works the first time. A better tomorrow, delivered.
         </motion.p>
 
         <motion.div

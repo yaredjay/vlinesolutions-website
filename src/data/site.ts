@@ -3,8 +3,8 @@ export const site = {
   legalName: "V-Line Solutions LLC",
   tagline: "Every system delivered. Every platform modernized. Every mission advanced.",
   description:
-    "Enterprise systems and SaaS platforms, engineered in Silicon Valley. We design, build and run the software institutions and national programs depend on.",
-  bio: "V-Line Solutions is a Silicon Valley technology firm. We design, build and run enterprise systems and SaaS platforms, from national registries and payment rails to the service platforms millions of people use every day.",
+    "Enterprise systems and SaaS platforms, engineered in Silicon Valley, so a service reaches every person who needs it, the first time and every time. Top-tier builds in service of a better tomorrow.",
+  bio: "V-Line Solutions is a Silicon Valley technology firm. We design, build and run enterprise systems and SaaS platforms so that a benefit arrives on time, a record exists for every person, and a service works the first time. Top-tier builds, in service of a better tomorrow.",
   address: {
     line1: "1725 South Bascom Ave #208",
     city: "Campbell",

@@ -106,7 +106,7 @@ export default async function OG() {
               lineHeight: 1.35,
             }}
           >
-            Enterprise systems and SaaS platforms, engineered in Silicon Valley.
+            Enterprise systems and SaaS platforms, in service of a better tomorrow.
           </div>
         </div>
 
