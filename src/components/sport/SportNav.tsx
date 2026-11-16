@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react";
 import { BrandSwitcher } from "@/components/sport/BrandSwitcher";
 import { SportLink, useSportBase } from "@/components/sport/SportBase";
 import { SportWordmark } from "@/components/sport/SportWordmark";
+import { ScrollProgress } from "@/components/sport/motion/ScrollFx";
 import { sportNav } from "@/data/sport";
 import { sportHref } from "@/lib/sport";
 import { cn } from "@/lib/cn";
@@ -33,6 +34,7 @@ export function SportNav() {
 
   return (
     <header className={cn("fixed inset-x-0 top-0 z-50 transition-all duration-500", scrolled ? "pt-2" : "pt-3")}>
+      <ScrollProgress />
       <div className="container-edge">
         {corpHome && (
           <div className="mb-2 flex justify-center">

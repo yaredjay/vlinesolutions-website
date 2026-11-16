@@ -1,13 +1,28 @@
 "use client";
 
 import Image from "next/image";
+import { useRef } from "react";
+import { motion, useReducedMotion, useTransform } from "framer-motion";
 import { Check } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
-import { SwipeHint } from "@/components/sport/SwipeRail";
+import { SwipeHint, SwipeRail } from "@/components/sport/SwipeRail";
 import { Whistle } from "@/components/sport/icons";
+import { DepthReveal, ScrollScale, useTravel } from "@/components/sport/motion/ScrollFx";
 import { officiating, steps } from "@/data/sport";
 
 export function SportGameDay() {
+  const reduced = useReducedMotion();
+  const collageRef = useRef<HTMLDivElement>(null);
+  const t = useTravel(collageRef);
+  // Three photos at three depths: the big one is the anchor, the small ones drift past it.
+  const yA = useTransform(t, [0, 1], [60, -60]);
+  const yB = useTransform(t, [0, 1], [140, -140]);
+  const yC = useTransform(t, [0, 1], [-40, 100]);
+  const rB = useTransform(t, [0, 1], [4, -3]);
+  const rC = useTransform(t, [0, 1], [-3, 4]);
+  const chipY = useTransform(t, [0, 1], [40, -80]);
+  const mv = (v: any) => (reduced ? undefined : v);
+
   return (
     <section id="program" className="relative overflow-hidden bg-white py-20 md:py-28">
       <div className="container-edge grid gap-10 md:grid-cols-12 md:gap-6">
@@ -21,10 +36,12 @@ export function SportGameDay() {
             </h2>
           </Reveal>
 
-          {/* phone photo */}
-          <Reveal className="relative aspect-[5/6] overflow-hidden rounded-[22px] bg-sp-deep shadow-[0_30px_70px_rgba(30,50,120,0.3)] md:hidden">
-            <Image src="/sport/soccer.webp" alt="Soccer referee showing a yellow card on a county park pitch" fill sizes="100vw" className="object-cover object-top" />
-          </Reveal>
+          {/* phone photo: scales up and un-tilts as it enters */}
+          <ScrollScale className="md:hidden" from={0.9} tilt={10}>
+            <div className="relative aspect-[5/6] overflow-hidden rounded-[22px] bg-sp-deep shadow-[0_30px_70px_rgba(30,50,120,0.3)]">
+              <Image src="/sport/soccer.webp" alt="Soccer referee showing a yellow card on a county park pitch" fill sizes="100vw" className="object-cover object-top" />
+            </div>
+          </ScrollScale>
 
           <Reveal delay={0.05} className="hidden text-[17px] leading-relaxed text-sp-slate md:block">
             Officials, operations and program leadership for active communities. One request covers the whole season: assignment, coverage, scorekeeping and reporting.
@@ -46,30 +63,34 @@ export function SportGameDay() {
 
           <div>
             <span className="sp-eyebrow text-sp-muted md:hidden">How it works</span>
-            <div className="sp-rail mt-3 md:mt-0 md:grid md:grid-cols-4 md:gap-2.5">
-              {steps.map((s) => (
-                <div key={s.num} className="flex w-[200px] flex-col gap-1.5 rounded-2xl border border-sp-ink/[0.05] bg-[#F3F6FF] p-3.5 md:w-auto">
+            <SwipeRail label="How it works" className="mt-3 md:mt-0 md:grid md:grid-cols-4 md:gap-2.5">
+              {steps.map((s, i) => (
+                <DepthReveal key={s.num} delay={i * 0.06} className="flex w-[200px] flex-col gap-1.5 rounded-2xl border border-sp-ink/[0.05] bg-[#F3F6FF] p-3.5 md:w-auto">
                   <span className="sp-cond text-[20px] md:text-[22px]" style={{ color: s.color }}>{s.num}</span>
                   <span className="text-[13px] leading-snug text-sp-slate">{s.text}</span>
-                </div>
+                </DepthReveal>
               ))}
-            </div>
+            </SwipeRail>
             <SwipeHint count={4} />
           </div>
         </div>
 
-        {/* desktop collage */}
-        <div className="relative hidden h-[760px] md:col-span-7 md:block">
-          <Reveal className="absolute left-10 top-0 h-[470px] w-[380px] overflow-hidden rounded-[28px] bg-sp-deep shadow-[0_40px_100px_rgba(30,50,120,0.3)]">
-            <Image src="/sport/basketball.webp" alt="Basketball referee running the baseline with electric-blue light ribbons" fill sizes="380px" className="object-cover object-[50%_22%]" />
-          </Reveal>
-          <Reveal delay={0.1} className="absolute right-0 top-[90px] h-[300px] w-[300px] overflow-hidden rounded-[28px] bg-sp-deep shadow-[0_40px_100px_rgba(30,50,120,0.3)]">
+        {/* desktop collage with depth parallax */}
+        <div ref={collageRef} className="relative hidden h-[760px] md:col-span-7 md:block [perspective:1400px]">
+          <motion.div style={{ y: mv(yA) }} className="absolute left-10 top-0 h-[470px] w-[380px] will-change-transform">
+            <ScrollScale from={0.94} tilt={6}>
+              <div className="relative h-[470px] w-[380px] overflow-hidden rounded-[28px] bg-sp-deep shadow-[0_40px_100px_rgba(30,50,120,0.3)]">
+                <Image src="/sport/basketball.webp" alt="Basketball referee running the baseline with electric-blue light ribbons" fill sizes="380px" className="object-cover object-[50%_22%]" />
+              </div>
+            </ScrollScale>
+          </motion.div>
+          <motion.div style={{ y: mv(yB), rotate: mv(rB) }} className="absolute right-0 top-[90px] h-[300px] w-[300px] overflow-hidden rounded-[28px] bg-sp-deep shadow-[0_40px_100px_rgba(30,50,120,0.3)] will-change-transform">
             <Image src="/sport/umpire.webp" alt="Baseball umpire making an out call at a youth ballpark" fill sizes="300px" className="object-cover object-[50%_30%]" />
-          </Reveal>
-          <Reveal delay={0.2} className="absolute bottom-0 right-[60px] h-[330px] w-[360px] overflow-hidden rounded-[28px] bg-sp-deep shadow-[0_40px_100px_rgba(30,50,120,0.3)]">
+          </motion.div>
+          <motion.div style={{ y: mv(yC), rotate: mv(rC) }} className="absolute bottom-0 right-[60px] h-[330px] w-[360px] overflow-hidden rounded-[28px] bg-sp-deep shadow-[0_40px_100px_rgba(30,50,120,0.3)] will-change-transform">
             <Image src="/sport/soccer.webp" alt="Soccer referee showing a yellow card on a county park pitch" fill sizes="360px" className="object-cover object-[50%_12%]" />
-          </Reveal>
-          <Reveal delay={0.3} className="absolute bottom-20 left-0 flex items-center gap-3 rounded-full border border-white bg-white/90 py-3 pl-3 pr-4 shadow-[0_24px_60px_rgba(30,50,120,0.16)] backdrop-blur-md">
+          </motion.div>
+          <motion.div style={{ y: mv(chipY) }} className="absolute bottom-20 left-0 flex items-center gap-3 rounded-full border border-white bg-white/90 py-3 pl-3 pr-4 shadow-[0_24px_60px_rgba(30,50,120,0.16)] backdrop-blur-md will-change-transform">
             <span className="grid h-9 w-9 place-items-center rounded-full text-white" style={{ background: "linear-gradient(120deg,#2B5CFF,#00C2FF)" }}>
               <Whistle className="h-5 w-5" />
             </span>
@@ -77,7 +98,7 @@ export function SportGameDay() {
               <span className="text-sm font-bold">Nationwide coverage</span>
               <span className="text-xs text-sp-muted">Parks &amp; rec · Municipal · Schools · Private leagues</span>
             </span>
-          </Reveal>
+          </motion.div>
         </div>
       </div>
     </section>

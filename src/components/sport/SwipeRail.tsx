@@ -1,24 +1,36 @@
 "use client";
 
+import { Children } from "react";
 import { ArrowRight } from "lucide-react";
+import { useRailFocus } from "@/components/sport/motion/ScrollFx";
 import { cn } from "@/lib/cn";
 
 /**
- * Below the md breakpoint the children sit on a horizontal, snap-scrolling rail.
+ * Below the md breakpoint the children sit on a horizontal, snap-scrolling rail
+ * with a cover-flow focus: the centred card stands straight, neighbours lean away.
  * From md up the caller decides the layout with utilities (md:grid, md:grid-cols-3 ...).
  */
 export function SwipeRail({
   className,
   children,
   label,
+  focus = true,
 }: {
   className?: string;
   children: React.ReactNode;
   label: string;
+  focus?: boolean;
 }) {
+  const ref = useRailFocus(focus);
+  // Each child gets a plain wrapper so the focus transform never fights a
+  // child's own entrance animation.
   return (
-    <div aria-label={label} className={cn("sp-rail", className)}>
-      {children}
+    <div ref={ref} aria-label={label} className={cn("sp-rail sp-stage", className)}>
+      {Children.map(children, (child, i) => (
+        <div key={i} className="sp-rail-item min-w-0 will-change-transform">
+          {child}
+        </div>
+      ))}
     </div>
   );
 }
