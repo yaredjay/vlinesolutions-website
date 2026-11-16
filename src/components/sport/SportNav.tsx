@@ -30,7 +30,8 @@ export function SportNav() {
     };
   }, [open]);
 
-  const corpHome = base ? "/" : corpUrl;
+  // null while the sites do not cross-link (SHOW_SPORT off), on every host
+  const corpHome = corpUrl === null ? null : base ? "/" : corpUrl;
 
   return (
     <header className={cn("fixed inset-x-0 top-0 z-50 transition-all duration-500", scrolled ? "pt-2" : "pt-3")}>
