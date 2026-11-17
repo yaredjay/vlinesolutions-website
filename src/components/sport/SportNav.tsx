@@ -50,7 +50,7 @@ export function SportNav() {
               : "border-transparent"
           )}
         >
-          <SportLink href="/" aria-label="VLS Sport home" className="flex items-center" onClick={() => setOpen(false)}>
+          <SportLink href="/" aria-label="V-Line Sport home" className="flex items-center" onClick={() => setOpen(false)}>
             <SportWordmark />
           </SportLink>
 

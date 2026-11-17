@@ -1,11 +1,11 @@
 import { clients } from "@/data/clients";
 
 export const sportBrand = {
-  name: "VLS Sport",
-  poweredBy: "Powered by V-Line Solutions",
+  name: "V-Line Sport",
+  poweredBy: "A V-Line Solutions division",
   tagline: "Officials for every game.",
   description:
-    "VLS Sport staffs referees, umpires, scorekeepers and game-day crews for county parks and recreation departments, municipalities, schools and private leagues. Any sport your league runs, in all 50 states.",
+    "V-Line Sport staffs referees, umpires, scorekeepers and game-day crews for county parks and recreation departments, municipalities, schools and private leagues. Any sport your league runs, in all 50 states.",
   hq: "Campbell, CA",
 };
 
@@ -123,7 +123,7 @@ export const coverageStates = [
 export const sportNav = [
   { label: "Officiating", href: "#serve" },
   { label: "Sports", href: "#sports" },
-  { label: "Why VLS", href: "#why" },
+  { label: "Why V-Line", href: "#why" },
   { label: "Coverage", href: "#coverage" },
   { label: "Become an official", href: "#become" },
 ];

@@ -47,7 +47,7 @@ export function Footer() {
                   href="/sports"
                   className="text-fg-secondary transition-colors hover:text-fg-primary"
                 >
-                  VLS Sport
+                  V-Line Sport
                 </Link>
               </li>
               )}

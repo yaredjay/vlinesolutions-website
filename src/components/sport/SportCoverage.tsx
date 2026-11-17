@@ -59,7 +59,7 @@ export function SportCoverage() {
                 viewport={{ once: true, margin: "-15% 0px" }}
                 variants={{ hidden: {}, show: { transition: { staggerChildren: reduced ? 0 : 0.09, delayChildren: 0.2 } } }}
               >
-                <Image src="/sport/us-map.svg" alt="Map of the United States with VLS Sport coverage pins" fill sizes="(min-width: 768px) 820px, 100vw" className="drop-shadow-[0_20px_40px_rgba(30,50,120,0.12)]" />
+                <Image src="/sport/us-map.svg" alt="Map of the United States with V-Line Sport coverage pins" fill sizes="(min-width: 768px) 820px, 100vw" className="drop-shadow-[0_20px_40px_rgba(30,50,120,0.12)]" />
                 {pins.map((p) => (
                   <motion.div key={p.state} variants={reduced ? undefined : drop} className="absolute h-0 w-0" style={{ left: `${p.x}%`, top: `${p.y}%` }} title={p.state}>
                     {p.hq && (

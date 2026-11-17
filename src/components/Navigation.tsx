@@ -158,7 +158,7 @@ export function Navigation() {
               >
                 {SHOW_SPORT && (
                   <Link href="/sports" className="btn-ghost w-full justify-center">
-                    VLS Sport · Officiating
+                    V-Line Sport · Officiating
                     <span aria-hidden>→</span>
                   </Link>
                 )}

@@ -11,7 +11,7 @@ import { SPORT_URL } from "@/lib/sport";
 export const metadata: Metadata = {
   title: "Request officials",
   description:
-    "Request referees, umpires, scorekeepers and game-day crews from VLS Sport for your season, tournament or league. Officials available in all 50 states.",
+    "Request referees, umpires, scorekeepers and game-day crews from V-Line Sport for your season, tournament or league. Officials available in all 50 states.",
   alternates: { canonical: `${SPORT_URL}/request` },
 };
 
@@ -125,7 +125,7 @@ export default function RequestOfficialsPage() {
                   official.
                 </h2>
                 <p className="text-[15px] leading-relaxed text-white/90">
-                  Join the VLS roster. Tell us your sports, certifications and availability. We match you to games near you.
+                  Join the V-Line roster. Tell us your sports, certifications and availability. We match you to games near you.
                 </p>
               </div>
               <a href="#request" className="sp-btn-white relative w-max">
@@ -141,7 +141,7 @@ export default function RequestOfficialsPage() {
                 {site.email}
               </a>
               <SportLink href="/" className="mt-2 inline-flex items-center gap-2 text-[13px] font-semibold text-sp-electric">
-                Back to VLS Sport <ArrowRight className="h-3.5 w-3.5" />
+                Back to V-Line Sport <ArrowRight className="h-3.5 w-3.5" />
               </SportLink>
             </Reveal>
           </div>
