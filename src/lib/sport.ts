@@ -1,5 +1,5 @@
 /**
- * VLS Sport lives at three addresses:
+ * V-Line Sport lives at three addresses:
  *   - vlinesports.com            (its own domain, served by the middleware rewrite)
  *   - sports.vlinesolutions.com  (alias subdomain, same rewrite)
  *   - vlinesolutions.com/sports  (the same pages under the corporate domain)
@@ -11,20 +11,20 @@ export const CORP_URL = "https://vlinesolutions.com";
 
 /**
  * SPORT-ONLY MODE is off. vlinesolutions.com serves the corporate site at the
- * root; VLS Sport remains reachable at /sports and sports.vlinesolutions.com.
+ * root; V-Line Sport remains reachable at /sports and sports.vlinesolutions.com.
  * Set NEXT_PUBLIC_SPORT_ONLY=true to put the sport placeholder back at the root.
  */
 const sportOnlyEnv = process.env.NEXT_PUBLIC_SPORT_ONLY;
 export const SPORT_ONLY = sportOnlyEnv === "true";
 
 /**
- * VLS Sport is a placeholder while the corporate site is finished. Until
+ * V-Line Sport is a placeholder while the corporate site is finished. Until
  * NEXT_PUBLIC_SHOW_SPORT=true, the corporate navigation hides the brand
  * switcher and sport links; the /sports routes still resolve.
  */
 export const SHOW_SPORT = process.env.NEXT_PUBLIC_SHOW_SPORT === "true";
 
-/** VLS Sport's own home. vlinesports.com is the standalone domain; the subdomain keeps working as an alias. */
+/** V-Line Sport's own home. vlinesports.com is the standalone domain; the subdomain keeps working as an alias. */
 export const SPORT_URL = SPORT_ONLY
   ? CORP_URL
   : process.env.NEXT_PUBLIC_SPORT_URL?.replace(/\/$/, "") ?? "https://vlinesports.com";
@@ -36,7 +36,7 @@ const SPORT_DOMAINS = ["vlinesports.com", "vlinesport.com"];
 /** Corporate-only routes; on a sport host they send visitors to the sport homepage. */
 export const CORP_ROUTES = ["/about", "/contact", "/government", "/technology"];
 
-/** True when a request host is one of the VLS Sport hostnames (every host in sport-only mode). */
+/** True when a request host is one of the V-Line Sport hostnames (every host in sport-only mode). */
 export function isSportHost(host: string | null | undefined): boolean {
   if (SPORT_ONLY) return true;
   const h = (host ?? "").toLowerCase().split(":")[0];

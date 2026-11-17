@@ -6,6 +6,7 @@ import { SportLink } from "@/components/sport/SportBase";
 import { SwipeHint } from "@/components/sport/SwipeRail";
 import { CountUp, DepthReveal, FlipGroup, FlipItem, Parallax } from "@/components/sport/motion/ScrollFx";
 import { sports } from "@/data/sport";
+import { sportPages } from "@/data/sport-pages";
 
 const stats: { value: React.ReactNode; grad: string; label: string }[] = [
   { value: <CountUp to={50} />, grad: "sp-grad-court", label: "States served. Nationwide crews for parks, rec and leagues." },
@@ -47,15 +48,20 @@ export function SportSports() {
         {/* phone: two swipeable rows; desktop: wrapping wall */}
         {/* chips flip up from the court one after another */}
         <FlipGroup step={0.035} className="sp-rail mt-8 grid grid-flow-col grid-rows-2 gap-2 md:mt-11 md:flex md:flex-wrap md:gap-3">
-          {sports.map((s) => (
-            <FlipItem
-              key={s}
-              as="span"
-              className="sp-cond whitespace-nowrap rounded-xl border border-white bg-white/80 px-3.5 py-2.5 text-[18px] text-sp-ink shadow-[0_8px_20px_rgba(30,50,120,0.08)] backdrop-blur-md md:rounded-2xl md:px-5 md:py-4 md:text-[26px]"
-            >
-              {s}
-            </FlipItem>
-          ))}
+          {sports.map((s) => {
+            const page = sportPages.find((p) => p.name === s);
+            return (
+              <FlipItem key={s} as="span" className="[backface-visibility:hidden]">
+                <SportLink
+                  href={page ? `/officials/${page.slug}` : "/request"}
+                  aria-label={page ? `${page.headline} for leagues and tournaments` : s}
+                  className="sp-cond block whitespace-nowrap rounded-xl border border-white bg-white/80 px-3.5 py-2.5 text-[18px] text-sp-ink shadow-[0_8px_20px_rgba(30,50,120,0.08)] backdrop-blur-md transition-transform hover:-translate-y-0.5 md:rounded-2xl md:px-5 md:py-4 md:text-[26px]"
+                >
+                  {s}
+                </SportLink>
+              </FlipItem>
+            );
+          })}
           <FlipItem as="span" className="sp-cond whitespace-nowrap rounded-xl border-[1.5px] border-dashed border-sp-electric/60 bg-sp-electric/[0.06] px-3.5 py-2.5 text-[18px] text-sp-electric md:rounded-2xl md:px-5 md:py-4 md:text-[26px]">
             + Yours
           </FlipItem>

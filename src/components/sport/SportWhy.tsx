@@ -12,14 +12,14 @@ export function SportWhy() {
       <div aria-hidden className="pointer-events-none absolute left-[20%] top-[300px] h-[500px] w-[900px] rounded-full blur-[60px] animate-sp-drift-reverse" style={{ background: "radial-gradient(ellipse at 50% 50%, rgba(124,77,255,0.18) 0%, rgba(0,194,255,0.14) 40%, rgba(0,194,255,0) 70%)" }} />
       <Parallax speed={-0.9} className="pointer-events-none absolute -right-2 top-6 md:-right-8 md:top-10">
         <div aria-hidden className="sp-display select-none text-[150px] leading-none tracking-[-0.06em] text-sp-electric/[0.05] md:text-[360px]">
-          VLS
+          V-LINE
         </div>
       </Parallax>
 
       <div className="container-edge relative">
         <div className="relative flex min-h-[190px] items-end md:min-h-[260px]">
           <Reveal className="flex w-[220px] flex-col gap-3 md:w-[820px] md:gap-4">
-            <span className="sp-eyebrow text-sp-flame">Why VLS</span>
+            <span className="sp-eyebrow text-sp-flame">Why V-Line</span>
             <h2 className="sp-display text-[38px] md:text-[60px] lg:text-[68px]">
               <span className="sp-outline">Booked</span> <span className="md:hidden"><br /></span>
               <span className="sp-outline">fast.</span>
@@ -43,7 +43,7 @@ export function SportWhy() {
           </Parallax>
         </div>
 
-        <SwipeRail label="Why VLS" className="mt-8 md:mt-10 md:grid md:grid-cols-3 md:gap-5">
+        <SwipeRail label="Why V-Line" className="mt-8 md:mt-10 md:grid md:grid-cols-3 md:gap-5">
           {why.map((w, i) => (
             <DepthReveal
               key={w.num}

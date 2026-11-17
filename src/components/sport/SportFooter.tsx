@@ -4,6 +4,7 @@ import { SportLink, useSportBase } from "@/components/sport/SportBase";
 import { SportWordmark } from "@/components/sport/SportWordmark";
 import { sportNav, sportBrand } from "@/data/sport";
 import { site } from "@/data/site";
+import { sportPages } from "@/data/sport-pages";
 
 export function SportFooter() {
   const { base, corpUrl } = useSportBase();
@@ -41,7 +42,20 @@ export function SportFooter() {
             </SportLink>
           </div>
 
-          <div className="flex flex-col gap-2.5 text-sm md:col-span-3 md:col-start-10">
+          <div className="flex flex-col gap-2.5 text-sm md:col-span-3">
+            <span className="mb-1 text-xs font-bold uppercase tracking-[0.12em] text-sp-muted">Officials by sport</span>
+            <ul className="grid grid-cols-2 gap-x-4 gap-y-2">
+              {sportPages.map((p) => (
+                <li key={p.slug}>
+                  <SportLink href={`/officials/${p.slug}`} className="text-sp-ink hover:text-sp-electric">
+                    {p.name}
+                  </SportLink>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="flex flex-col gap-2.5 text-sm md:col-span-2">
             <span className="mb-1 text-xs font-bold uppercase tracking-[0.12em] text-sp-muted">Connect</span>
             <a href={site.phoneHref} className="text-sp-ink hover:text-sp-electric">
               {site.phone}

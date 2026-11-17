@@ -13,7 +13,7 @@ import { useEffect, useRef, type CSSProperties, type ReactNode } from "react";
 import { cn } from "@/lib/cn";
 
 /**
- * Scroll-driven motion primitives for VLS Sport.
+ * Scroll-driven motion primitives for V-Line Sport.
  *
  * Every effect here is transform/opacity only, runs on the compositor, and is
  * mobile-first: nothing depends on hover or a fine pointer. Under

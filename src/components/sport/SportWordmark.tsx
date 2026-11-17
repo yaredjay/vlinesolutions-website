@@ -3,7 +3,7 @@ import { cn } from "@/lib/cn";
 export function SportWordmark({ className, size = "md" }: { className?: string; size?: "sm" | "md" | "lg" }) {
   const dims = size === "lg" ? 34 : size === "sm" ? 26 : 30;
   return (
-    <span className={cn("inline-flex items-center gap-2.5", className)} aria-label="VLS Sport">
+    <span className={cn("inline-flex items-center gap-2.5", className)} aria-label="V-Line Sport">
       <svg viewBox="0 0 32 32" width={dims} height={dims} fill="none" aria-hidden="true">
         <defs>
           <linearGradient id="vls-mark" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
@@ -20,7 +20,7 @@ export function SportWordmark({ className, size = "md" }: { className?: string; 
           size === "lg" ? "text-[26px]" : size === "sm" ? "text-[20px]" : "text-[22px]"
         )}
       >
-        VLS
+        V-LINE
         <span
           className={cn(
             "font-sans font-medium normal-case tracking-[-0.01em] text-sp-slate",

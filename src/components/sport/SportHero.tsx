@@ -71,7 +71,7 @@ export function SportHero() {
               <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full text-white" style={{ background: "linear-gradient(120deg,#2B5CFF,#00C2FF)" }}>
                 <Whistle className="h-3.5 w-3.5" />
               </span>
-              <span className="truncate">VLS Sport · Powered by V-Line Solutions</span>
+              <span className="truncate">V-Line Sport · A V-Line Solutions division</span>
             </motion.div>
 
             <motion.h1 {...fade(0.15)} className="sp-hero flex flex-col text-[54px] sm:text-[72px] md:text-[88px] lg:text-[112px] [perspective:900px]">
@@ -82,7 +82,7 @@ export function SportHero() {
 
             <motion.div style={{ y: mv(yCopy), opacity: mv(copyOpacity) }} className="flex flex-col gap-6 md:gap-7">
               <motion.p {...fade(0.28)} className="max-w-[560px] text-base leading-relaxed text-[#1F2740] md:text-xl">
-                VLS Sport staffs referees, umpires, scorekeepers and game-day crews for county parks and recreation
+                V-Line Sport staffs referees, umpires, scorekeepers and game-day crews for county parks and recreation
                 departments, municipalities, schools and private leagues. Any sport your league runs, in all 50 states.
               </motion.p>
 
@@ -112,7 +112,7 @@ export function SportHero() {
                   <div className="relative aspect-[4/5] overflow-hidden rounded-[33px] bg-sp-deep">
                     <Image
                       src="/sport/hero.webp"
-                      alt="VLS Sport officials from soccer, baseball, basketball and volleyball with electric-blue light ribbons"
+                      alt="V-Line Sport officials from soccer, baseball, basketball and volleyball with electric-blue light ribbons"
                       fill
                       priority
                       sizes="(min-width: 1024px) 470px, (min-width: 768px) 400px, 340px"

@@ -2,7 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import { CORP_ROUTES, isSportHost, SPORT_PATH } from "@/lib/sport";
 
 /**
- * On the VLS Sport host, serve the /sports route group at the root:
+ * On the V-Line Sport host, serve the /sports route group at the root:
  *   sports.vlinesolutions.com/           -> /sports
  *   sports.vlinesolutions.com/request    -> /sports/request
  * and keep URLs clean by redirecting any /sports/* on that host to the bare path.
@@ -38,6 +38,6 @@ export function middleware(req: NextRequest) {
 
 export const config = {
   matcher: [
-    "/((?!_next/|api/|logos/|sport/|icon\\.svg|apple-icon|favicon\\.ico|robots\\.txt|sitemap\\.xml).*)",
+    "/((?!_next/|api/|logos/|sport/|icon\\.svg|apple-icon|favicon\\.ico|robots\\.txt|sitemap\\.xml|llms\\.txt).*)",
   ],
 };

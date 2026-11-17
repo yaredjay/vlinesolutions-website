@@ -59,7 +59,7 @@ export function SportBecome() {
                 official.
               </h2>
               <p className="text-sm leading-relaxed text-sp-slate md:text-[15px]">
-                Join the VLS roster. Tell us your sports, certifications and availability and we match you to games near you.
+                Join the V-Line roster. Tell us your sports, certifications and availability and we match you to games near you.
               </p>
             </div>
             <SportLink href="/request#become" className="sp-btn-primary relative w-full justify-center md:w-max">

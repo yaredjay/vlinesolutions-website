@@ -5,7 +5,7 @@ import { cn } from "@/lib/cn";
 
 /**
  * The portfolio switcher shared by both sites: one tap between
- * V-Line Solutions (corporate) and VLS Sport (officiating).
+ * V-Line Solutions (corporate) and V-Line Sport (officiating).
  */
 export function BrandSwitcher({
   active,
@@ -23,7 +23,7 @@ export function BrandSwitcher({
   const light = tone === "light";
   const items = [
     { key: "corp", label: "V-Line Solutions", href: corpHref },
-    { key: "sport", label: "VLS Sport", href: sportHref },
+    { key: "sport", label: "V-Line Sport", href: sportHref },
   ] as const;
 
   return (

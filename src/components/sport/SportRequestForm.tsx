@@ -38,7 +38,7 @@ export function SportRequestForm() {
         </div>
 
         <input type="text" name="company_url" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />
-        <input type="hidden" name="division" value="vls-sport" />
+        <input type="hidden" name="division" value="v-line-sport" />
 
         <div className="grid gap-3 sm:grid-cols-2">
           <label className="flex flex-col gap-1.5 text-[13px] font-semibold text-sp-slate">

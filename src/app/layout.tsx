@@ -18,7 +18,7 @@ const display = Space_Grotesk({
   display: "swap",
 });
 
-// VLS Sport display face: variable width axis gives both the condensed ticker voice and the wide hero voice.
+// V-Line Sport display face: variable width axis gives both the condensed ticker voice and the wide hero voice.
 const archivo = Archivo({
   subsets: ["latin"],
   axes: ["wdth"],

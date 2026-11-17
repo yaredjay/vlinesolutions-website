@@ -392,7 +392,7 @@ html.lenis, html.lenis body { height: auto; }
 }
 
 
-/* ===================== VLS Sport (light-only division) ===================== */
+/* ===================== V-Line Sport (light-only division) ===================== */
 [data-site="sport"] {
   color-scheme: light;
   --bg-base: #ffffff;
