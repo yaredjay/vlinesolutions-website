@@ -7,7 +7,7 @@ import { site } from "@/data/site";
 
 export function SportFooter() {
   const { base, corpUrl } = useSportBase();
-  const corpHome = base ? "/" : corpUrl;
+  const corpHome = corpUrl === null ? null : base ? "/" : corpUrl;
   const year = new Date().getFullYear();
 
   return (

@@ -1,15 +1,16 @@
 "use client";
 
 import { ArrowRight } from "lucide-react";
-import { Reveal } from "@/components/ui/Reveal";
 import { SportLink } from "@/components/sport/SportBase";
+import { DepthReveal, Parallax } from "@/components/sport/motion/ScrollFx";
 import { site } from "@/data/site";
 
 export function SportBecome() {
   return (
     <section id="become" className="bg-sp-mist py-6 md:py-16">
-      <div className="container-edge grid gap-3 md:grid-cols-12 md:gap-6">
-        <Reveal
+      <div className="container-edge sp-stage grid gap-3 md:grid-cols-12 md:gap-6">
+        <DepthReveal
+          tilt={10}
           className="relative flex min-h-[360px] flex-col justify-between overflow-hidden rounded-[28px] p-6 text-white shadow-[0_60px_140px_rgba(43,92,255,0.35)] md:col-span-8 md:min-h-[500px] md:rounded-[40px] md:p-14"
           style={{
             background:
@@ -17,7 +18,9 @@ export function SportBecome() {
           }}
         >
           <div aria-hidden className="pointer-events-none absolute inset-0 opacity-70" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.10) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.10) 1px, transparent 1px)", backgroundSize: "56px 56px", maskImage: "radial-gradient(ellipse at 50% 50%, #000 20%, transparent 75%)", WebkitMaskImage: "radial-gradient(ellipse at 50% 50%, #000 20%, transparent 75%)" }} />
-          <div aria-hidden className="sp-display pointer-events-none absolute -right-3 top-5 select-none text-[170px] leading-none text-white/[0.08] md:-right-5 md:top-8 md:text-[300px]">GO</div>
+          <Parallax speed={-0.8} className="pointer-events-none absolute -right-3 top-5 md:-right-5 md:top-8">
+            <div aria-hidden className="sp-display select-none text-[170px] leading-none text-white/[0.08] md:text-[300px]">GO</div>
+          </Parallax>
           <div className="relative flex flex-col gap-3 md:gap-4">
             <span className="sp-eyebrow text-sp-volt">Next season starts here</span>
             <h2 className="sp-display text-[38px] text-white md:text-[64px] lg:text-[76px]">
@@ -41,11 +44,13 @@ export function SportBecome() {
               </a>
             </div>
           </div>
-        </Reveal>
+        </DepthReveal>
 
-        <Reveal delay={0.1} className="rounded-[28px] bg-gradient-to-br from-white via-[rgba(255,106,44,0.6)] to-[rgba(255,61,140,0.6)] p-[2px] shadow-[0_30px_80px_rgba(30,50,120,0.14)] md:col-span-4 md:rounded-[40px]">
+        <DepthReveal delay={0.12} tilt={14} className="rounded-[28px] bg-gradient-to-br from-white via-[rgba(255,106,44,0.6)] to-[rgba(255,61,140,0.6)] p-[2px] shadow-[0_30px_80px_rgba(30,50,120,0.14)] md:col-span-4 md:rounded-[40px]">
           <div className="relative flex h-full min-h-[356px] flex-col justify-between overflow-hidden rounded-[26px] bg-white p-6 md:min-h-[496px] md:rounded-[38px] md:p-9" style={{ backgroundImage: "radial-gradient(360px 260px at 100% 0%, rgba(255,106,44,0.16), transparent 60%)" }}>
-            <div aria-hidden className="sp-display pointer-events-none absolute -bottom-6 -right-2 select-none text-[140px] leading-none text-sp-flame/[0.07] md:-bottom-8 md:-right-3 md:text-[200px]">REF</div>
+            <Parallax speed={0.5} className="pointer-events-none absolute -bottom-6 -right-2 md:-bottom-8 md:-right-3">
+              <div aria-hidden className="sp-display select-none text-[140px] leading-none text-sp-flame/[0.07] md:text-[200px]">REF</div>
+            </Parallax>
             <div className="relative flex flex-col gap-3">
               <span className="sp-eyebrow text-sp-flame">For officials</span>
               <h2 className="sp-display text-[42px]">
@@ -61,7 +66,7 @@ export function SportBecome() {
               Apply to the roster <ArrowRight className="h-4 w-4 text-sp-volt" />
             </SportLink>
           </div>
-        </Reveal>
+        </DepthReveal>
       </div>
     </section>
   );

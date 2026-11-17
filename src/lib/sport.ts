@@ -1,6 +1,7 @@
 /**
- * VLS Sport lives at two addresses:
- *   - sports.vlinesolutions.com (its own host, served by the middleware rewrite)
+ * VLS Sport lives at three addresses:
+ *   - vlinesports.com            (its own domain, served by the middleware rewrite)
+ *   - sports.vlinesolutions.com  (alias subdomain, same rewrite)
  *   - vlinesolutions.com/sports  (the same pages under the corporate domain)
  *
  * Everything here must stay edge-safe: the middleware imports it.
@@ -23,10 +24,14 @@ export const SPORT_ONLY = sportOnlyEnv === "true";
  */
 export const SHOW_SPORT = process.env.NEXT_PUBLIC_SHOW_SPORT === "true";
 
+/** VLS Sport's own home. vlinesports.com is the standalone domain; the subdomain keeps working as an alias. */
 export const SPORT_URL = SPORT_ONLY
   ? CORP_URL
-  : process.env.NEXT_PUBLIC_SPORT_URL?.replace(/\/$/, "") ?? "https://sports.vlinesolutions.com";
+  : process.env.NEXT_PUBLIC_SPORT_URL?.replace(/\/$/, "") ?? "https://vlinesports.com";
 export const SPORT_PATH = "/sports";
+
+/** Hostnames that serve the sport site at their root (apex and www). */
+const SPORT_DOMAINS = ["vlinesports.com", "vlinesport.com"];
 
 /** Corporate-only routes; on a sport host they send visitors to the sport homepage. */
 export const CORP_ROUTES = ["/about", "/contact", "/government", "/technology"];
@@ -41,6 +46,7 @@ export function isSportHost(host: string | null | undefined): boolean {
   } catch {
     /* ignore a malformed env value */
   }
+  if (SPORT_DOMAINS.some((d) => h === d || h === `www.${d}`)) return true;
   return h.startsWith("sports.") || h.startsWith("vlssport.");
 }
 

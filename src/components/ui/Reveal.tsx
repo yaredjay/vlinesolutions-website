@@ -24,10 +24,12 @@ export function Reveal({
   const Component = (motion as any)[as] ?? motion.div;
   return (
     <Component
-      initial={reduced ? false : { opacity: 0, y }}
-      whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
+      // Always animate to the visible state: with reduced motion the duration is 0,
+      // so the server-rendered opacity 0 never survives hydration.
+      initial={{ opacity: 0, y }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-12% 0px -8% 0px" }}
-      transition={{ duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] }}
+      transition={reduced ? { duration: 0 } : { duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] }}
       className={cn(className)}
       data-reveal
       {...rest}

@@ -478,6 +478,10 @@ html.lenis, html.lenis body { height: auto; }
   .sp-btn-white {
     @apply inline-flex h-14 items-center gap-3 rounded-full bg-white px-7 text-[15px] font-bold text-sp-ink shadow-[0_18px_50px_rgba(0,0,0,0.2)] transition-transform duration-300 hover:-translate-y-0.5;
   }
+  /* 3D stage: children with rotateX/rotateY read as depth instead of skew */
+  .sp-stage { perspective: 1200px; }
+  .sp-stage > * { transform-style: preserve-3d; }
+
   /* phone: snap-scrolling rail that bleeds to the screen edge; md and up: the caller's grid */
   .sp-rail {
     display: flex;

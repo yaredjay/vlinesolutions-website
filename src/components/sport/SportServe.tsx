@@ -3,6 +3,7 @@
 import { Building2, Globe2, Trophy } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 import { SwipeHint, SwipeRail } from "@/components/sport/SwipeRail";
+import { DepthReveal, Parallax } from "@/components/sport/motion/ScrollFx";
 import { serve } from "@/data/sport";
 
 const icons = { building: Building2, globe: Globe2, trophy: Trophy } as const;
@@ -10,7 +11,9 @@ const icons = { building: Building2, globe: Globe2, trophy: Trophy } as const;
 export function SportServe() {
   return (
     <section id="serve" className="relative overflow-hidden bg-white py-20 md:py-28">
-      <div aria-hidden className="pointer-events-none absolute -left-40 top-[300px] h-[600px] w-[700px] rounded-full blur-[40px] animate-sp-drift" style={{ background: "radial-gradient(circle, rgba(0,194,255,0.22) 0%, rgba(0,194,255,0) 65%)" }} />
+      <Parallax speed={-0.5} className="pointer-events-none absolute -left-40 top-[300px] h-[600px] w-[700px]">
+        <div aria-hidden className="h-full w-full rounded-full blur-[40px] animate-sp-drift" style={{ background: "radial-gradient(circle, rgba(0,194,255,0.22) 0%, rgba(0,194,255,0) 65%)" }} />
+      </Parallax>
       <div className="container-edge relative">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between md:gap-10">
           <Reveal className="flex flex-col gap-4">
@@ -32,9 +35,10 @@ export function SportServe() {
           {serve.map((card, i) => {
             const Icon = icons[card.icon];
             return (
-              <Reveal
+              <DepthReveal
                 key={card.num}
-                delay={i * 0.08}
+                delay={i * 0.1}
+                tilt={22}
                 className={`w-[296px] rounded-[30px] bg-gradient-to-br p-[2px] shadow-[0_30px_80px_rgba(30,50,120,0.12)] md:w-auto ${card.ring}`}
               >
                 <div
@@ -56,7 +60,7 @@ export function SportServe() {
                     <p className="text-[13px] leading-relaxed text-sp-slate md:text-[15px]">{card.body}</p>
                   </div>
                 </div>
-              </Reveal>
+              </DepthReveal>
             );
           })}
         </SwipeRail>

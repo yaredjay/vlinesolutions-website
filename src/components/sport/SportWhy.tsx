@@ -3,15 +3,18 @@
 import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
 import { SwipeHint, SwipeRail } from "@/components/sport/SwipeRail";
+import { DepthReveal, Parallax, Tilt3D } from "@/components/sport/motion/ScrollFx";
 import { why } from "@/data/sport";
 
 export function SportWhy() {
   return (
     <section id="why" className="relative overflow-hidden py-20 md:py-28" style={{ background: "linear-gradient(180deg, #FFFFFF 0%, #F6F8FF 100%)" }}>
       <div aria-hidden className="pointer-events-none absolute left-[20%] top-[300px] h-[500px] w-[900px] rounded-full blur-[60px] animate-sp-drift-reverse" style={{ background: "radial-gradient(ellipse at 50% 50%, rgba(124,77,255,0.18) 0%, rgba(0,194,255,0.14) 40%, rgba(0,194,255,0) 70%)" }} />
-      <div aria-hidden className="sp-display pointer-events-none absolute -right-2 top-6 select-none text-[150px] leading-none tracking-[-0.06em] text-sp-electric/[0.05] md:-right-8 md:top-10 md:text-[360px]">
-        VLS
-      </div>
+      <Parallax speed={-0.9} className="pointer-events-none absolute -right-2 top-6 md:-right-8 md:top-10">
+        <div aria-hidden className="sp-display select-none text-[150px] leading-none tracking-[-0.06em] text-sp-electric/[0.05] md:text-[360px]">
+          VLS
+        </div>
+      </Parallax>
 
       <div className="container-edge relative">
         <div className="relative flex min-h-[190px] items-end md:min-h-[260px]">
@@ -25,28 +28,33 @@ export function SportWhy() {
               <span className="sp-grad-heat">always.</span>
             </h2>
           </Reveal>
-          <div className="pointer-events-none absolute -right-8 -top-8 h-[200px] w-[200px] animate-sp-whistle md:-top-16 md:right-0 md:h-[400px] md:w-[400px]">
-            <Image
-              src="/sport/whistle.webp"
-              alt="Chrome referee whistle on a black lanyard"
-              fill
-              sizes="(min-width: 768px) 400px, 200px"
-              className="object-contain drop-shadow-[0_40px_60px_rgba(30,50,120,0.28)]"
-            />
-          </div>
+          <Parallax speed={0.7} className="pointer-events-none absolute -right-8 -top-8 h-[200px] w-[200px] md:-top-16 md:right-0 md:h-[400px] md:w-[400px]">
+            <Tilt3D maxTilt={0} scrollTilt={14} lift={0} className="h-full w-full">
+              <div className="relative h-[200px] w-[200px] animate-sp-whistle md:h-[400px] md:w-[400px]">
+                <Image
+                  src="/sport/whistle.webp"
+                  alt="Chrome referee whistle on a black lanyard"
+                  fill
+                  sizes="(min-width: 768px) 400px, 200px"
+                  className="object-contain drop-shadow-[0_40px_60px_rgba(30,50,120,0.28)]"
+                />
+              </div>
+            </Tilt3D>
+          </Parallax>
         </div>
 
         <SwipeRail label="Why VLS" className="mt-8 md:mt-10 md:grid md:grid-cols-3 md:gap-5">
           {why.map((w, i) => (
-            <Reveal
+            <DepthReveal
               key={w.num}
-              delay={i * 0.06}
+              delay={(i % 3) * 0.08 + Math.floor(i / 3) * 0.12}
+              tilt={20}
               className="flex h-[160px] w-[240px] flex-col gap-2 rounded-[18px] border border-white bg-white/90 p-4 shadow-[0_12px_30px_rgba(30,50,120,0.10)] backdrop-blur-md md:h-auto md:min-h-[176px] md:w-auto md:gap-3 md:rounded-3xl md:p-7"
             >
               <span className="sp-cond text-[16px] text-sp-electric md:text-[20px]">{w.num}</span>
               <span className="text-[16px] font-bold tracking-tight md:text-[20px]">{w.title}</span>
               <span className="text-[12px] leading-relaxed text-sp-slate md:text-sm">{w.body}</span>
-            </Reveal>
+            </DepthReveal>
           ))}
         </SwipeRail>
         <SwipeHint count={6} accent="linear-gradient(120deg,#FF6A2C,#7C4DFF)" />

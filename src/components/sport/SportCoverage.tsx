@@ -1,15 +1,24 @@
 "use client";
 
 import Image from "next/image";
-import { Reveal } from "@/components/ui/Reveal";
+import { motion, useReducedMotion } from "framer-motion";
 import { Pin } from "@/components/sport/icons";
+import { ScrollScale } from "@/components/sport/motion/ScrollFx";
 import { coverageStates, pins } from "@/data/sport";
 
+const drop = {
+  hidden: { opacity: 0, y: -28, scale: 0.6 },
+  show: { opacity: 1, y: 0, scale: 1, transition: { type: "spring", stiffness: 420, damping: 22 } },
+};
+
 export function SportCoverage() {
+  const reduced = useReducedMotion();
   return (
     <section id="coverage" className="border-t border-sp-ink/[0.06] bg-sp-mist py-6 md:py-24">
       <div className="container-edge">
-        <Reveal
+        <ScrollScale
+          from={0.94}
+          tilt={9}
           className="relative overflow-hidden rounded-[28px] border border-white bg-white p-5 shadow-[0_40px_100px_rgba(30,50,120,0.14)] md:rounded-[40px] md:p-12"
           style={{
             backgroundImage:
@@ -43,25 +52,31 @@ export function SportCoverage() {
             </div>
 
             <div className="md:col-span-8">
-              <div className="relative mx-auto aspect-[975/610] w-full max-w-[820px]">
+              <motion.div
+                className="relative mx-auto aspect-[975/610] w-full max-w-[820px]"
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, margin: "-15% 0px" }}
+                variants={{ hidden: {}, show: { transition: { staggerChildren: reduced ? 0 : 0.09, delayChildren: 0.2 } } }}
+              >
                 <Image src="/sport/us-map.svg" alt="Map of the United States with VLS Sport coverage pins" fill sizes="(min-width: 768px) 820px, 100vw" className="drop-shadow-[0_20px_40px_rgba(30,50,120,0.12)]" />
                 {pins.map((p) => (
-                  <div key={p.state} className="absolute h-0 w-0" style={{ left: `${p.x}%`, top: `${p.y}%` }} title={p.state}>
+                  <motion.div key={p.state} variants={reduced ? undefined : drop} className="absolute h-0 w-0" style={{ left: `${p.x}%`, top: `${p.y}%` }} title={p.state}>
                     {p.hq && (
                       <span aria-hidden className="absolute -left-[14px] -top-[14px] h-7 w-7 rounded-full bg-sp-electric/35 animate-sp-pulse md:-left-[22px] md:-top-[22px] md:h-11 md:w-11" />
                     )}
                     <Pin className="absolute -left-[9px] -top-6 h-6 w-[18px] drop-shadow-[0_6px_10px_rgba(43,92,255,0.45)] md:-left-[15px] md:-top-10 md:h-10 md:w-[30px]" />
                     <span className="sr-only">{p.state}</span>
-                  </div>
+                  </motion.div>
                 ))}
-              </div>
+              </motion.div>
             </div>
           </div>
           <span className="relative mt-5 inline-flex items-center gap-2 rounded-full bg-sp-ink py-2 pl-2 pr-3 text-xs font-semibold text-white md:hidden">
             <span className="h-2 w-2 rounded-full bg-sp-volt" />
             Officials available in all 50 states
           </span>
-        </Reveal>
+        </ScrollScale>
       </div>
     </section>
   );

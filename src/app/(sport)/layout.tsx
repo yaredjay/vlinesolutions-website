@@ -5,7 +5,7 @@ import { SportNav } from "@/components/sport/SportNav";
 import { SportFooter } from "@/components/sport/SportFooter";
 import { SportStructuredData } from "@/components/sport/SportStructuredData";
 import { sportBrand } from "@/data/sport";
-import { CORP_URL, isSportHost, SPORT_ONLY, SPORT_URL } from "@/lib/sport";
+import { CORP_URL, isSportHost, SHOW_SPORT, SPORT_ONLY, SPORT_URL } from "@/lib/sport";
 
 const title = `${sportBrand.name} — ${sportBrand.tagline}`;
 
@@ -60,7 +60,8 @@ export default function SportLayout({ children }: { children: React.ReactNode })
 
   return (
     <div data-site="sport" className="min-h-dvh bg-white font-sans text-sp-ink">
-      <SportBaseProvider base={base} corpUrl={SPORT_ONLY ? null : CORP_URL}>
+      {/* The brand switcher and corporate links appear only while the two sites cross-link (SHOW_SPORT). */}
+      <SportBaseProvider base={base} corpUrl={SPORT_ONLY || !SHOW_SPORT ? null : CORP_URL}>
         <SportStructuredData />
         <SportNav />
         <main className="relative">{children}</main>
